@@ -6,7 +6,6 @@ package datastructure.object.custom;
  * 
  *  Bao gồm 3 thông tin: Item(id, nam, price)
  *  
- *  
  */
 public class Item {
 	// khi mình khởi tạo hay mình gán giá trị cho 1 biến kiểu Item
