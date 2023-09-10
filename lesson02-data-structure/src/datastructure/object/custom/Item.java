@@ -13,7 +13,7 @@ public class Item {
 	// thì ô nhớ trỏ đến luôn có thông tin của 3 thông tin của thuộc tính
 	
 	public int id;
-	public char name;
+	public String name;
 	public double price;
 	
 	// method: [access modify] [static] return_type method_name(parameters) {...}		
@@ -29,9 +29,9 @@ public class Item {
 	//int pId = 4;
 	//char pName = 'E';
 	//double pPrice = 44d;
-	public Item(int id, char name, double price) {
+	public Item(int id, String string, double price) {
 		this.id = id;
-		this.name = name;
+		this.name = string;
 		this.price = price;
 	}
 	
