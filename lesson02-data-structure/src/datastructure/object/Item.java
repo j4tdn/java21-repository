@@ -1,6 +1,6 @@
 package datastructure.object;
 /**
- * Tạo ra KDL đối tượng 
+ * Mục đích tạo ra class Item: Tạo ra KDL đối tượng 
  * KDL tên là: Item
  * Bao gồm 3 thông tin: Item(id, name, price)
  * 
