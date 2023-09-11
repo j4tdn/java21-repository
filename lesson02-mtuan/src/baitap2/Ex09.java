@@ -21,4 +21,3 @@ public class Ex09 {
 		return true;
 	}
 }
-
