@@ -4,8 +4,8 @@ import java.util.Random;
 
 public class Ex10 {
 	public static void main(String[] args) {
-		
-		boolean a[] = new boolean[11]; 
+
+		boolean a[] = new boolean[11];
 		Random rd = new Random();
 		int index, count = 0;
 

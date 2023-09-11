@@ -13,7 +13,6 @@ public class Ex05 {
 		int tmp = n;
 		int reverse = 0;
 
-		// Tìm số đảo ngược của số đã nhập:
 		while (tmp != 0) {
 			reverse = reverse * 10 + tmp % 10;
 			tmp /= 10;
