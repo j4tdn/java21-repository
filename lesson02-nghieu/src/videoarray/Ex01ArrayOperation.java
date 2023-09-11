@@ -1,6 +1,6 @@
 package videoarray;
 
-public class ArrayOperation {
+public class Ex01ArrayOperation {
 
 	public static void main(String[] args) {
 		//index: 0 1 2 3 4 5 
