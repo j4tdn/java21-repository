@@ -1,0 +1,29 @@
+Quy tắc đặt tên
+	+ package: tất cả viết thường
+
+	+ class: chữ cái đầu tiên viết hoa
+			 kí tự dầu tiên của mỗi từ viết hoa
+
+			 -->
+
+
++ Static type
+	--> khi khai báo biến cần biết kiểu dữ liệu đó thuộc kiểu gì
+
+
++ Dynamic type
+
+	--> khi khai báo biến k cần khai báo kiểu dữ liệu lúc runtie
+
++ Khai báo 1 số nguyên --> dùng int hay Interger ?
+--> tùy trường hợp
+		+Bắt buộc dùng (k đc null): int
+		+K bắt buộc phải linh hoạt dùng Integer
+
++ Khai báo chuỗi 		--> sử dụng String varName = "..." --> 100% dùng ít tốn vùng nhớ
+						hay là --> String varName = new String("...")
+
+---------------
+26/8
+Viết hàm swap 2 biến lưu trữ số nguyên
+gợi ý: sử dụng CustomInteger(int value)
