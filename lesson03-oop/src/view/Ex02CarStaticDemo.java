@@ -8,7 +8,7 @@ public class Ex02CarStaticDemo {
 		
 		
 		Car c1 = new Car("C1", "Audi", "Yellow", 550d);
-		
+		c1.setModel("MG");
 		Car c2 = new Car("C2", "Audi", "Black", 800);
 		
 		Car c3 = new Car("C3", "Audi", "White", 880);

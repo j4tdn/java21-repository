@@ -1,20 +1,21 @@
 package bean;
 
-//pojo: plain old java object 
-//Car, Item, Store, Employee: khai báo KDL của bài toán 
+// pojo: plain old java object 
+// Car, Item, Store, Employee: khai báo KDL của bài toán 
 
 //Spring FW: lưu trữ những đối tượng của class vào vùng nhớ của nó 
-
+//		   : đối tưọng --> bean
 public class Car {
 
-	//system
+	// System = Objects
+	// Object = Attribute + Methods
 	
 	// attributes
-	// sẽ được cấp phát, gnas giá trij khi tạo ra đối tượng mới
+	// sẽ được cấp phát, gán giá trị khi tạo ra đối tượng mới
 	// mỗi đối tượng sẽ lưu trữ thông tin riêng của các thuộc tính
 	
 	// oop: mỗi đối tượng sẽ quản lý thông tin thuộc tính của riêng nó
-	// access modifier: private
+	// access modifier : private
 	
 	
 	//thuộc tính 
@@ -33,10 +34,9 @@ public class Car {
 	
 	// default constructor
 	public Car() {
-		
 	}
+	
 	// constructor with full parameters
-
 	public Car(String id, String model, String color, double salesPrice) {
 		this.id = id;
 		this.model = model;
