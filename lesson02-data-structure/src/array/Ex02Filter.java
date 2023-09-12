@@ -18,7 +18,6 @@ public class Ex02Filter {
 		
 	}
 	
-	
 	// int[] elements = numbers	
 	private static int[] findOddNumber(int[] elements) {
 		// inde: 0 1 2 3 4
@@ -32,7 +31,7 @@ public class Ex02Filter {
 			}
 		}
 		int[] result = new int[count];
-		for(int i =0; i < count; i++) {
+		for(int i = 0; i < count; i++) {
 			result[i] = oddElements[i];
 		}
 		return result;

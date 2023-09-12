@@ -15,11 +15,13 @@ public class Ex03FilterString {
 		String[] result = new String[elements.length];
 		int count = 0;
 		for(String element: elements) {
+			// startsWith: kiểm tra chuõi bắt đầu bằng một chuỗi con cụ thể
 			if(element.startsWith("P")) {
 				result[count] = element;
 				count++;
 			}
 		}
+		//trả về mảng có số phần tử chạy từ [a, b)
 		return Arrays.copyOfRange(result, 0, count);
 	}
 }

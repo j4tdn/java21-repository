@@ -25,15 +25,16 @@ public class Ex01Final {
 		// Object Type
 		// Giá trị lưu trữ ở HEAP
 		// Biến lưu ở STACK  chứa thông tin địa chỉ ô nhớ ở HEAP
-		Item itA = new Item(1, 'A', 11);
-		final Item itB = new Item(2, 'B', 22);
-		Item itC = new Item(3, 'C', 33);
+		Item itA = new Item(1, "A", 11);
+		final Item itB = new Item(2, "B", 22);
+		Item itC = new Item(3, "C", 33);
+				
 		
 		itA = itB;
 		//itB = itC;
 		itC = itA;
 		
-		itB.name = 'Z';
+		itB.name = "Z";
 		
 	}
 

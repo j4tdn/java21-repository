@@ -24,32 +24,32 @@ public class Ex01ObjectDemo {
 		Item i1 = new Item(); //H1
 		// set/gán lại các giá trị cho các thuộc tính của ô nhớ hiện tại mà i1 đang trỏ đến
 		i1.id = 1;
-		i1.name = 'A';
+		i1.name = "A";
 		i1.price = 11d;
 		
 		System.out.println("i1 address 1st --> " + System.identityHashCode(i1));
 		
 		// tạo ô nhớ mới và gán địa chỉ của ô nhớ mới cho i1
 		i1 = new Item(); //H2 --> i1 trỏ đến H2
-		i1.name = 'B'; 
+		i1.name = "B"; 
 		
 		System.out.println("i1 address 2nd --> " + System.identityHashCode(i1));
 
 		Item i2 = new Item();
 		i2.id = 2;
-		i2.name = 'C';
+		i2.name = "C";
 		i2.price = 22d;
 		
 		// B1: gọi hàm khởi tạo rỗng để khởi tạo ô nhớ HEAP
 		Item i3 = new Item();
 		// B2: gán giá trị cho các thuộc tính của ô nhớ
 		i3.id = 3;
-		i3.name = 'D';
+		i3.name = "D";
 		i3.price = 33d;
 		
 		// khởi tạo và gán giá trị trực tiếp cho ô nhớ đó
 		// hàm khởi tại có tham số
-		Item i4 = new Item(4, 'E', 44d);
+		Item i4 = new Item(4, "E", 44d);
 		
 		// Java có class gọi là cha của tất cả các class --> Object
 		// Object class sẽ có một số hàm

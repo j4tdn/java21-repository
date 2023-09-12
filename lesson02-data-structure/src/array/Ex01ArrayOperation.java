@@ -4,7 +4,7 @@ public class Ex01ArrayOperation {
 
 	public static void main(String[] args) {
 		// index 0 1 2 3 4 5
-		// value 0 0 0 0 0 0
+		// value 0 0 0 25 0 0
 		int[] numbers = new int[6];
 		numbers[3] = 25;
 		

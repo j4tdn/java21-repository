@@ -59,7 +59,8 @@ public class Ex01IfElse {
 		
 		avgPoint = avgPoint > 10 ? 10 : avgPoint;
 		
-		System.out.println("Avg Point = " + BigDecimal.valueOf(avgPoint).setScale(1, RoundingMode.HALF_UP));
+		System.out.println("Avg Point = " + BigDecimal.valueOf(avgPoint)
+											.setScale(1, RoundingMode.HALF_UP));
 		
 		if (avgPoint < 5) {
 			System.out.println("Yếu");

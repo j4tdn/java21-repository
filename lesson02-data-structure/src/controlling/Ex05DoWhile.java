@@ -17,7 +17,7 @@ public class Ex05DoWhile {
 		// 4 --> Thoát
 
 		do {
-			exportmenu();
+			exportMenu();
 			System.out.println("Lựa chọn (1-4): ");
 			String option = ip.nextLine();
 			
@@ -59,7 +59,7 @@ public class Ex05DoWhile {
 			   option.equals("4");
 	}
 	
-	private static void exportmenu() {
+	private static void exportMenu() {
 		System.out.println(
 				"***Mời chọn chức năng**\n"
 				+ " 1. Chức năng A\n"

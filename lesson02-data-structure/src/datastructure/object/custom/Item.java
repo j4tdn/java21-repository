@@ -29,9 +29,9 @@ public class Item {
 	//int pId = 4;
 	//char pName = 'E';
 	//double pPrice = 44d;
-	public Item(int id, String string, double price) {
+	public Item(int id, String name, double price) {
 		this.id = id;
-		this.name = string;
+		this.name = name;
 		this.price = price;
 	}
 	
