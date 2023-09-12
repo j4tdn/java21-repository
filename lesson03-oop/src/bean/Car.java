@@ -41,7 +41,7 @@ public class Car {
 	// default constructor
 	public Car() {
 	}
-
+	
 	// constructor with full parameters
 	public Car(String id,String color, double salesPrice) {
 		this.id = id;
