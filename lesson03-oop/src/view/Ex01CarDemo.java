@@ -9,13 +9,13 @@ public class Ex01CarDemo {
 		//Tạo n đối tượng car
 		Car c1 = new Car();
 		c1.setId("C1"); 		// c1.id = "C1";
-		c1.setModel("MG5");		// c1.model = "MG5";
+		//c1.setModel("MG5");		// c1.model = "MG5";
 		c1.setColor("Yellow");	// c1.color = "Yellow";
 		c1.setSalesPrice(550d);	// c1.salesPrices = "550d";
 		
-		Car c2 = new Car("C2", "Toyota Cross", "Black", 800);
-		Car c3 = new Car("C3", "Honda CRV", "White", 880);
-		Car c4 = new Car("C4", "Huyndai Creta", "Red", 620);
+		Car c2 = new Car("C2", "Black", 800);
+		Car c3 = new Car("C3", "White", 880);
+		Car c4 = new Car("C4", "Red", 620);
 		
 		System.out.println("c1 -->" + c1);
 		
@@ -44,20 +44,38 @@ public class Ex01CarDemo {
 		 	
 		 		+ bên ngoài không thể thay đổi cấu trúc dữ liệu của thuộc tính bên trong class
 		 		  VD: class Store {
-		 		  	public List<Item> items; // dynamic list
+		 		  	public List<Item> items = new ArrayLisst<>(); // dynamic list
 		 		  		}
 		 		  
 		 		  class App(){
 		 		  	main(){
+		 		  		Store s1 = new Store();
+		 		  		s1.items = List.of(1,2,3); // fixed-size list, immutable
 		 		  		
+		 		  		s1.add(4); // internal error
 		 		  		}		 		  
 		 		  	}		 		  
 		 		+ bên ngoài nên truy cập tăng/giảm/thay đổi giá trị của thuộc tính chứ không nên biết chính xác
-		 		  giá trị của nguồn gốc của thuộc tính đó như thế nào
+		 		  giá trị nguồn gốc của thuộc tính đó như thế nào
 		 		  VD: class Company {
-		 		  		private 
-		 		  }
+		 		  		private double balance; // quỹ lương
+		 		  		
+		 		  		public void payment(Employee employee, double salary) {
+		 		  			balance = balance - salary;
+		 		  			employee.plusIncome(salary);
+		 		  			
+		 		  		}
+		 		  	  }
+		 		  	  
+		 		  	  class Employee {
+		 		  	  	private double income; // thu nhập
+		 		  	  	
+		 		  	  	public void plusIncome(double salary){
+		 		  	  		thí.income = thisincome + salary;
+		 		  	  	}
+		 		  	  }
 		 */
+		
 		
 	}
 

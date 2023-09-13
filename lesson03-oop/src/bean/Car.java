@@ -14,7 +14,7 @@ public class Car {
 
 		// System = Object
 		// Object = Atributess + Methods
-		//class
+		// Class
 		
 		// atributes
 		// sẽ được cấp phát, gán giá trị khi tạo ra đối tượng mới
@@ -25,17 +25,19 @@ public class Car {
 	
 		// thuộc tính
 		// static: thuộc phạm vi của class
-		//			các đối tượng của class sẽ mang cùng giá trị static
-		//			: gọi Class.
-		//			:
+		//		 : các đối tượng của class sẽ mang cùng giá trị static
+		//		 : gọi Class.
+		//		 :	   Object. (không khuyến khích )
 	
 	
 	
 		// non-static: thuộc phạm vi của object
-					: 
+		// 			 : mỗi đối tượng sẽ lưu trữ thông tin thuộc tính riêng
+		
+		public static String model;
+
 		private String id;
-		private String model;
-		private String coler;
+		private String color;
 		private double salesPrice;
 		
 		//default constructor
@@ -43,16 +45,15 @@ public class Car {
 			
 		}
 
-		public Car(String id, String model, String coler, double salesPrice) {
+		public Car(String id, String color, double salesPrice) {
 			super();
 			this.id = id;
-			this.model = model;
-			this.coler = coler;
+			this.color = color;
 			this.salesPrice = salesPrice;
 		}
 		
 		// getter, setter
-		// để các class bên ngoài có thể truy cập, thay đổi các giá trị của thuộc tính privatr bên ngoài
+		// để các class bên ngoài có thể truy cập, thay đổi các giá trị của thuộc tính private bên trong class
 		private String getId() {
 			return id;
 		}
@@ -61,21 +62,12 @@ public class Car {
 			this.id = id;
 		}
 		
-		
-		public String getModel() {
-			return model;
+		public String getColor() {
+			return color;
 		}
 
-		public void setModel(String model) {
-			this.model = model;
-		}
-
-		public String getColer() {
-			return coler;
-		}
-
-		public void setColer(String coler) {
-			this.coler = coler;
+		public void setColor(String color) {
+			this.color = color;
 		}
 
 		public double getSalesPrice() {
@@ -90,7 +82,7 @@ public class Car {
 		//toString
 		@Override
 		public String toString() {
-			return "Car [id=" + id + ", model=" + model + ", coler=" + coler + ", salesPrice=" + salesPrice + "]";
+			return "Car [id=" + id + ", model=" + model + ", coler=" + color + ", salesPrice=" + salesPrice + "]";
 		}
 		
 }
