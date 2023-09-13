@@ -20,6 +20,8 @@ public class Ex02CarStaticDemo {
 		System.out.println("c2 -->" + c2);
 		System.out.println("c3 -->" + c3);
 		System.out.println("c4 -->" + c4);
+		
+		// khi nào hàm static ?
 	}
 
 }

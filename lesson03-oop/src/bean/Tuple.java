@@ -5,10 +5,11 @@ public class Tuple {
 	private int t2;
 	
 	public Tuple() {
+		
 	}
-
+	
 	public Tuple(int t1, int t2) {
-		super();
+		//super();
 		this.t1 = t1;
 		this.t2 = t2;
 	}
@@ -29,8 +30,8 @@ public class Tuple {
 		this.t2 = t2;
 	}
 	
-	//tuple1.sun*m()
-	//
+	// tuple1.sum()
+	// tuple2.sum()
 	
 	public int sum() {
 		return t1 + t2;

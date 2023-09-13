@@ -53,7 +53,7 @@ public class Car {
 		}
 		
 		// getter, setter
-		// để các class bên ngoài có thể truy cập, thay đổi các giá trị của thuộc tính private bên trong class
+		// để các class bên ngoài có thể truy cập, thay đổi các giá trị của thuộc tính private bên trong class 
 		private String getId() {
 			return id;
 		}

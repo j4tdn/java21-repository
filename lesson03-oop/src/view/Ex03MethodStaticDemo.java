@@ -1,4 +1,4 @@
-package view;
+	package view;
 
 import bean.Tuple;
 
@@ -38,6 +38,8 @@ public class Ex03MethodStaticDemo {
 		
 		//Ex03MethodStaticDemo ms2 = new Ex03MethodStaticDemo();
 		System.out.println("ms2 --> " + Ex03MethodStaticDemo.sum(m, n));
+		
+		System.out.println("\n====\n");
 		
 		Tuple tuple1 = new Tuple(3, 2);
 		System.out.println("tuple1 sum --> " + tuple1.sum());

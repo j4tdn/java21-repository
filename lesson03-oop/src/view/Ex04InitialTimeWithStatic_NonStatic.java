@@ -8,20 +8,32 @@ public class Ex04InitialTimeWithStatic_NonStatic {
 	
 	// non-static	: object creating time
 	
-	private static String staticVarString;
-	private String nonStaticVarString;
+	// order time 	: static --> non-static
+	
+	
+	private static String staticVar;
+	private String nonStaticVar;
 	
 	public static void main(String[] args) {
 		staticMethod();
 		
 	}
-	
+
+	// Class.staticMethod
+	// Object.staticMethod
 	private static void staticMethod() {
+		System.out.println(staticVar);
+		// System.out.println(nonStaticVar);
+		// nonStaticMethod();
 		
 		System.out.println("Ex4 --> Static Method" );
 	}
 	
 	private  void nonStaticMethod() {
-		System.out.println("Ex4 --> nonStatic Method" );
+		System.out.println(staticVar);
+		System.out.println(nonStaticVar);
+		staticMethod();
+		
+		System.out.println("Ex4 --> NonStatic Method" );
 	}
 }
