@@ -29,8 +29,8 @@ public class Tuple {
 		this.t2 = t2;
 	}
 
-	//
-	//
+	// tuple1.sum()
+	// tuple2.sum()
 	public int sum() {
 		return t1 + t2;
 	}

@@ -6,14 +6,15 @@ public class Ex02CarStaticDemo {
 
 	public static void main(String[] args) {
 		
+		Car.model = "Audi";
 		
-		Car c1 = new Car("C1", "Audi", "Yellow", 550d);
-		c1.setModel("MG");
-		Car c2 = new Car("C2", "Audi", "Black", 800);
+		Car c1 = new Car("C1", "Yellow", 550d);
+		//c1.model = "MG";
+		Car c2 = new Car("C2", "Black", 800);
 		
-		Car c3 = new Car("C3", "Audi", "White", 880);
-		
-		Car c4 = new Car("C4", "Audi", "Red", 620);
+		Car c3 = new Car("C3", "White", 880);
+		//c3.model = "Honda";
+		Car c4 = new Car("C4", "Red", 620);
 		
 		System.out.println("c1 --> " + c1);
 		System.out.println("\nc2 --> " + c2);

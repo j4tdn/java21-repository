@@ -4,7 +4,7 @@ package bean;
 // Car, Item, Store, Employee: khai báo KDL của bài toán 
 
 //Spring FW: lưu trữ những đối tượng của class vào vùng nhớ của nó 
-//		   : đối tưọng --> bean
+//		   : đối tượng --> bean
 public class Car {
 
 	// System = Objects
@@ -26,7 +26,7 @@ public class Car {
 	
 	//non-static: thuộc phạm vi của object
 	//			: mỗi đối tượng sẽ lưu trữ thông tin thuộc tính riêng
-	private static String model;
+	public static String model;
 	
 	private String id;
 	private String color;
@@ -37,9 +37,8 @@ public class Car {
 	}
 	
 	// constructor with full parameters
-	public Car(String id, String model, String color, double salesPrice) {
+	public Car(String id, String color, double salesPrice) {
 		this.id = id;
-		this.model = model;
 		this.color = color;
 		this.salesPrice = salesPrice;
 	}
@@ -47,7 +46,7 @@ public class Car {
 	//
 	
 	//getter, setter
-	//để các class bên ngoài có thể truy cập, thay đổi giá trị của các thuộc tính private bên trong 
+	//để các class bên ngoài có thể truy cập, thay đổi giá trị của các thuộc tính private bên trong class 
 	public String getId() {
 		return id;
 	}
@@ -56,13 +55,6 @@ public class Car {
 		this.id = id;
 	}
 
-	public String getModel() {
-		return model;
-	}
-
-	public void setModel(String model) {
-		this.model = model;
-	}
 
 	public String getColor() {
 		return color;
