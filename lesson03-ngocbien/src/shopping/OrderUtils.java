@@ -12,7 +12,7 @@ import java.time.Month;
 public class OrderUtils {
 	
 	private OrderUtils() {
-		// TODO Auto-generated constructor stub
+
 	}
 
 	public static double export(Order order) {
