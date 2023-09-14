@@ -19,7 +19,7 @@ public class App {
 			String tenChuXe = ip.nextLine();
 			System.out.println("Loại xe: ");
 			String loaiXe = ip.nextLine();
-			System.out.println("Dung tích: ");
+			System.out.println("Dung tích: " + "cc");
 			int dungTich = ip.nextInt();
 			System.out.println("Trị giá: ");
 			double triGia = ip.nextDouble();
