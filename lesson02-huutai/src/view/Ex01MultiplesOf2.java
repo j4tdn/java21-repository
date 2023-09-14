@@ -16,6 +16,7 @@ public class Ex01MultiplesOf2 {
 			number = ip.nextLine();
 			numberOfTries--;
 			if(numberOfTries == 0 && !isNumeric(number)) {
+				ip.close();
 				return;
 			}
 		}
