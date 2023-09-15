@@ -1,4 +1,4 @@
-package shopping;
+package ex01shopping;
 
 import java.time.LocalDateTime;
 

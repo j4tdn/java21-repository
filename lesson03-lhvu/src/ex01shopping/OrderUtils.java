@@ -1,4 +1,4 @@
-package shopping;
+package ex01shopping;
 
 import java.time.LocalDate;
 import java.time.Month;

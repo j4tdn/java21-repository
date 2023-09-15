@@ -1,4 +1,4 @@
-package shopping;
+package ex01shopping;
 
 public class ItemDetail {
 
