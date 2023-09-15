@@ -10,6 +10,7 @@ public class App {
 		Scanner ip = new Scanner(System.in);
 		int a;
 		int n = 0;
+		//Create array
 		Vehicle[] vhc = null;
 		Boolean exit = true;
 
@@ -26,6 +27,7 @@ public class App {
 			case 1:
 				System.out.print("Nhập số lượng xe: ");
 				n = Integer.parseInt(ip.nextLine());
+				//array vhc have 'n' element
 				vhc = new Vehicle[n];
 
 				for (int i = 0; i < n; i++) {
@@ -43,16 +45,24 @@ public class App {
 				}
 				break;
 			case 2:
-				System.out.printf("%-20s %-15s %-15s %-20s %-20s %n", "Tên chủ xe", "Loại xe", "Dung tích", "Trị giá",
-						"Thuế phải nộp");
+				System.out.printf("%-20s %-15s %-15s %-20s %-20s %n", 
+										"Tên chủ xe", 
+										"Loại xe", 
+										"Dung tích", 
+										"Trị giá",
+										"Thuế phải nộp");
 				System.out.println("===========================================================================");
 				for (Vehicle vhcVehicle : vhc) {
 					DecimalFormat df = new DecimalFormat("####.00");
-					System.out.printf("%-20s %-15s %-15s %-20s %-20s %n", vhcVehicle.getName(), vhcVehicle.getVehicle(),
-							vhcVehicle.getCapacity(), df.format(vhcVehicle.getCost()),
-							df.format(VehicleUtils.tax(vhcVehicle)));
-					break;
+					System.out.printf("%-20s %-15s %-15s %-20s %-20s %n", 
+										vhcVehicle.getName(), 
+										vhcVehicle.getVehicle(),
+										vhcVehicle.getCapacity(), 
+										df.format(vhcVehicle.getCost()),
+										df.format(VehicleUtils.tax(vhcVehicle)));
+					
 				}
+				break;
 			case 3:
 				exit = false;
 				break;
