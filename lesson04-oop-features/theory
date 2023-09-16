@@ -1,0 +1,40 @@
+1.Tính chất đóng gói(encapsulation)
+	+ Khái niệm:
+	   - Tính chất đóng gói được thể hiện qua các tù khóa của acces modifiler(public, private, protected.  )
+	   
+	Sử dụng : attribite ( global variable ), method ( function ), 
+			  type( class, interface, abstract class, enum ).
+		   
+	   *  private   : Đóng gói trong phạm vi của class
+	   
+	   *  public    : Sử dụng mọi nơi.
+	   
+	   *            : Đóng gói trong phạm vi của package
+	   
+	   *  protected : Đóng gói trong phạm vi của package 
+	   					Và những class có quan hệ cha con bên ngoài package ( Tính chất thừa kê (inheritance) )
+
+
+2. Tính chất đa hình ( polymorphism)
+
+- Khái niệm:
+	Tính chất đa hình có 2 loại: phương thức với đối tượng 
+	
+	+ Đa hình trong phương thức:
+	 	là 1 phương thức nhưng mà sẽ có nhiều phần thực thi, thể hiện khác nhau
+	 	* overloading
+	 		--> 2 hay nhiều phương thức được gọi là overload nếu
+	 			+ Cùng 1 type(class), tên hàm
+	 			+ Khác:
+	 				+ KDL trả về ?
+	 				+ KDL truyển vào của tham số
+	 				+ Số lượng tham số truyền vào
+	 	* overriding 
+	 		--> Khi có 1 hàm trong class cha, hàm đó được định nghĩa lại trong class con 
+	 			(liên quan đến tính chất thừa kế)
+	 			Hàm override trong lớp con bắt buộc phải chung phần khai báo với hàm ở lớp cha.
+	 			
+	 			void log() { // declaration
+	 			  	//implementation
+	 			}
+	 		
