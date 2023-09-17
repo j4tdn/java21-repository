@@ -4,7 +4,7 @@ package bean;
 // Car, Item, Store, Employee: Khai báo kdl của bài toán
 
 // Spring FW: Lưu trữ những đối tượng của class vào vùng nhớ của nó
-//            : Đối tượng
+//          : Đối tượng
 
 public class Car {
 
@@ -22,10 +22,12 @@ public class Car {
 	// thuộc tính
 	//static: thuộc phạm vi của class
 //			: các đối tượng của class sẽ mang cùng giá trị của static
-//			:  
+//			: gọi class
+//			: gọi object cũng được nhưng kh khuyến khích
 	
 	// non-static: thuộc phạm vi của object
-//				: mỗi đối tượng sẽ lưu trữ thông tin riêng
+//				 : mỗi đối tượng sẽ lưu trữ thông tin riêng
+	
 	private String id;
 	public static String model;
 	private String color;
