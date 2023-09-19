@@ -8,4 +8,6 @@ public class PolyParent {
 	void log() {
 		System.out.println("log...");
 	}
+	
 }
+ 

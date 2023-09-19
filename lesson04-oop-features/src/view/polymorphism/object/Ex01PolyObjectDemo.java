@@ -15,7 +15,7 @@ public class Ex01PolyObjectDemo {
 		square.setBackground();
 		//Rectangle
 		System.out.println("\n--- Rectangle ---");
-		Rectangle rectangle = new Rectangle();
+		Shape rectangle = new Rectangle();
 		rectangle.paint();
 		rectangle.calS();
 		//Polymorphism with Object
