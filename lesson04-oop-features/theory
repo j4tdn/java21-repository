@@ -1,0 +1,20 @@
+.Tinh chất đóng gói(encapsulation)
+ -khái niệm: tính chất đóng gói được thể hiện qua các từ khóa của access modifier(public, private, protected...)
+ private: đóng gói trong phạm vi của class
+ public : sử dụng mọi nơi
+        : dùng trong phạm vi của package
+ protected : đóng gọi trong phạm vi package, và những class có quan hệ cha/con bên ngoài package(tính chất thừa kế interface)
+ Sử dụng: attribute, method 
+ 
+  
+ Tính chất đa hình(Polymorphism)
+ khái niệm: 
+ tính chất đa hình có 2 loại: phương thước & đối tượng
+ + Đa hình trong phương thức: là 1 một phương thức sẽ có nhiều phần thực thi, thể hiện khác nhau
+  .overloading
+  ---> 2 hay nhiều phương thức được gọi là overrload nếu: cùng 1 class, cùng tên hàm
+                                                          khác: KDL truyền vào, số lượng tham số truyền vào
+  .overriding                   
+  ---> khi có 1 hàm trong class cha, hàm đó được định nghĩa lại trong class con
+  Hàm overriding trong lớp con bắt buộc phải chung phần khai báo với hàm ở class cha
+  
