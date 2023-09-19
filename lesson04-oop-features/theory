@@ -1,0 +1,63 @@
+1.Tính chất đóng gói(encapsulation)
+ +) Khái niệm:Tính chất đóng gói được thực hiện qua các từ khóa của access modifier
+  (public, private, protected)
+  
+  Sử dụng: attribute(global variable), method(function)
+  		   type(class, interface, abstract class, enum) 
+ 
+  +) private: Đóng gói trong phạm vi của class
+  +) public: Sử dụng mọi nơi
+  +) default"   ": Đóng gói trong phạm vi của package
+  +) protected: Đóng gói trong phạm vi của package
+  				Và những class có quan hệ cha/con bên trong package
+  				(Tính chất thừa kế: inheritance)
+ 
+2. Đa hình - Polymorphism
+ -) Khai niệm:
+  Tính chất đa hình có 2 loại: phương thức & đối tướng
+  +)Đa hình trong phương thức:
+	  Là một phương thức nhưng mà sẽ có nhiều phần thực thi, thể hiện khác nhau.
+	  .Overloading
+	   --> 2 hay nhiều phương thức được gọi là overrload nếu:
+	      +) Cùng 1 type(class), cùng tên hàm
+	      +) Khác nhau: 
+	         .Kiểu dữ liệu truyền vào của tham số
+	         .Số lượng tham số truyền vào
+	      (*): Nếu cùng tên, cùng tham số nhưng khác type trả ra thì ko được gọi là Overloading
+
+	  .Overriding
+		--> Khi có 1 hàm trong class cha, hàm đó được định nghĩa lại trong class con
+		(Liên quan đến tính chất thừa kế)
+		Hàm override trong lớp con bắt buộc phải chung phần khai báo với hàm ở lớp cha
+		void log() { // declaration
+			// Implementation
+		}
+		
+		=> Tại sao phải override hàm cha?
+		   Code chung để kế thừa
+		   Dù định nghĩa khác nhau nhưng nên override từ cha để thể hiện tính đồng nhất
+		vd:
+		 Shape
+		     calS(){}
+		 Rectangle: callS()  <=> tinhS
+		 Square   : callS()  <=> callSOfSqure
+		 Triangle : callS()  <=> ...
+		 Circle   : callS()  <=> ...
+
+  +)Đa hình trong đối tượng:
+   Câu hỏi 1: Parent p =  new Child(); 
+   			 Mình có thể lấy Child p = new Parent() có được không ?
+   			 --> Không, khi biến thuộc child gọi hàm tự tạo ra lúc runtime không thể tìm thấy được trong đối tượng KDL cha
+   			 --> Biến KDL cha có thể nhận giá trị KDL chính nó hoặc con
+   			 => Vì khi new cha() thì trên Head chỉ tạo ra hàm của cha thôi.
+   			    nên khi gọi hàm con sẽ bị lỗi vì trên vùng nhớ Heap của cha không có hàm con.
+   			    => thực hiện failed first
+  Câu hỏi 2: Tại sao không khai báo trực tiếp
+  			 Parent p = new Parent();
+  			 Child c = new Child();
+  			 mà phải sử dụng đa hình trong đối tượng
+  			 Parent p = new Child();
+  			-->	Dễ dàng covert KDL qua lại giữa các Child trong phạm vi KDL cha con
+  			--> Hỗ trợ tạo một danh sách(mảng) các phần tử trong phạm vi cha con
+  			--> Hỗ trợ tạo hàm có KDL cha => có thể truyền tham số KDL cha hoặc con
+  			---> Hỗ trợ factory pattern
