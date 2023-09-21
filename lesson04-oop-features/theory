@@ -21,7 +21,7 @@ Khái niệm:
 2. Tính chất đa hình (polymorphism)
 
 Khái niệm: 
-  - Tính chất đa hình có 2 loai: phương thức & đối tượng
+  - Tính chất đa hình có 2 loại: phương thức & đối tượng
   
   + Đa hình trong phương thức:
    Là một phương thức nhưng mà có nhiều phần thực thi, thể hiện khác nhau
@@ -32,7 +32,7 @@ Khái niệm:
           KDL truyền vào của tham số
           Số lượng tham số truyền vào
           
-    . overriding
+    . overriding  ( chỉ override hàm, không override thuộc tính)
     --> Khi có 1 hàm trong class cha và hàm đó được định nghĩa lại trong class con (liên quan đến tính chất kế thừa) 
     
   Hàm override trong lớp con bắt buộc phải chung phần khai báo với hàm ở lớp cha

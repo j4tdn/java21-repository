@@ -47,7 +47,7 @@ public class Ex01PolyObjectDemo {
 		   
 		   mà phải sử dụng đa hình trong đối tượng
 		   + Parent p1 = new ChildX();
-		   + Parent p2 = nê ChildX();'
+		   + Parent p2 = new ChildX();'
 		   
 		   --> Dễ dàng ép kiểu qua về giữa các biến trong phạm vi kiểu dữ liệu cha con
 		   --> Hỗ trợ tạo danh sách (mảng) các phần tử trong phạm vi cha con
