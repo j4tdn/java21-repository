@@ -29,7 +29,7 @@ public class Ex04InitialTimeWithStatic_NonStatic {
 		System.out.println("Ex4 --> Static Method" );
 	}
 	
-	private  void nonStaticMethod() {
+	private void nonStaticMethod() {
 		System.out.println(staticVar);
 		System.out.println(nonStaticVar);
 		staticMethod();
