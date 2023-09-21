@@ -11,7 +11,7 @@ public class Ex02OverrideDemo {
 		// Mà phải tạo log ở parent xong override ở child
 		
 		/*
-		 1. Tạo thằng cho, có code chung khi đó thằng con kế thừa
+		 1. Tạo thằng cha, có code chung khi đó thằng con kế thừa
 		 2. giúp code sạch sẽ, đồng nhất dùng chung hàm (override ahfm thui)
 		 */
 	}

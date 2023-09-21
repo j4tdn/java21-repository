@@ -29,7 +29,7 @@
     		  KDL trả về ?
     		  KDL truyền vào tham số
     		  Số lượng tham số truyền vào
-    . overiding
+    . overriding
     	--> khi có 1 hàm trong  class cha, hàm đó được định nghĩa lại trong class con
     		(liên quan đến tính chất kế thừa)
     		Hàm override trong lớp con bắt buộc phải chung phần khai báo với hàm
@@ -39,3 +39,19 @@
     			// implementation
     		}
    + Đa hình trong đối tượng
+   		khi đối tượng lớp cha có thể trỏ đến đối tượng lớp con,
+   		
+   		
+3. Inheritance(kế thừa)
+	là một cơ chế cho phép 1 kiểu con được phép kế thừa những đặc điểm (fields, methods) của 1 kiểu cha
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

@@ -86,6 +86,6 @@ public class Ex01PolyObjectDemo {
 		shape = rangtangle;
 		// rangtangle = shape; // error
 		
-		Square sq1 = (Square) new Shape(); // error 
+		//Square sq1 = (Square) new Shape(); // error 
 	}
 }
