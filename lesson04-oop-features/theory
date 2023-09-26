@@ -61,3 +61,43 @@
   			--> Hỗ trợ tạo một danh sách(mảng) các phần tử trong phạm vi cha con
   			--> Hỗ trợ tạo hàm có KDL cha => có thể truyền tham số KDL cha hoặc con
   			---> Hỗ trợ factory pattern
+  			
+ 3. Tính chất thừa kế
+  + Lớp cha là class
+    khi: có các thuộc tính chung
+    --> Con: Không bắt buộc phải override hàm từ cha
+ 
+  + Lớp cha là interface:
+    Khi: Có các hàm chung chưa biết phần thực thi như nào.
+    
+    Trước java8: Interface chỉ chứa hàm trừu tượng
+    --> Con: bắt buộc override hàm trừu tượng từ cha
+    
+    Từ java 8 trở đi: default, static hàm có thể có body
+    java 9: private 
+    ==> Nếu các class cha có cùng một hàm thì bắt buộc con phải Override
+    
+    
+    Class<Con> extends class<Cha>
+    Class<Con> implements Interface1<Cha>
+    Class<Con> implements Interface1<Cha>, Interface2<Cha>
+    
+    <Abstract>Class extends [Abstract] Class
+    [Abstract]Class implements Interface[s]
+    
+    Interface extends Interface[s]
+    
+    Abstract class implements Interface hoặc Interface extends Interface
+    --> Không bắt buộc phải override abstract method
+   
+   
+?? Java có hỗ trợ đa thừa kế không ? vì sao ?
+	Đa thừ kế --> Class con kế thừa thừ nhiều class cha
+	==>Nếu con extends nhiều lớp cha, mà con không Override lại hàm của các cha thì khi thực thi con thì không biết
+	sẽ thực thi hàm cha nào của nào
+	====> Java không hỗ trợ đa thừa kế
+		  Vì có trường các class cha có chung hàm khai bóa
+		  Nếu Class con không bắt buộc override hàm từ cha
+		  --->Thì khi lấy con gọi hàm chung thì sẽ không biết gọi đến class nào
+		      compile error thay vì đợi gọi
+	
