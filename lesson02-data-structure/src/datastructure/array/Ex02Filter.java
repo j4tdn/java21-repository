@@ -28,6 +28,6 @@ public class Ex02Filter {
 		for (int i = 0; i < count; i++) {
 			result[i] = oddElements[i];
 		}		
-		return oddElements;
+		return result;
 	}
 }
