@@ -6,9 +6,9 @@ public class ReferennceBook extends Book {
 	
 	private BigDecimal tax;
 	
-	// Khi mình gọi hàm khởi tạo của KDL con
+	// Khi gọi hàm khởi tạo của KDL con
 	// Yêu cầu phải gọi đến 1 hàm khởi tạo của KDL cha
-	// Mặc định gọi super(), nên trong KDL cha nên có 1 hàm khưởi tạo rỗng	
+	// Mặc định gọi super(), nên trong KDL cha nên có 1 hàm khởi tạo rỗng	
 	public ReferennceBook() {
 
 	}
@@ -31,7 +31,7 @@ public class ReferennceBook extends Book {
 
 	@Override
 	public String toString() {
-		return super.toString();
+		return super.toString() + ", " + tax;
 	}
 	
 	

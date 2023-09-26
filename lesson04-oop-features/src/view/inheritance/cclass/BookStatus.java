@@ -7,8 +7,8 @@ public enum BookStatus {
 	
 	// Mặc định --> name, ordinal(thứ tự trong enum, zero based)
 	
-	// NEW --> NEW = new BookStatus("mới");
-	// OLD --> OLD = new BookStatus("cũ");
+	// NEW --> BookStatus NEW = new BookStatus("mới");
+	// OLD --> BookStatus OLD = new BookStatus("cũ");
 	
 	NEW("mới"),
 	OLD("cũ");

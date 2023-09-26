@@ -16,8 +16,8 @@ public class BookApp {
 		 
 		 + true/false
 		 + MOI/CU/TRA_LAI
-		 + 
-		 +
+		 + INTERNAL_ERROR/RESOURCE_NOT_FOUND/FILE_NOT_FILE
+		 + INSIDE/OUTSIDE/ONSIDE
 		  KDL 	--> enum(enumeration)
 		  		--> Khi muốn lưu trữ tập hợp các giá trị là hằng số, bất biến (immutable)
 		 		--> KDL đối tượng
@@ -63,9 +63,9 @@ public class BookApp {
 				new TextBook("SGK-718"	, "Hoá 8"	, bd(30) , "Nhi Đồng", BookStatus.NEW, 2),
 				new TextBook("SGK-111"	, "Văn 12"	, bd(20) , "Việt Nam", BookStatus.NEW, 2),
 				new TextBook("SGK-0911"	, "Địa 9"	, bd(30) , "Việt Nam", BookStatus.OLD, 5),
-				new ReferennceBook("STK-23", "Sử 7"			, bd(30), "Nhi Đồng", bd(2)),
+				new ReferennceBook("STK-23", "Sử 7"			, bd(20), "Nhi Đồng", bd(2)),
 				new ReferennceBook("STK-77", "Sinh 7"		, bd(30), "Nhi Đồng", bd(4)),
-				new ReferennceBook("STK-55", "Lý 10"		, bd(30), "Nhi Đồng", bd(2)),
+				new ReferennceBook("STK-55", "Lý 10"		, bd(20), "Nhi Đồng", bd(2)),
 				new ReferennceBook("STK-44", "Công nghệ 12"	, bd(30), "Nhi Đồng", bd(2)),
 				new ReferennceBook("STK-22", "Sử 8"			, bd(30), "Nhi Đồng", bd(4)),
 		};

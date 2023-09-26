@@ -6,9 +6,12 @@ public class TextBook extends Book {
 	
 	private BookStatus bookStatus;
 	private Integer discount;
-	//fixx
+	
+	
+	
+	
 	public TextBook(String id, String name, BigDecimal salesPrice, String publisher, BookStatus bookStatus, Integer discount) {
-		super(id, name,salesPrice, publisher);
+		super(id, name, salesPrice, publisher);
 		this.bookStatus = bookStatus;
 		this.discount = discount;
 	}
