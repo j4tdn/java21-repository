@@ -9,7 +9,7 @@ public class App {
 	static double tax;
 	static int t = 0;
 	public static void main(String[] args) {
-		
+		Info[] cars = null;
 		
 		System.out.println(" 1. Nhập kê khai thông tin của xe."+
 							"\n 2. Xuất bản kê khai thuế"+
@@ -29,11 +29,15 @@ public class App {
 					pushInfo(arrs[i]);
 					
 				}
+				cars = arrs;
 	
 			}
 			case 2: {
-					System.out.printf("%-15s %-10s %-15s %-15s","Chủ sở hữu","Loại xe","Dung tích","Giá trị");
-					System.out.println("\n====================================================");
+					System.out.printf("%-15s %-10s %-15s %-15s %-15s","Chủ sở hữu","Loại xe","Dung tích","Giá trị","Thuế");
+					System.out.println("\n=====================================================================");
+					for(Info car  : cars) {
+						System.out.printf("\n%-15s %-10s %-15s %-15s %-15s",car.getName(),car.getType(),car.getCapacity(),car.getValue(),tax(car.getValue(),car.getCapacity())+"\n");
+					}
 					}
 				break;
 			default:
