@@ -26,9 +26,9 @@ public class App {
 			
 			vehicle[i] = new Vehicle(name, type, capacity, price);		
 		}
-		
+		System.out.println("Tên chủ xe" +"		"+ "Tên loại xe" +"		"+ "Dung tích" +"		"+ "Giá trị xe" +"		"+ "Thuế");
 		for (Vehicle vhc : vehicle) {
-			System.out.printf("%-20s%-10s%20s%20s%20s\n", vhc.getName(), vhc.getType(), vhc.getCapacity(), vhc.getPrice(), getTax(vhc));
+			System.out.println(vhc.getName() +"			"+ vhc.getType() +"			"+ vhc.getCapacity() +"			"+ vhc.getPrice() +"		"+ getTax(vhc));
 		}
 		
 	}
