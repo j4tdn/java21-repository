@@ -37,4 +37,22 @@
 	 			void log() { // declaration
 	 			  	//implementation
 	 			}
+
+3. Tính chất thừa kế
++ Lớp cha là class
+	Khí cs các thuộc tính chung
+		--> Con : ko bắt buộc overide hàm từ cha
+		
++ Lớp cha là Interface
+	Khi các hàm chung chưa biết phần thực thi như nào
+	
+	Trước JAVA 8 : Interface chỉ chứa hàm trừu tượng
+		--> Con bắt buộc phải overide hàm trừu tượng từ cha
+		
+	Class extends class;
+	Class implements Interface1, Interface2;
+	
+	interface1 extends interface2
+	[Abstract] Class implement Interface hoặc  Interface extends Interface
+	--> k bắt buộc phải ovv
 	 		
