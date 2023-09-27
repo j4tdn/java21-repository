@@ -26,3 +26,40 @@
 			
 			}
 	+ đa hình trong đối tượng
+	
+3. Tính chất thừa kế
++ Lớp cha là class
+when: có các thuộc tính chung
+--> Con: k bắt buộc override
+
++ Lớp cha là interface
+when có các hàm chung chưa biết phần thực thi như nào
+
+Trước java 8: interface chỉ chứa hàm trừu tượng 
+--> con: bắt buộc override hàm trừu tượng từ cha
+
+
+[Abstract] Class extends [Abstract] Class
+
+[Abstract] Class implements Interface[s]
+
+Interface extends Interface[s]
+
+Abstract class implement Interface hoặc Interface extends Interface
+--> k bắt buộc phải override abstract method
+
+
+?? Java có hỗ trợ đa thừa kế không ?
+	+ k hỗ trợ, có thể k override
+
+-- java8 --> default, statis hàm có thể có body
+-- java9 --> private
+
+
+
+
+
+
+
+
+
