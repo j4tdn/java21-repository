@@ -9,7 +9,7 @@
  + private: Đóng gói trong phạm vi của class
  + public: sử dụng mọi nơi
  + protected: Đóng gói trong phạm vi của package và những class có quan hệ cha/con bên ngoài package
- + default: Đóng gói trong phạm vi của package(Tính chất thừa kế)
+ + default: Đóng gói trong phạm vi của package
  
  2. Tính chất đa hình(Polymorphism)
  
@@ -30,4 +30,44 @@
   	  void log() { // khai báo
   	  	// thực thi
   	  }
+  	  
+ Câu hỏi: 1. Vì sao phải tạo class cha rồi overriding lại trong class con?
+		 	--> Tạo class cha là mình có code chung(tạo 1 function chung) để mình kế thừa
+		 	--> Tạo class cha rồi overriding lại trong class con, giúp code sạch sẽ dùng chung 1 hàm
+		 	VD: Cũng là hàm tính Diện tích mà mỗi hình đặt tên hàm khác nhau(TinhS, TinhDienTich..)
+		 	--> Thay vào đó tạo 1 class cha rồi class con overriding lại --> sạch sẽ code, tái sử dụng
+		  2. Thế nào được gọi là thừa kế ?
+		  	--> khi nhiều type(class, enum, interface, abstract class) có chung thuộc tính hay phương thức
+		  		thay vì code riêng lẽ từng thằng gôm lại code vào 1 class cha nếu class nào dùng khác thì
+		  		ovveriding lại.
+		  		
+3. Tính chất thừa kế
++ Lớp cha là class
+ when: có các thuộc tính chung
+ --> Lớp con: kh bắt buộc override hàm từ cha(Class extends Class)
+ 
+ + Lớp cha là interface
+  when: có các hàm chung chưa biết phần thực thi như nào
+  Trước Java 8: Interface chỉ chứa hàm trừu tượng từ cha
+  --> Lớp con: Bắt buộc ovveride hàm trừu tượng từ cha(Class implements Interface 1, Interface 1)
+  
+  [abstract] Class extends [abstract] Class
+  [abstract] Class implements Interface[s]
+  
+  Interface extend Interface[s]
+  [abstract] Class implements Interface hoặc Interface extends Interface
+  --> kh phải bắt buộc override abstract class
+  
+  Java có hỗ trợ đa thừa kế không, vì sao ?
+  Đa thừa kế 
+  	--> Class con thừa kế từ nhiều class cha
+  	Bố: nấu ăn, chạy bộ
+  	Mẹ: nấu ăn, coding, đánh cầu lông
+  	
+  	Con extends Bố, Mẹ
+  	Không bắt buộc override
+  	
+  	
+  
+  
  

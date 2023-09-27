@@ -1,13 +1,14 @@
 package view.polymorphism.object;
 
 public class Ex01PolyObjectDemo {
+	
 	public static void main(String[] args) {
+		
 		// Shape
 		System.out.println("===SHAPE===");
 		Shape shape = new Shape();
 		shape.paint();
 		shape.calS();
-		
 		
 		// Square
 		System.out.println("===Square===");
@@ -16,24 +17,24 @@ public class Ex01PolyObjectDemo {
 		square.calS();
 		square.setBackground();
 		
-		
-		// Retangle
-		System.out.println("===Retangle===");
-		Retangle retangle = new Retangle();
-		retangle.paint();
-		retangle.calS();
+		// Rectangle
+		System.out.println("===Rectangle===");
+		Rectangle rectangle = new Rectangle();
+		rectangle.paint();
+		rectangle.calS();
 		
 		//			s1
 		// compile: Shape
-		// runtime:
+		// runtime: Square
 		
-//		polymorphism with object
+		// polymorphism with object
+		
 		System.out.println("\n=== polymorphism with object ===");
 		Shape s1 = new Square();
 		s1.paint();
 		s1.calS();
 		
-		Shape s2 = new Retangle();
+		Shape s2 = new Rectangle();
 		s2.paint();
 		s2.calS();
 		
@@ -58,11 +59,10 @@ public class Ex01PolyObjectDemo {
 		 	--> Hỗ trợ tạo hàm có KDL(chung)
 		 		Có thể truyền tham số KDL cha, con
 		 	--> Hỗ trợ factory pattern	
-		 	
 		 */
 		
 		// cho ds các hình(vuông, hcn, hình tam giác..)
-		Shape[] shapes = {retangle, square, s1, s2, shape};
+		Shape[] shapes = {rectangle, square, s1, s2, shape};
 		
 	}
 }
