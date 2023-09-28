@@ -1,41 +1,60 @@
 1. Tính chất đóng gói(encapsulation)
 
-- Khái niệm:
-	tính chất đóng gói được thể hiện qua các từ khóa của 
-	access modifier(public, private, protected, )
-	
-	sử dụng: attribute(global variable), method
-			 type(class, interface, abstract class, enum)
-	
-	+ private	: đóng gói trong phạm vi của class
-	
-	+ public 	: sử dụng mọi nơi
-	
-	+			: đóng gói trong phạm vi của package
-	
-	+ protected	: đóng gói trong phạm vi của package
-				  và những class có quan hệ cha/con bên ngoài package
-				  (tính chất thừa kế inheritance)
+	- Khái niệm:
+		tính chất đóng gói được thể hiện qua các từ khóa của 
+		access modifier(public, private, protected, )
+		
+		sử dụng: attribute(global variable), method
+				 type(class, interface, abstract class, enum)
+		
+		+ private	: đóng gói trong phạm vi của class
+		
+		+ public 	: sử dụng mọi nơi
+		
+		+			: đóng gói trong phạm vi của package
+		
+		+ protected	: đóng gói trong phạm vi của package
+					  và những class có quan hệ cha/con bên ngoài package
+					  (tính chất thừa kế inheritance)
 				  
 2. Tính chất đa hình(polymorphism)
 
-- Khái niệm:
-	Tính chất đa hình có 2 loại: phương thức & đối tượng
+	- Khái niệm:
+		Tính chất đa hình có 2 loại: phương thức & đối tượng
 	
-	+ đa hình trong phương thức:
-		là một phương thức nhưng mà sẽ có nhiều phần thực thi, thể hiện khác nhau 
-			. orerloading
-				--> 2 hay nhiều phương thức được gọi là overload nếu
-					+ cùng 1 type(class), tên hàm
-					+ khác:
-						KDL truyền vào của tham số
-						số lượng tham số truyền vào
-			. overriding		
-				--> khi có 1 hàm trong class cha, hàm đó được định nghĩa lại trong class con
-					(liên quan đến tính chất kế thừa)
-					Hàm override trong lớp con bắt buộc phải chung phần khai báo với hàm 
-					ở lớp cha
+		+ đa hình trong phương thức:
+			là một phương thức nhưng mà sẽ có nhiều phần thực thi, thể hiện khác nhau 
+				. orerloading
+					--> 2 hay nhiều phương thức được gọi là overload nếu
+						+ cùng 1 type(class), tên hàm
+						+ khác:
+							KDL truyền vào của tham số
+							số lượng tham số truyền vào
+				. overriding		
+					--> khi có 1 hàm trong class cha, hàm đó được định nghĩa lại trong class con
+						(liên quan đến tính chất kế thừa)
+						Hàm override trong lớp con bắt buộc phải chung phần khai báo với hàm 
+						ở lớp cha
 					
 					void log(){ // declaration(phần khai báo)
 						// implement(phần thực thi)
 					}
+					
+3. tính chất thừa kế
+	+ lớp cha là class
+		when: có các thuộc tính chung
+		--> con: ko bắt buộc override hàm từ cha
+	
+	+ lớp cha là interface
+		when: có các hàm chung chưa biết phần thực thi như nào
+	
+		Trước java 8: Interface chỉ chứa hàm trừu tượng
+		--> con: bắt buộc override hàm trừu tượng từ cha
+	
+		[abstract]class extends [abstract]class
+		[abstract]class implements Interface[s]
+	
+		interface extends Interfaces[s]
+	
+		Abstract class implements Interface hoặc Interface extends Interface
+		--> ko bắt buộc phải override abstract method 
