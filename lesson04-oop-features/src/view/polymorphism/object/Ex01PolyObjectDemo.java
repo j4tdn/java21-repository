@@ -18,12 +18,12 @@ public class Ex01PolyObjectDemo {
 		square.calS();
 		square.setBackground();
 		
-		//Rangtangle
+		//rectangle
 		System.out.println("---Rangtangle---");
 
-		Rangtangle rangtangle = new Rangtangle();
-		rangtangle.paint();
-		rangtangle.calS();
+		Rectangle rectangle = new Rectangle();
+		rectangle.paint();
+		rectangle.calS();
 		
 		
 		
@@ -35,7 +35,7 @@ public class Ex01PolyObjectDemo {
 		s1.paint();
 		s1.calS();
 		
-		Shape s2 = new Rangtangle();
+		Shape s2 = new Rectangle();
 		s2.paint();
 		s2.calS();
 		
@@ -65,11 +65,11 @@ public class Ex01PolyObjectDemo {
 		 		Có thể truyền tham số KDL cha, con
 		 		
 		 		log(shape);
-		 		log(rangtangle);
+		 		log(rectangle);
 		 		log(square);
 		 		
 		 		// Shape shape = shape;
-		 		// Shape shape = rangtangle;
+		 		// Shape shape = rectangle;
 		 		// Shape shape = square;
 		 		
 		 		void log(Shape shape){
@@ -80,11 +80,11 @@ public class Ex01PolyObjectDemo {
 		 */
 		
 		// Cho ds các hình (vuông, chữ nhật, tròn,....)
-		Shape[] shapes = {shape, square, rangtangle, s1, s2};
+		Shape[] shapes = {shape, square, rectangle, s1, s2};
 		
 		
-		shape = rangtangle;
-		// rangtangle = shape; // error
+		shape = rectangle;
+		// rectangle = shape; // error
 		
 		//Square sq1 = (Square) new Shape(); // error 
 	}

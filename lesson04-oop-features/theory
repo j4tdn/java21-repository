@@ -45,9 +45,46 @@
 3. Inheritance(kế thừa)
 	là một cơ chế cho phép 1 kiểu con được phép kế thừa những đặc điểm (fields, methods) của 1 kiểu cha
 	
++ Lớp cha là class
+	When: có các thuộc tính chung
+	--> Con: ko bắt buộc override hàm từ cha (hàm của cha có phần body gòi)
+	
++ Lớp cha là interface
+	When: có các hàm chung chưa biết phần thực thi như nào
+	
+	Trước Java 8: Interface chỉ chứa hàm trừu tượng
+	--> Con: Bắt buộc override hàm trừu tượng từ cha
+	
+	[Abstract] Class extends [Abstract] [Class]
+	[Abstract] Class implements Interface[s]
+	
+	Interface extends interface[s]
+	
+	Abstract class implements Interface hoặc Interface extends Interface
+	--> ko bắt buộc phải override abstract method
+	
+?? Java có hỗ trợ đa thừa kế không, vì sao?
+	đa thừa kế
+	--> Class con kế thừa từ nhiều class cha
+	
+	Bố: nấu ăn, chạy bộ
+	Mẹ: nấu ăn, coding, đánh cầu lông
+	
+	Con extends Bố Mẹ
+	* Ko bắt buộc override
+	--> 4 chức năng
 	
 	
-	
+4. Abstract 
+	class --> là khái niệm trừu tượng dùng để chỉ tập hợp các đối tượng có chung
+		+ thuộc tính
+		+ phương thức
+		Car1, Car2, Car3 --> Car
+		
+	coding
+	abstract methods trong interface, abstract class
+	--> tạo ra các abstract method chung cho KDL cha, sau đó con sẽ override
+	--> VD: calS, tinhS, tinhDienTich, tinhDT
 	
 	
 	
