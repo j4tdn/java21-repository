@@ -1,0 +1,36 @@
+1 . Tính chất đóng gói(encapsulation)
+
+- Khái niệm:
+  *Tính chất đóng gói được thể hiện qua các từ khóa của access modifier(public, private, protected,)
+  	+private: Đóng gói trong phạm vi của class
+  	+public : Sử dụng mọi nơi
+  	+protected : Đóng gói trong phạm vi của package và những class
+  				 có quan hệ cha/con bên ngoài package ( tính chất thừa kế inheritance)
+  	+default : Đóng gói trong phạm vi của package
+2. Tính chất đa hình(polymorphism)
+
+- Khái niệm:
+	Tính chất đa hình có 2 loại: phương thức & đối tượng
+	
+	+Đa hình trong phương thức:
+		Là một phương thức nhưng mà sẽ có nhiều phần thực thim thể hiện khác nhau
+		- overloading
+		- overriding
+		
+- Tính chất thừa kế 
++Lớp cha là class
+when: có các thuộc tính chung
+--> Con: ko bắt buộc override hàm từ cha
+
++Lớp cha là interface
+when: có các hàm chung chưa biết phần thực thi như nào
+--> Con: bắt buộc override hàm trừu tượng từ cha
+
+Class extends Class
+Class implements Interface1, interface2
+interface1 extends interface2
+[Abstract] Class implements Interface hoặc Interface extends Interface
+--> Ko bắt buộc phải override abstract method
+
+java không hỗ trợ đa kế thừa vì khi bố và mẹ đều chung hàm nhưng khác phương thức 
+mà khi con extends lại không bắt buộc override , do đó nếu không override thì khi gọi sẽ sinh ra conflict
