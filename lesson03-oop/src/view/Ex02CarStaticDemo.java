@@ -18,6 +18,6 @@ public class Ex02CarStaticDemo {
 		
 		
 		// khi nào hàm static? 
-		// 
+		
 	}
 }
