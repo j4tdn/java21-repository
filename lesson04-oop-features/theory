@@ -40,3 +40,84 @@ Khái niệm:
       void log() { //declaration
          //implementation
       } 
+      
+      
+      
+3. Tính chất thừa kế
++ Lớp cha là class
+when dùng: Có các thuộc tính chung
+--> Con: không bắt buộc override
+
+ 
++ Lớp cha là interface     
+when dùng: Có các hàm chung chưa biết phần thực thi như nào      
+
+  Trước java 8: Interface chỉ chứa hàm trừu tượng
+ --> Con: bắt buộc override hàm trừu tượng từ cha
+ 
+  
+  
+  [Abstract] Class implements Interface[s]
+  [Abstract] Class extends [Abstract] Class
+  Interface extends Interface[s]
+ 
+ Abstract class implements Interface hoặc Interface extends Interface
+ --> Không bắt buộc phải override abstract method
+ 
+ 
+ 
+ Java có hỗ trợ đa thừa kế không, vì sao?
+    Đa thừa kế
+    --> Class con kế thừa từ nhiều class cha
+    vì trong java 1 cái class con khi extend cái class cha thì nó không bặt buộc phải override, 
+     cho trường hợp các lớp cha có hàm giống nhau thì khi đó lớp con sẽ không biết gọi cái hàm đó từ lớp cha nào 
+    
+    
+ Phân biết abstract và interface?
+ 
+ 
+4. Tính chất trừu tượng 
+class -> là khái niệm trừu tượng dùng để chỉ tập hợp các dối tượng có chung 
++ thuộc tính 
++ phương thức
+Car1, Car2, Car3 --> Car 
+
+Trong coding
+- abstract methods trong interface, abstract class
+--> tạo ra các abstract method chung cho kiểu dữ liệu cha sau đó con sẽ override
+--> Ví dụ: calS, tinhS, tinhDienTich, tinhDT
+
+ 
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
