@@ -11,4 +11,10 @@ public class BusinessEmailServiceImpl extends EmailService {
 	void login2Steps() {
 		System.out.println("BusinessEmailServiceImpl  --> login2Steps");
 	}
+
+	@Override
+	void logout() {
+		// TODO Auto-generated method stub
+		
+	}
 }

@@ -10,6 +10,12 @@ public class InheritanceAbstractClassDemo {
 			void login() {
 				System.out.println("Anonymous class");
 			}
+
+			@Override
+			void logout() {
+				// TODO Auto-generated method stub
+				
+			}
 		};
 		es.login();
 		

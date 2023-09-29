@@ -6,5 +6,11 @@ public class StandarEmailServiceImpl extends EmailService {
 	void login() {
 		System.out.println("StandarEmailServiceImpl  -->  login");
 	}
+
+	@Override
+	void logout() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }
