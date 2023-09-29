@@ -34,7 +34,61 @@
 		 		// thực thi: implementation
 		 		}
 		 		
+3. Tính chất thừa kế
+ + Lớp cha là class
+ 	Khi: có các thuộc tính chung
+ 	--> Con: không bắt buộc override hàm từ cha
+ 
+ +Lớp cha là Interface		
+   	Khi: có các hàm chung chưa biết phần thực thi như nào 
+   	
+   	Trước Java 8: Interface chỉ chứa hàm trừu tượng
+   	--> Con: bắt buộc phải override hàm trừu tượng từ hàm cha
 		 
-		 
-		 
+	[Abstract] Class extends [Abstract] Class  (kế thừa class dùng extends) ( chỉ dùng extends được 1 class)
+	[Abstract] Class implements Interface1, Interface2	  (kế thừa interface1 dùng Implements
+	
+	Interface extend Interface1, Interface 2 (kế thừa nhều interface)
+	
+	Abstract class implements Interface hoặc Interface extends Interface
+	--> không bắt buộc phải override abstracs method
+	
+	?? Java có hỗ trợ đa thừa kế không? Vì sao
+	-Đa thừa kế:
+		+Class con kế thừa từ nhiều class 
+			vì không bắt buộc override nên khi kế thừa thì hàm bị trùng ở bố và mẹ sẽ không biết dùng ở hàm của ai
+		
+	
+	
+	//Còn tính chất trừu tượng: Lý thuyết
+	//Anonymous function (lambda expresstion)
+	// Strategy pattern
+	
+	
+	class --> là 1 khái niệm trừu tượng được tạo ra để chỉ 1 tập hợp các đối tượng có chung 1 thuộc tính , và phương thức
+			+tt
+			pt
+			Car1, car2, car3 --> car
+	+coding
+	 -->abstract method trong interface, abstract class
+	--->tạo ra các abstract method chung cho KDL cha, sau đó con sẽ override
+	--> VD: calS, tinhS, tinhDientich, tinhDT
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 		 
