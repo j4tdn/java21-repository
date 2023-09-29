@@ -1,0 +1,70 @@
+1. Tính chất đóng gói(encapsulation)
+
++ Khái niệm:
+	Tính chất đóng gói đc thể hiện qua các từ khóa access modifier(public, private, protected, )
+	
+	Sử dụng: attribute(global variable), method(function), 
+			type(class, interface, abstract class, enum)
+	
+		+ private: Đóng gói trong phạm vi class.
+		+ public: Sử dụng mọi nơi
+		+ protected: Đóng gói trong phạm vi của package Và những class có quan hệ cha/con bên ngoài package(tính chất thừa kế inheritance)
+		+			: Đóng gói trong phạm vi của package
+		
+2. TÍnh chất đa hình(polymorphism)
+-Khái niệm: 
+	Tính chất đa hình có 2 loại: phương thức và đối tương
+	 + Đa hình trong phương thức:
+	 	Là 1 phương thức nhưng mà sẽ có nhiều phân thực thi, thể hiện khác nhau
+	 	 . overloading
+	 	  --> 2 hay nhiều phương thức đc gọi là overload nếu:
+	 	  	+ Cùng 1 type(class), tên hàm
+	 	  	+ Khác:
+	 	  		KDL truyền vào của tham số
+	 	  		Số lương tham số truyền vào.
+	 	 . overriding
+	 	  --> khi có 1 hàm trong class cha, hàm đó được định nghĩa lại trong class con(liên quan đến tính chất kế thừa)
+	 	  Hàm override trong lớp con bắt buộc phải chuhng phần khai báo với hàm ở lớp cha
+	 	  
+3. Tính chất thừa kế
++ Lớp cha là class
+  when: có các thuộc tính chung
+  --> Con: k bắt buộc override hàm từ cha
++ Lớp cha là inrterface:
+  when: có các hàm chung chưa biết phần thực thi như nào
+  
+  Trước java 8: Interface chỉ chứa hàm trừu tượng
+  --> Con: bắt buộc override hàm trừu trượng từ cha
+  
+  [Abstract] Class extends [Abstract] Class
+  [Abstract] Class implements Interface1, Interface2
+  
+  Interface extends Interface[s]
+  
+  Abstract class implements Interface hoặc Interface extends Interface
+  	--> k bắt buộc phải override abstract method
+  	
+
+?? Java có hỗ trợ đa thừa kế không?
+	Đa thừa kế
+	--> Class con kế thừa từ nhiều class cha
+	
+4. Tính trừu tượng
+	class --> là khái niệm trừu tượng dùng để chỉ tập hợp các đối tượng có chung
+		+ ttinh
+		+ pthuc
+	VD: car1, car2, car3 --> car
+	
+	coding 
+	abstract methods trong interface, abstract class
+	--> tạo ra các abstract method chung cho KDL cha, sau đó con sẽ override 
+	VD: calS, tinhS, tinhDienTIch, tinhDT
+  
+  
+  
+  
+  
+  
+  
+  
+  
