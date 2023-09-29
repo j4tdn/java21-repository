@@ -28,8 +28,9 @@ public class Car {
 	// non-static: thuộc phạm vi của object
 	//			 : mỗi đối tượng sẽ lưu trữ thông tin thuộc tính riêng
 	
+	public static String model;
+	
 	private String id;
-	private String model;
 	private String color;
 	private double salesPrice;
 	
@@ -44,6 +45,10 @@ public class Car {
 		this.color = color;
 		this.salesPrice = salesPrice;
 	}
+	
+	// Car c1 = new Car('C1', 'Honda', 'Yellow', 200);
+	// c1.id         --> c1.getId()
+	// c1.id = 'Cz'  --> c1.setId('Cz')
 	
 	// getter, setter
 	// để các class bên ngoài có thể truy cập, thay đổi giá trị của các thuộc tính private bên 
@@ -80,6 +85,7 @@ public class Car {
 	}
 
 	// toString
+	// id = this.id
 	@Override
 	public String toString() {
 		return "Car [id=" + id + ", model=" + model + ", color=" + color + ", salesPrice=" + salesPrice + "]";
