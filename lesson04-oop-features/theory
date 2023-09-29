@@ -77,10 +77,11 @@ when dùng: Có các hàm chung chưa biết phần thực thi như nào
  
  
 4. Tính chất trừu tượng 
+
 class -> là khái niệm trừu tượng dùng để chỉ tập hợp các dối tượng có chung 
 + thuộc tính 
 + phương thức
-Car1, Car2, Car3 --> Car 
+Car1, Car2, Car3 --> Car  
 
 Trong coding
 - abstract methods trong interface, abstract class
