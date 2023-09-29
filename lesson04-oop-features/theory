@@ -101,3 +101,19 @@
 		  --->Thì khi lấy con gọi hàm chung thì sẽ không biết gọi đến class nào
 		      compile error thay vì đợi gọi
 	
+
+Lambda: Là một cách viết ngắn gọn để tạo ra một giá trị(thể hiện) cho 1 biến là kiểu "functional interface"
+Anonymous function(lambda expression): 
+	Trên lợp interface phải có thêm "@FunctionalInterface"
+	
+
+Strategy pattern:
+	Viết 1 hàm thể hiện cộng/trừ/nhân/chia
+
+Trừu tượng:
+ (abstraction): Là khái niệm trừu trượng dùng để chỉ tập hợp các đối tượng
+ 				có chung "thuộc tính" và "phương thức"
+ 				--> Car1, Car2, Car3 -> Car
+ 	abstract method trong interface, abstract class
+ 	--> tạo ra các abstract method chung cho KDL cha, sau đó con sẽ Override 
+	Vd: calS, tinhS, tinhDienTich, tinhDT

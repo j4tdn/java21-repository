@@ -8,8 +8,7 @@ public class InheritanceAbstractClassDemo {
 			
 			@Override
 			void login() {
-				// TODO Auto-generated method stub
-				
+				System.out.println("Anonymous class");
 			}
 		};
 		es.login();
