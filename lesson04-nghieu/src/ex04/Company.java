@@ -13,6 +13,6 @@ public class Company {
 		NhanVien nv3 = new NhanVien("nv3", "13/01/2005", 1, "phong 2", "tran tu");
 		NhanVien nv4 = new NhanVien("nv4", "14/07/2000", 1, "phong 1", "nguyen tan");
 		NhanVien nv5 = new NhanVien("nv5", "15/05/2004", 1, "phong 2", "tran tu");
-		NhanVien nv6 = new NhanVien("nv6", "16/06/2004", 1, "phong 1", "nguyen tan");
+		NhanVien nv6 = new NhanVien("nv6", "16/06/2001", 1, "phong 1", "nguyen tan");
 	}
 }
