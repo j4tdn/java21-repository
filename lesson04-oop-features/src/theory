@@ -1,0 +1,61 @@
+1. Tính chất đóng gói  (Encapsulation)
+
+Khái niệm: 
+
+  - Tính chất đóng gói được thể hiện qua các từ khóa của access modifier(public, private, protected) 
+
+   Sử dụng: attribute(global variable), method 
+            type(class, interface, abstract class, enum): public/private
+   
+  + private: Đóng gói trong phạm vi của class
+  
+  + public: Sử dụng mọi nơi 
+  
+  + protected: đóng gói trong phạm vi của package và những class có quan hệ cha/con bên ngoài package
+  
+  +          : khi một hàm hay một thuộc tính mà mình kh khai báo access modifier thì nó sẽ được đóng gói trong phạm vi của package 
+   
+   
+   
+   
+2. Tính chất đa hình (polymorphism)
+
+Khái niệm: 
+  - Tính chất đa hình có 2 loai: phương thức & đối tượng
+  
+  + Đa hình trong phương thức:
+   Là một phương thức nhưng mà có nhiều phần thực thi, thể hiện khác nhau
+    . overloading
+    --> 2 hay nhiều phương thức được gọi là overload nếu 
+        + Cùng 1 type (class), tên hàm
+        + Khác:
+          KDL truyền vào của tham số
+          Số lượng tham số truyền vào
+          
+    . overriding
+    --> Khi có 1 hàm trong class cha và hàm đó được định nghĩa lại trong class con (liên quan đến tính chất kế thừa) 
+    
+  Hàm override trong lớp con bắt buộc phải chung phần khai báo với hàm ở lớp cha
+  
+      void log() { //declaration
+         //implementation
+      } 
+     
+    
+3. Tính chất thừa kế
++ Lớp cha là class
+	when: có các thuộc tính chung
+	--> con: không bắt buộc override hàm từ cha
++ Lớp cha là interface
+	when: có các hàm chung chưa biết phần thực thi như nào
+	
+	Trước JV 8: Interface chỉ chứa hàm trừu tượng
+	--> Con: bắt buộc override hàm trừu tượng từ cha
+	
+	[Abstract] Class extends [Abstract] Class
+	[Abstract] Class implements Interface[s]
+	
+	Interface extends Interface[s]   
+	
+	Abstract class implements Interface hoặc Interface extends Interface
+	--> ko bắt buộc phải override abstract method
