@@ -2,19 +2,19 @@ package Ex04Manage;
 
 import java.math.BigDecimal;
 import java.sql.Date;
+import java.time.LocalDate;
 
 public class HumanResources {
 
 	private String name;
-	private Date date;
+	private LocalDate date;
 	private BigDecimal coefficientsSalary;
 	
 	
 	public HumanResources() {
 	}
 
-
-	public HumanResources(String name, Date date, BigDecimal coefficientsSalary) {
+	public HumanResources(String name, LocalDate date, BigDecimal coefficientsSalary) {
 		super();
 		this.name = name;
 		this.date = date;
@@ -32,12 +32,12 @@ public class HumanResources {
 	}
 
 
-	public Date getDate() {
+	public LocalDate getDate() {
 		return date;
 	}
 
 
-	public void setDate(Date date) {
+	public void setDate(LocalDate date) {
 		this.date = date;
 	}
 
@@ -51,12 +51,12 @@ public class HumanResources {
 		this.coefficientsSalary = coefficientsSalary;
 	}
 	
-	public BigDecimal tinhLuong() {
+	public BigDecimal calSalary() {
         return BigDecimal.ZERO;
     }
 
 	@Override
 	public String toString() {
-		return "HumanResources [name=" + name + ", date=" + date + ", coefficientsSalary=" + coefficientsSalary + "]";
+		return " Name: " + name + ", Date: " + date + ", CoefficientsSalary= " + coefficientsSalary ;
 	}
 }

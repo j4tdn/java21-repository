@@ -1,6 +1,7 @@
 package Ex04Manage;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 public class Director extends HumanResources {
 
@@ -9,8 +10,8 @@ public class Director extends HumanResources {
 	public Director() {
 	}
 
-	public Director(BigDecimal positionCoefficient) {
-		super();
+	public Director(String name, LocalDate date, BigDecimal coefficientsSalary, BigDecimal positionCoefficient) {
+		super(name, date, coefficientsSalary);
 		this.positionCoefficient = positionCoefficient;
 	}
 
@@ -24,11 +25,11 @@ public class Director extends HumanResources {
 
 	@Override
 	public String toString() {
-		return "Director [positionCoefficient=" + positionCoefficient + "]";
+		return "ROLE: " + getClass().getName().substring(11)+ " | " + super.toString() + ", Position Coefficient: " + getPositionCoefficient();
 	}
-	
+
 	@Override
-	public BigDecimal tinhLuong() {
+	public BigDecimal calSalary() {
 		BigDecimal base = new BigDecimal("3000000");
 		return (getCoefficientsSalary().add(positionCoefficient)).multiply(base);
 	}
