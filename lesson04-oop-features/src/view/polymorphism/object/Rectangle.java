@@ -1,12 +1,14 @@
 package view.polymorphism.object;
 
 public class Rectangle extends Shape{
+	//Lớp con: Khi thừa kế từ cha là class, không bắt buộc phải override
+	//-> lớp con bắt buộc phải override các hàm trong KDL cha
 @Override
 void paint() {
 	System.out.println("Rectangle --->paint...");
 }
 @Override
-	void cals() {
+	void calS() {
 		System.out.println("Rectangle--> calS");
 	}
 }

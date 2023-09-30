@@ -3,14 +3,15 @@ package view.polymorphism.object;
 public class Square extends Shape {
 	@Override
 	void paint() {
-		System.out.println("Rectangle --->paint...");
+		System.out.println("Square --> paint ..." );
 	}
-
+	
 	@Override
-	void cals() {
-		System.out.println("Rectangle--> calS");
+	void calS() {
+		System.out.println("Square --> calS ...");
 	}
+	
 	void setBackground() {
-	System.out.println("Square ---> setBackgroungh ");	
+		System.out.println("Square --> setBackground ...");
 	}
 }

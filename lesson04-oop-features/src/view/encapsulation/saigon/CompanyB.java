@@ -6,6 +6,6 @@ public class CompanyB {
 public static void main(String[] args) {
 	CompanyA cA = new CompanyA();
 	System.out.println("cA taxID=>"+cA.taxId);
-	System.out.println("cA projects =>"+ cA.projects);
+	//System.out.println("cA projects =>"+ cA.projects);
 }
 }

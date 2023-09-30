@@ -1,12 +1,13 @@
 package view.polymorphism.object;
 
 public class Shape {
-void paint() {
-	System.out.println("Shape --> paint ...");
+	void paint() {
+		// unknown implementation
+		System.out.println("Shape --> paint ..." );
+	}
 	
-}
-void cals() {
-	System.out.println("Shape --> calS ");
-	
-}
+	void calS() {
+		// unknown implementation
+		System.out.println("Shape --> calS ...");
+	}
 }

@@ -18,3 +18,19 @@
   ---> khi có 1 hàm trong class cha, hàm đó được định nghĩa lại trong class con
   Hàm overriding trong lớp con bắt buộc phải chung phần khai báo với hàm ở class cha
   
+ 3. Tính chất thừa kế
+ + Lớp cha là class
+ When: có các thuộc tính chung
+ --> Con không bắt buộc override
+ 
+ 
+ + Lớp cha là interface
+ When: có các hàm chung chưa biết phần thực thi như nào 
+ ---> Con: phải override hàm trừu tượng từ cha
+  
+Class, Abstract  extends class, abstrat class
+class implements Interface
+Interface extends Interface[..]
+
+Abstract class implements Interface hoặc Interface extends Interface 
+---> k bắt buộc phải override abstract method
