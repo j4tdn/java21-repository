@@ -55,6 +55,8 @@ public class Student {
 		return "id = " + idStudent + ", name = " + name + ", theoryPoint = " + theoryPoint
 				+ ", practicePoint = " + practicePoint;
 	}
+
+	
 	
 	
 }
