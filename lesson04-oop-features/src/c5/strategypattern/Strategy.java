@@ -1,6 +1,7 @@
 package c5.strategypattern;
-
-
+	
+// CHương trinh có nhiều công thức chung thì dùng Strategy
+	
 	// arbitray interface name
 public interface Strategy {
 	
