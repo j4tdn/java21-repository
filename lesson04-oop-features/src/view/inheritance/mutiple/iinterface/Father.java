@@ -1,5 +1,5 @@
 package view.inheritance.mutiple.iinterface;
-
+// đa thừa kế
 public interface Father {
  void cooking();
  

@@ -1,5 +1,5 @@
 package view.polymorphism.method;
-
+// tính đa hình phương thức
 public class Ex01OverloadDemo {
 	
 	public static void main(String[] args) {
@@ -7,7 +7,7 @@ public class Ex01OverloadDemo {
 	}
 	private static double sum(double a, double b) {
 		return a+b;
-	}
+	} 
 	
 	private static int sum(int a, int b) {
 		return a +b;

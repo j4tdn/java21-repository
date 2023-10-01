@@ -1,6 +1,7 @@
 package view.inheritance.iinterface;
 
 public class Square implements Shape {
+		
 	@Override
 	public void paint() {
 		// TODO Auto-generated method stub

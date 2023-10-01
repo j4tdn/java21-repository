@@ -1,5 +1,5 @@
 package view.polymorphism.object;
-
+// tính đa hình đối tượng
 public class Ex01PolyObjectDemo {
 	public static void main(String[] args) {
 		
