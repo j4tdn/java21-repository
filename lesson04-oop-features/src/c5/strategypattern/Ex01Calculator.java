@@ -24,6 +24,7 @@ public class Ex01Calculator {
 		
 		// anonymous function --> lamda expression
 		// là 1 cách viết ngắn gọn để tạo ra thể hiện cho functional interface
+		// KHI NÀO DÙNG LAMDA?
 		System.out.println("sub " + sub(a, b));
 		
 		System.out.println("mul " + mul(a, b));
