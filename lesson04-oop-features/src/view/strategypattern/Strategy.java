@@ -8,5 +8,6 @@ public interface Strategy {
 	// arbitrary abstract method đặt tên hàm abstract là gì cũng dược
 	// important: list of parameter and return type
 	// (x, y) -> x / y;
+	
 	int process(int x, int y);
 }

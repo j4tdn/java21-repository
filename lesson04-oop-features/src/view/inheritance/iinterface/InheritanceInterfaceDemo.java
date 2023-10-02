@@ -34,11 +34,11 @@ public class InheritanceInterfaceDemo {
 		// Anonymous function
 		/*
 		 	Để tạo 1 đối tượng cho biến KDL interface
-		 	Dùng
-		 	 + External class
-		 	 + Anonymous function
-		 	 --> Có thể có 1 hàm nhiều hàm trừu tượng
+		 	Dùng:
+		 	 + External class	||
+		 	 + Anonymous class	|| --> Có thể có 1 hàm hay nhiều hàm trừu tượng
+		 	 
+		 	 + Anonymous function  || --> có duy nhất 1 hàm trừu tượng
 		 */
-		
 	}
 }
