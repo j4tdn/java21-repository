@@ -35,6 +35,8 @@ public class Ex01Calculator {
 		System.out.println("mul strategy -> " + calc(a, b, mulStrategy));
 		
 		// Strategy divStrategy = (x, y) ->  x / y;
+		// if has one parameter -> delete ()
+		// if has one line -> delete {}
 		System.out.println("mul strategy -> " + calc(a, b, (x, y) ->  x / y));
 	}
 	
