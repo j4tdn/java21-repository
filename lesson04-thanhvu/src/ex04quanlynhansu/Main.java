@@ -21,13 +21,12 @@ public class Main {
 		Manager m2 = new Manager("Nguyen Thi Lan", LocalDate.of(1968, 12, 5), BigDecimal.valueOf(80), BigDecimal.valueOf(20), "Take care of customers");
 		System.out.println("--> Manager: ");
 		System.out.println(m1);
-		Management.countStaff(m1, arr);
+		System.out.println(arr.size());
 		System.out.println("Salary of Manager " + m1.getName() + ": " + m1.countSalary());
 		
 		System.out.println("--------------------------------------------------------");
 		System.out.println(m2);
 		System.out.println("Salary of Manager " + m2.getName() + ": " + m2.countSalary());
-		Management.countStaff(m2, arr);
 		
 		System.out.println("--------------------------------------------------------");
 
@@ -76,6 +75,9 @@ public class Main {
 		Management.addStaff(s6, arr);
 		
 		System.out.println("--------------------------------------------------------");
+		
+		Management.countStaff(m1, arr);
+		Management.countStaff(m2, arr);
 
 		System.out.println("\n==========================================================================\n");
 		

@@ -15,7 +15,7 @@ public class Management {
 				count++;
 			}
 		}
-		System.out.println("The number staff of manager: " + count);
+		System.out.println("The number staff of manager " + mn.getName() + " : " + count);
 	}
 	
 
