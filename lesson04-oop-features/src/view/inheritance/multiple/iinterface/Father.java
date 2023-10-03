@@ -1,7 +1,5 @@
 package view.inheritance.multiple.iinterface;
 
-import java.nio.charset.CodingErrorAction;
-
 public interface Father {
 
 	void cooking();
