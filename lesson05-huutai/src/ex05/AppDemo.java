@@ -5,10 +5,7 @@ import java.util.Arrays;
 public class AppDemo {
 	public static void main(String[] args) {
 		Book[] books = mockBooks();
-		Book[] findBook = findPublisher(books);
-		for (Book book : findBook) {
-			System.out.println(book);
-		}
+		findPublisher(books);
 	}
 	
 	private static Book[] mockBooks() {
@@ -21,15 +18,19 @@ public class AppDemo {
 		};
 	}
 	
-	private static Book[] findPublisher(Book[] books) {
+	private static void findPublisher(Book[] books) {
 		Book[] result = new Book[books.length];
 		int count = 0;
 		for (Book book : books) {
 			if("Nhi Đồng".equals(book.getPublisher())) {
 				result[count] = book;
+				count++;
 			}
 		}
 		
-		return Arrays.copyOfRange(result, 0, count);
+		result = Arrays.copyOfRange(result, 0, count);
+		for (Book book : result) {
+			System.out.println(book);
+		}
 	}
 }
