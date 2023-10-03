@@ -64,6 +64,7 @@ public class BookApp {
 
 		// adorreporemote
 
+		System.out.println("Bigdecimal : " + bd(1562565));
 
 	}
 
