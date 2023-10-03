@@ -1,14 +1,11 @@
 package view.inheritance.cclass;
 
 import java.math.BigDecimal;
-import java.math.MathContext;
 import java.math.RoundingMode;
-import java.sql.Ref;
-
 public class BookApp {
 
 	public static void main(String[] args) {
-
+		
 		/*
 		 * Cho ứng dụng quản lý thông tin sách trong cửa hàng 
 		 * Thông tin sách 
@@ -55,15 +52,6 @@ public class BookApp {
 		}
 		
 		System.out.println("Tổng tiền: " + totalOfMoney);
-		
-		// repo
-		// git remote add origin-ador url/adorreporemote
-		// git fetch origin-ador
-		// ..... b1 ......
-		// git push origin-ador b1:remoteb1
-		
-		// adorreporemote
-		
 		
 	}
 

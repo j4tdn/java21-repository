@@ -41,3 +41,45 @@
           void log() { // declaration
            	  // implementation
           }
+
+          
+3. Tính chất thừa kế
++ Lớp cha là class
+  when: có các thuộc tính chung
+  --> Con: ko bắt buộc override hàm từ cha
+  
++ Lớp cha là interface
+  when: có các hàm chung chưa biết phần thực thi như nào
+  
+  Trước Java 8: Interface chỉ chứa hàm trừu tượng
+  --> Con: bắt buộc override hàm trừu tượng từ cha
+  
+  [Abstract] Class extends [Abstract] Class
+  [Abstract] Class implements Interface[s]
+  
+  Interface extends Interface[s]
+  
+  Abstract class implements Interface hoặc Interface extends Interface
+  --> ko bắt buộc phải override abstract method
+  
+  InterfaceA extends InterfaceB
+  
+  InterfaceB extends InerfaceC
+  	public void paint();
+  
+  InerfaceC
+  	void paint();
+  	
+?? Java có hỗ trợ đa thừa kế không, vì sao ?
+   Đa thừa kế
+   --> Class con kế thừa từ nhiều class cha
+   
+   Bố: nấu ăn, chạy bộ
+   Mẹ: nấu ăn, coding, đánh cầu lông
+   
+   Con extends Bố, Mẹ
+   * Ko bắt buộc override
+   --> 4 chức năng
+
+
+          
