@@ -1,11 +1,39 @@
 package hw.lesson04.ex04;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Arrays;
 
 public class ZEx04CompanyDemo {
 	
 	public static void main(String[] args) {
+		
+		// Con của interface Comparable<T>
+		
+		// boxing, unboxing
+		// Long, Integer, Double ... 
+		// hỗ trợ + - * / tương tự kiểu nguyên thủy
+		
+		// BigDecimal
+		// ko hỗ trợ + - * / tương tự kiểu nguyên thủy
+		
+		// Chung, so sánh giá trị số kiểu đối tượng
+		// .compareTo
+		
+		BigDecimal b1 = BigDecimal.TEN;
+		
+		BigDecimal b2 = BigDecimal.valueOf(62);
+		
+		// if(b1 > b2)
+		// if(b1 - b2) > 0
+		// if(b1.compareTo(b2) > 0)
+		
+		System.out.println("b1.compareTo(b2) -> " + b1.compareTo(b2));
+		if (b1.compareTo(b2) > 0) {
+			System.out.println("hello --> +");
+		} else {
+			System.out.println("hello --> -");
+		}
 		
 		Person[] staffs = mockData();
 		
