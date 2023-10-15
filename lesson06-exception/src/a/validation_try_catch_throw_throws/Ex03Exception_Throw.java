@@ -24,6 +24,7 @@ public class Ex03Exception_Throw {
 			System.out.println("Vị trí của B: "+ divide(2, 1));
 		} catch (Exception e) {
 			System.out.println("ef ->" + e.getMessage());
+			e.printStackTrace();
 		}
 	}
 	
