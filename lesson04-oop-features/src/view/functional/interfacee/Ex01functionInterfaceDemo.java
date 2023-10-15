@@ -11,8 +11,9 @@ public class Ex01functionInterfaceDemo {
 
 	}
 	//đếm sô chắn
-	public static int countEven(int[], numbers) {
+	public static int countEven(int[] numbers) {
 		System.out.println();
+		return 0;
 	}
 	public static void main(String[] args) {
 		
@@ -31,4 +32,3 @@ public class Ex01functionInterfaceDemo {
 	}
 	
 
-}
