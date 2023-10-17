@@ -1,7 +1,5 @@
 package pattern.builder;
 
-import java.time.LocalDateTime;
-
 public class Ex01RootCase {
 	
 	public static void main(String[] args) {
@@ -18,9 +16,9 @@ public class Ex01RootCase {
 		   A: a1, a2, a3, a4, a5, a6
 		   + constructor()
 		   + constructor(a1, a2, a3, a4, a5, a6)
-		   + constructor(a1, a2)
+		   + constructor(a1, a2, a3, a4)
 		   + constructor(a1, a3, a4)
-		   + constructor(a5, a6)
+		   + constructor(a5, a6, a2, a3)
 		   
 		   --> Code rườm rà
 		   --> Vì constructor luôn trùng tên với class
