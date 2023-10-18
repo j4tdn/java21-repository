@@ -23,8 +23,8 @@ public class Ex04ReadNumber {
 				if (n >= 0 && n < 1000)
 					return n;
 				else
-					throw new ArithmeticException();
-			} catch (NumberFormatException | ArithmeticException e) {
+					throw new NumberFormatException();
+			} catch (NumberFormatException e) {
 				System.out.println("Nhập sai ! Nhập lại !");
 			}
 			
