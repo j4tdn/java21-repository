@@ -1,5 +1,8 @@
 package pattern.builder;
 
+//builder pattern : Mục đích: k cần tạo ra quá nhiều hàm khởi tạo
+//				 + 
+
 public class User {
 	private Integer id;
 	private String firstName;

@@ -24,7 +24,7 @@ public class Ex03Exception_Throw {
 		//         : cho a, b tùy ý - chưa có validation
 		
 		try {
-			System.out.println("Vị trí A:" +divide(4, 0));
+			System.out.println("Vị trí B:" +divide(4, 0));
 		} catch (ArithmeticException e) {
 		System.out.println("ef -->" +e.getMessage());
 		}
@@ -32,9 +32,9 @@ public class Ex03Exception_Throw {
 	}
 	
 	private static int divide(int a, int b) {
-		if (b==0) {
+	if (b==0) {
 			throw new ArithmeticException("e -> / by zero");
-		}
+	}
 		return a/b;
 	}
 	/*
