@@ -1,5 +1,7 @@
 package pattern.builder;
 
+import java.math.BigDecimal;
+
 public class Ex02BuilderDemo {
 	
 	public static void main(String[] args) {
@@ -25,5 +27,23 @@ public class Ex02BuilderDemo {
 		System.out.println("user2 --> " + user2);
 		System.out.println("user3 --> " + user3);
 		
+		// Builder pattern with custom style
+		BigDecimal a = new BigDecimal(12)
+							.with
+						
+		
+		
+		//  builder patter but custom style --> using User2
+		User2 uA = new User2()
+				.withId(27)
+				.withEmail("teo@gmail.com");
+		
+		
+		
+		System.out.println("uA --> " + uA);
+	}
+	
+	private static BigDecimal bd(double doubleValue) {
+		return BigDecimal.valueOf(doubleValue);
 	}
 }
