@@ -1,6 +1,10 @@
 package view.math;
 
 import java.math.BigDecimal;
+import java.math.MathContext;
+import java.math.RoundingMode;
+
+import static utils.NumberUtils.*;
 
 
 public class Ex01Math {
@@ -18,7 +22,7 @@ public class Ex01Math {
 		// Click vào Menu --> Mặt Hàng --> Item --> 20 items
 		
 		// --> Tổng số item --> TotalItems = 20
-		// Cấu hình số mặt hàng trên 1 trang --> ItemsPerPage = 4
+		// --> Cấu hình số mặt hàng trên 1 trang --> ItemsPerPage = 4
 		
 		// Số page --> 20/4 --> TotalPages = 5
 		// 		   --> 22/4 --> TotalPages = 5.5 --> roundup = 6 pages
@@ -42,22 +46,25 @@ public class Ex01Math {
 		System.out.println("Value --> " + val);
 		System.out.println("Value --> " +fv);
 		
-		// BigDecimal bdValue = bd(17)divide()
+		// BigDecimal bdValue = bd(17)divide(bd(7)); Non-terminating decimal expansion; no exact representable decimal result
 		
 		// MathContext.DECIMAL32 --> 7 digits
 		// MathContext.DECIMAL64 --> 16 digits -->  thường dùng
 		// MathContext.DECIMAL128 --> 34 digits
-		//
-		//
 		
-		//
-		//
-		//
+		// dùng hàm này khi mình muốn chia lấy kết quả nhiều số thập phân có thể
+		// ko quan tâm chính xác bao nhiêu, ko quan tâm rounding mode
+		BigDecimal bdValue = bd(170).divide(bd(7), MathContext.DECIMAL128);
+		System.out.println("bdValue --> " + bdValue);
+		// khi nào mình quan tâm chính các làm tròn bao nhiêu số
+		// và chế độ làm tròn như thế nào
+		bdValue =bd(170).divide(bd(7), 9, RoundingMode.HALF_UP);
 		
-		// khi nào mình quan tâm chính xác làm tròn bao nhiêu số
-		// và chế độ làm tròn()
-
-		BigDecimal bdValue = bd(17).divide(bd(7));
-		System.out.println("bdValue --> ");
+		System.out.println("bdValue --> " + bdValue);
+		
+		// Số --> Làm tròn --> Kết quả vẫn là số --> dùng để tính toán --> BigDecimal, Math
+		
+		// Số --> Định dạng --> Trả về String hiển thị ra console với những forrmat khác nhau, . --> NumberFormat, DecimalFormat
+		
 	}
 }

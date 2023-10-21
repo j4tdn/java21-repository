@@ -10,7 +10,7 @@ public class NumberUtils {
 	
 	public static BigDecimal bd(double value) {
 		// C1 --> new BigDecimal(String)
-		// C2 --> BigDecimal
+		// C2 --> BigDecimal.valueOf(double)
 		return new BigDecimal(String.valueOf(value));
 	}
 	

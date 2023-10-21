@@ -29,18 +29,30 @@ public class Ex02BuilderDemo {
 		
 		// Builder pattern with custom style
 		BigDecimal a = new BigDecimal(12)
-							.with
+							.add(bd(22))
+							.subtract(bd(44));
+		System.out.println("a --> " + a);
+		
+		BigDecimal b = BigDecimal.valueOf(20)
+				.add(bd(22))
+				.subtract(bd(44));
+		System.out.println(" b --> " + b);
 						
 		
 		
-		//  builder patter but custom style --> using User2
-		User2 uA = new User2()
-				.withId(27)
+		//  Builder patter but custom style --> using User2
+		User2 uA = new User2() // H1
+				.withId(27) // H1
 				.withEmail("teo@gmail.com");
 		
 		
 		
+		User2 uB = User2.of() // H2
+				.withId(27) // H2
+				.withEmail("teo@gmail.com");
+		
 		System.out.println("uA --> " + uA);
+		System.out.println("uB --> " + uB);
 	}
 	
 	private static BigDecimal bd(double doubleValue) {

@@ -31,7 +31,15 @@ public class User2 {
 	}
 
 	public User2 withId(Integer id) {
-		//
+		// -->always create new instance
+		User2 clone = new User2();
+//		clone.firstName = this.firstName;
+//		clone.lastName = this.lastName;
+//		clone.age = this.age;
+//		clone.email = this. email;
+//		clone.address = this.address;
+//		clone.id = id;
+//		return this;
 		this.id = id;
 		return this;
 	}
@@ -79,6 +87,12 @@ public class User2 {
 	public User2 withAddress(String address) {
 		this.address = address;
 		return this;
+	}
+
+	@Override
+	public String toString() {
+		return "User2 [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", age=" + age + ", email="
+				+ email + ", address=" + address + "]";
 	}
 	
 	

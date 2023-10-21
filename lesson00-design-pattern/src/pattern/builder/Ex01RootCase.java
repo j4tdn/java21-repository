@@ -1,5 +1,6 @@
 package pattern.builder;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 public class Ex01RootCase {
@@ -45,8 +46,14 @@ public class Ex01RootCase {
 				.withMinute(20)  // LocalDateTime
 				.withSecond(30); // LocalDateTime
 		 */
+		BigDecimal a = new BigDecimal(12)
+				.add(bd(22))
+				.subtract(bd(44));
 		
-		
+	}
+	
+	private static BigDecimal bd(double doubleValue) {
+		return BigDecimal.valueOf(doubleValue);
 	}
 	
 }

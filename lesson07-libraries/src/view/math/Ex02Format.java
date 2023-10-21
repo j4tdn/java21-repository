@@ -7,7 +7,7 @@ import java.util.Locale;
 public class Ex02Format {
 
 	public static void main(String[] args) {
-		//  singleton pattern
+		// singleton pattern
 		// pattern cho việc khởi tạo đối tượng
 		// class áp dụng singleton, chỉ cho phép tạo ra duy nhất 1 đối tượng cho class đó
 		
@@ -15,21 +15,21 @@ public class Ex02Format {
 		
 		System.out.println("double value --> " + value);
 		
-		// locale: vị trí, định vị của mỗi quốc gia, khu vực
-		// dèault setting của Java: US
+		// locale(language country): vị trí, định vị của mỗi quốc gia, khu vực
+		// dafault setting của Java: US
 		
 		System.out.println("default locale: " + Locale.getDefault());
 		
 		// NumberFormat: Sử dụng format có sẵn trong class --> ko thể biến đổi
-		// NumberFormat nf = NumberFormat
-		NumberFormat nf = NumberFormat.getCurrencyInstance(new Locale("vi", "VN")); 
+		//NumberFormat nf = NumberFormat.getInstance(new Locale("vn", "VN")); // format ra số
+		NumberFormat nf = NumberFormat.getCurrencyInstance(new Locale("vi", "VN")); // format ra tiền tệ  
 		String fmtValue = nf.format(value);
 		
 		System.out.println("fmtValue --> " + fmtValue);
 		
-		// Demimal Format --> format với định dạng, pattern truyền vào
+		// Decimal Format --> format với định dạng, pattern truyền vào
 		value = 726.2853d;
-		DecimalFormat df = new DecimalFormat("#,###.00");
+		DecimalFormat df = new DecimalFormat("#,###.##");
 		String dffmValue = df.format(value);
 		
 		System.out.println("dffmValue -->" + dffmValue);
