@@ -24,13 +24,16 @@ public class ReadNumber {
 			result += hangchuc[chuc] + " ";
 		}
 		if (donvi >= 0) {
+			if(chuc == 0 && tram != 0 && donvi!=0) {
+				result += "linh " ;
+			}
 			result += hangdonvi[donvi] + " ";
 		}
 		return result;
 	}
 
 	public static void main(String[] args) {
-		int[] numbers = { 6, 5, 25, 101, 321, 820, 219, 0, 1, 48, 229};
+		int[] numbers = { 6, 5, 25, 101, 321, 820, 219, 102, 21, 48, 229};
 		for (int i = 0; i < numbers.length; i++) {
 			System.out.println(numbers[i] + " --> " + readNumber(numbers[i]));
 		}
