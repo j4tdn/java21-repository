@@ -17,5 +17,6 @@ public class Ex02BuilderDemo {
 		User2 uB = User2.of().withId("27").withEmail("@gmail.com");
 		
 		System.out.println("uA --> " + uA);
+		System.out.println("uB --> " + uB);
 	}
 }

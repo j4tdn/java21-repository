@@ -32,6 +32,15 @@ public class User2 {
 	}
 
 	public User2 withId(String id) {
+//		--> always create new instance
+//		User2 clone = new User2();
+//		clone.firstName = this.firstName;
+//		clone.lastName = this.lastName;
+//		clone.age = this.age;
+//		clone.email = this.email;
+//		clone.address = this.address;
+//		clone.id = id;
+//		return this;
 		this.id = id;
 		return this;
 	}
