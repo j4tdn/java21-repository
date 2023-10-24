@@ -1,6 +1,7 @@
 package homework;
 
-import java.text.SimpleDateFormat;
+import static utils.DateUtils.format;
+
 import java.util.Calendar;
 
 public class Ex04ProjectCompletionDate {
@@ -16,7 +17,7 @@ public class Ex04ProjectCompletionDate {
 				count ++;
 			}
 		} while (count < days);
-		System.out.println("Deadline -> " + new SimpleDateFormat("dd/MM/yyyy").format(projectDay.getTime()));
+		System.out.println("Deadline -> " + format(projectDay, "dd/MM/yyyy"));
 	}
 	
 	private static boolean isDayOff(Calendar checkDate) {

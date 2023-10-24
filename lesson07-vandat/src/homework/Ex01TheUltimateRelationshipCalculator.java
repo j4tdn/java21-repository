@@ -7,6 +7,8 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.Scanner;
 
+import static utils.DateUtils.*;
+
 public class Ex01TheUltimateRelationshipCalculator {
 
 	public static void main(String[] args) {
@@ -59,7 +61,9 @@ public class Ex01TheUltimateRelationshipCalculator {
 		
 		Period period = Period.between(startDays, endDays);
 		System.out.print("Mối tình đã bắt đầu được ");
-		System.out.print(period.getYears() + " năm " + period.getMonths() + " tháng " + period.getDays() + " ngày ");
+		System.out.print(optional(period.getYears(), "năm") 
+						+ optional(period.getMonths(), "tháng")
+						+ optional(period.getDays(), "ngày"));
 		
 		if (opption == 2) {		// chưa chia tay thì mới cần đếm đến giờ phút giây
 			LocalTime now = LocalTime.now();

@@ -7,32 +7,37 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Scanner;
 
+import static utils.DateUtils.format;
+
 public class Ex02WeekdayCalculatorJava7 {
 
 	public static void main(String[] args) {
 		Scanner ip = new Scanner(System.in);
 		
 		DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+		df.setLenient(false);
 		Date date = null;
 		
-		System.out.print("Enter according to the form: Day/Month/Year -> ");
-		try {
-			date = df.parse(ip.nextLine());
-			
-			Calendar c = Calendar.getInstance();
-			c.setTime(date);
-
-			output(c);
-		} catch (ParseException e) {
-			System.out.println("Day/Month/Year Invalid Input !");
-		}
+		do {
+			System.out.print("Enter according to the form: Day/Month/Year -> ");
+			try {
+				date = df.parse(ip.nextLine());
+				break;
+			} catch (ParseException e) {
+				System.out.println("Day/Month/Year Invalid Input !");
+			}
+		} while (true);
+		
+		Calendar c = Calendar.getInstance();
+		c.setTime(date);
+		output(c);
 		
 		ip.close();
 	}
 	
 	private static void output(Calendar c) {
-		String weekDay = new SimpleDateFormat("EEEE").format(c.getTime());
-		String monthAsString = new SimpleDateFormat("MMMM").format(c.getTime());
+		String weekDay = format(c, "EEEE");
+		String monthAsString = format(c, "MMMM");
 		System.out.println(c.get(Calendar.DAY_OF_MONTH) + " " + (monthAsString) + " " + c.get(Calendar.YEAR) + " is a " + weekDay);
 		
 		int dayOfYear = c.get(Calendar.DAY_OF_YEAR);
