@@ -1,6 +1,7 @@
 package homework;
 
-import java.text.SimpleDateFormat;
+import static utils.DateUtils.format;
+
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneId;
@@ -11,7 +12,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Scanner;
 
-public class Ex02WeekdayCalculator {
+public class Ex02WeekdayCalculatorJava8 {
 
 	public static void main(String[] args) {
 		Scanner ip = new Scanner(System.in);
@@ -29,7 +30,20 @@ public class Ex02WeekdayCalculator {
 				System.out.println("Day/Month/Year Invalid Input !");
 			}
 		} while (true);
-		//System.out.println(localDate.getDayOfMonth() + " " + localDate.getMonthValue() + " " + localDate.getYear() + " done");
+		
+        output(localDate);
+        
+        ip.close();
+	}
+	
+	private static void output(LocalDate localDate) {
+		String weekDay = format(localDate, "EEEE");
+		String monthAsString = format(localDate, "MMMM");
+		System.out.println(localDate.getDayOfMonth() + " " + (monthAsString) + " " + localDate.getYear() + " is a " + weekDay);
+		
+		int dayOfYear = localDate.getDayOfYear();
+		int remanningDays = localDate.lengthOfYear() - dayOfYear;
+		System.out.println("It is day number " + dayOfYear + " of the year, " + remanningDays + " day left");
 		
 		//convert LocalDate -> Calendar
         ZonedDateTime zonedDateTime = localDate.atStartOfDay(ZoneId.systemDefault());
@@ -37,21 +51,7 @@ public class Ex02WeekdayCalculator {
         Date date = Date.from(instant);
         Calendar c = Calendar.getInstance();
         c.setTime(date);
-		
-        output(c);
         
-        ip.close();
-	}
-	
-	private static void output(Calendar c) {
-		String weekDay = new SimpleDateFormat("EEEE").format(c.getTime());
-		String monthAsString = new SimpleDateFormat("MMMM").format(c.getTime());
-		System.out.println(c.get(Calendar.DAY_OF_MONTH) + " " + (monthAsString) + " " + c.get(Calendar.YEAR) + " is a " + weekDay);
-		
-		int dayOfYear = c.get(Calendar.DAY_OF_YEAR);
-		int remanningDays = c.getActualMaximum(Calendar.DAY_OF_YEAR) - dayOfYear;
-		System.out.println("It is day number " + dayOfYear + " of the year, " + remanningDays + " day left");
-		
 		int weekOfYear = c.get(Calendar.WEEK_OF_YEAR);
 		int weeksInYear = c.getActualMaximum(Calendar.WEEK_OF_YEAR);
 		int year = c.get(Calendar.YEAR);
@@ -62,8 +62,8 @@ public class Ex02WeekdayCalculator {
 		System.out.println("It is " + weekDay + " number " + weekOfMonth + " out of " + weeksInMonth + " in " 
 							+ monthAsString + " " + year);
 	
-		System.out.println("Year " + year + " has " + c.getActualMaximum(Calendar.DAY_OF_YEAR) + " days");
+		System.out.println("Year " + localDate.getYear() + " has " + localDate.lengthOfYear() + " days");
 		
-		System.out.println(monthAsString + " " + year + " has " + c.getActualMaximum(Calendar.DAY_OF_MONTH) + " days");
+		System.out.println(monthAsString + " " + localDate.getYear() + " has " + localDate.lengthOfMonth() + " days");
 	}
 }
