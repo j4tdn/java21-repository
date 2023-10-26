@@ -1,4 +1,5 @@
-package lesson01_calQualityDating;
+package java07;
+
 
 import java.time.LocalDate;
 import java.time.Period;
@@ -11,7 +12,7 @@ import java.time.Period;
 import java.time.format.DateTimeParseException;
 import java.util.Scanner;
 
-public class Lesson01_calQualityDating {
+public class Lesson01_DucThinh {
     static Scanner ip = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -46,4 +47,5 @@ public class Lesson01_calQualityDating {
         
     }
 }
+
 
