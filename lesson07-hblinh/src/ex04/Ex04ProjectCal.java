@@ -11,9 +11,7 @@ public class Ex04ProjectCal {
 		date.set(2022,5,7);
 		// số ngày làm vc trên tuần: 5 ngày
 		// thời gian làm xong dự án nếu tính cả thứ 7 và CN: 110/5 = 22 => 22*2 =154 days => addTime tiến (154-1)=153
-		int week = date.get(Calendar.DAY_OF_WEEK);
 		int cal = (workDay/5)*2+workDay;
-		System.out.println(cal);
 		date.add(Calendar.DAY_OF_MONTH, cal-1);
 		System.out.println(" Nhóm A phải bàn giao sản phẩm vào ngày: "+SimpleDate(date.getTime()));
 	}
