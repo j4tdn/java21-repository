@@ -8,6 +8,7 @@ import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.time.format.ResolverStyle;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Scanner;
@@ -17,7 +18,8 @@ public class Ex02WeekdayCalculatorJava8 {
 	public static void main(String[] args) {
 		Scanner ip = new Scanner(System.in);
 		
-		DateTimeFormatter df = DateTimeFormatter.ofPattern("d/M/yyyy");
+		DateTimeFormatter df = DateTimeFormatter.ofPattern("d/M/uuuu")
+												.withResolverStyle(ResolverStyle.STRICT);
 		LocalDate localDate = null;
 
 		do {
@@ -52,6 +54,9 @@ public class Ex02WeekdayCalculatorJava8 {
         Calendar c = Calendar.getInstance();
         c.setTime(date);
         
+        // test with method in LocalDate
+        //int weekOfYear = localDate.get(WeekFields.of(Locale.getDefault()).weekOfWeekBasedYear());
+		//long weeksInYear = localDate.range(WeekFields.ISO.weekOfWeekBasedYear()).getMaximum();
 		int weekOfYear = c.get(Calendar.WEEK_OF_YEAR);
 		int weeksInYear = c.getActualMaximum(Calendar.WEEK_OF_YEAR);
 		int year = c.get(Calendar.YEAR);
