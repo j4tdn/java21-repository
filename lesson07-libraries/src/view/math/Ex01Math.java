@@ -36,7 +36,6 @@ public class Ex01Math {
 		int itemPerPage = 4;
 		
 		int totalPages = (int)Math.ceil((float)totalItems/itemPerPage);
-		
 		System.out.println("totalPages --> " + totalPages);
 		
 		System.out.println("\n====\n");

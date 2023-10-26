@@ -24,7 +24,6 @@ public class Ex02Format {
 		//NumberFormat nf = NumberFormat.getInstance(new Locale("vn", "VN")); // format ra số
 		NumberFormat nf = NumberFormat.getCurrencyInstance(new Locale("vi", "VN")); // format ra tiền tệ  
 		String fmtValue = nf.format(value);
-		
 		System.out.println("fmtValue --> " + fmtValue);
 		
 		// Decimal Format --> format với định dạng, pattern truyền vào
@@ -35,6 +34,6 @@ public class Ex02Format {
 		System.out.println("dffmValue -->" + dffmValue);
 		
 		// --> Công thức, tính toán, làm tròn --> BigDecimal
-		//									  --> sétcale(scale, roundingMode)
+		//									  --> setscale(scale, roundingMode)
 	}
 }
