@@ -1,12 +1,6 @@
 package ex03;
 
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
-import java.time.temporal.ChronoUnit;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Scanner;
@@ -24,7 +18,7 @@ public class Ex03DateFunction {
 		Calendar time20Day = Calendar.getInstance();
 		time20Day.add(Calendar.DAY_OF_MONTH, 20);
 		System.out.println(" 5. Sau 20 ngày nữa là ngày: "+SimpleDate(time20Day.getTime()));
-		System.out.println(" Nhập ngày tháng năm sinh của bạn: ");
+		System.out.println("\n    Nhập ngày tháng năm sinh của bạn: ");
 		String dateEnter = sc.nextLine();
 		try {
 			conventerToDate(dateEnter);
@@ -36,12 +30,12 @@ public class Ex03DateFunction {
 public static void printDateTimeNow(Date date) {
 	SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 	String timeNow = df.format(date);
-	System.out.println(" 1."+timeNow);
+	System.out.println(" 1. "+timeNow);
 }
 
 public static void printLastDayofMonth(Calendar timeNowCal) {
 	int lastDayOfMo = timeNowCal.getActualMaximum(Calendar.DAY_OF_MONTH);
-	System.out.println(" 2.Ngày cuối cùng của tháng hiện tại: "+ lastDayOfMo+"/"+(timeNowCal.get(Calendar.MONTH)+1)+"/"+timeNowCal.get(Calendar.YEAR));
+	System.out.println(" 2. Ngày cuối cùng của tháng hiện tại: "+ lastDayOfMo+"/"+(timeNowCal.get(Calendar.MONTH)+1)+"/"+timeNowCal.get(Calendar.YEAR));
 }
 public static void printLastAndFirstDayOfWeek(Calendar timeNowCal) {
 	int dayOfWeek = timeNowCal.get(Calendar.DAY_OF_WEEK);
@@ -49,15 +43,15 @@ public static void printLastAndFirstDayOfWeek(Calendar timeNowCal) {
 	System.out.println(" 3. Xem ngày đầu tiên và cuối cùng của tuần hiện tại: ");
 	switch (dayOfWeek) {
 	case 1: {
-		System.out.println("Ngày cuối tuần của tuần hiện tại là: "+SimpleDate(dayOfWeek1.getTime()));
+		System.out.println("  Ngày cuối tuần của tuần hiện tại là: "+SimpleDate(dayOfWeek1.getTime()));
 		dayOfWeek1.add(Calendar.DAY_OF_MONTH, -6);
-		System.out.println(" Ngày đầu tuần của tuần hiện tại là: "+SimpleDate(dayOfWeek1.getTime()));
+		System.out.println("  Ngày đầu tuần của tuần hiện tại là: "+SimpleDate(dayOfWeek1.getTime()));
 		break;
 	}
 	case 2: {
-		System.out.println("Ngày đầu tuần của tuần hiện tại là: "+SimpleDate(dayOfWeek1.getTime()));
+		System.out.println("  Ngày đầu tuần của tuần hiện tại là: "+SimpleDate(dayOfWeek1.getTime()));
 		dayOfWeek1.add(Calendar.DAY_OF_MONTH, 6);
-		System.out.println(" Ngày cuối tuần của tuần hiện tại là: "+SimpleDate(dayOfWeek1.getTime()));
+		System.out.println("  Ngày cuối tuần của tuần hiện tại là: "+SimpleDate(dayOfWeek1.getTime()));
 		break;
 		}
 	case 3: {
@@ -84,9 +78,9 @@ public static void printLastAndFirstDayOfWeek(Calendar timeNowCal) {
 }
 public static void soutDayOfWeek(int num, Calendar dayOfWeek1) {
 	dayOfWeek1.add(Calendar.DAY_OF_MONTH, num);
-	System.out.println(" Ngày đầu tuần của tuần hiện tại là: "+SimpleDate(dayOfWeek1.getTime()));	
+	System.out.println("  Ngày đầu tuần của tuần hiện tại là: "+SimpleDate(dayOfWeek1.getTime()));	
 	dayOfWeek1.add(Calendar.DAY_OF_MONTH, 6);
-	System.out.println(" Ngày cuối tuần của tuần hiện tại là: "+SimpleDate(dayOfWeek1.getTime()));
+	System.out.println("  Ngày cuối tuần của tuần hiện tại là: "+SimpleDate(dayOfWeek1.getTime()));
 	}
 public static String SimpleDate(Date date) {
 	SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
