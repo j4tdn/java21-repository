@@ -37,12 +37,12 @@ public class Ex02WeekdayCalcualator {
 		Calendar date1 = conventerDateToCalendar(date);
 		//tick2
 		if(date.getDay()==0) {System.out.println(" * It is "+calDayofWeek(date)+" number "+totalToMonthYears(date,8,1,2)+" out of "+totalInYears(date,8,1,2)+" in "+ date1.get(Calendar.YEAR)+".");};
-		if(date.getDay()==1) {System.out.println(" * It is2 "+calDayofWeek(date)+" number "+totalToMonthYears(date,2,3,4)+" out of "+totalInYears(date,2,3,4)+" in "+ date1.get(Calendar.YEAR)+".");};
-		if(date.getDay()==2) {System.out.println(" * It is3 "+calDayofWeek(date)+" number "+totalToMonthYears(date,3,4,5)+" out of "+totalInYears(date,3,4,5)+" in "+ date1.get(Calendar.YEAR)+".");};
-		if(date.getDay()==3) {System.out.println(" * It is4 "+calDayofWeek(date)+" number "+totalToMonthYears(date,4,5,6)+" out of "+totalInYears(date,4,5,6)+" in "+ date1.get(Calendar.YEAR)+".");};
-		if(date.getDay()==4) {System.out.println(" * It is5 "+calDayofWeek(date)+" number "+totalToMonthYears(date,5,6,7)+" out of "+totalInYears(date,5,6,7)+" in "+ date1.get(Calendar.YEAR)+".");};
-		if(date.getDay()==5) {System.out.println(" * It is6 "+calDayofWeek(date)+" number "+totalToMonthYears(date,6,7,8)+" out of "+totalInYears(date,6,7,8)+" in "+ date1.get(Calendar.YEAR)+".");};
-		if(date.getDay()==6) {System.out.println(" * It is7 "+calDayofWeek(date)+" number "+totalToMonthYears(date,7,8,1)+" out of "+totalInYears(date,7,8,1)+" in "+ date1.get(Calendar.YEAR)+".");};
+		if(date.getDay()==1) {System.out.println(" * It is "+calDayofWeek(date)+" number "+totalToMonthYears(date,2,3,4)+" out of "+totalInYears(date,2,3,4)+" in "+ date1.get(Calendar.YEAR)+".");};
+		if(date.getDay()==2) {System.out.println(" * It is "+calDayofWeek(date)+" number "+totalToMonthYears(date,3,4,5)+" out of "+totalInYears(date,3,4,5)+" in "+ date1.get(Calendar.YEAR)+".");};
+		if(date.getDay()==3) {System.out.println(" * It is "+calDayofWeek(date)+" number "+totalToMonthYears(date,4,5,6)+" out of "+totalInYears(date,4,5,6)+" in "+ date1.get(Calendar.YEAR)+".");};
+		if(date.getDay()==4) {System.out.println(" * It is "+calDayofWeek(date)+" number "+totalToMonthYears(date,5,6,7)+" out of "+totalInYears(date,5,6,7)+" in "+ date1.get(Calendar.YEAR)+".");};
+		if(date.getDay()==5) {System.out.println(" * It is "+calDayofWeek(date)+" number "+totalToMonthYears(date,6,7,8)+" out of "+totalInYears(date,6,7,8)+" in "+ date1.get(Calendar.YEAR)+".");};
+		if(date.getDay()==6) {System.out.println(" * It is "+calDayofWeek(date)+" number "+totalToMonthYears(date,7,8,1)+" out of "+totalInYears(date,7,8,1)+" in "+ date1.get(Calendar.YEAR)+".");};
 		//tick3
 		dayOfMonths(date);
 		System.out.println(" * It is "+calDayofWeek(date)+" number "+totalDay+ " out of "+totalDayofWeeks+" in "+calMonthofYear(date)+" "+ date1.get(Calendar.YEAR)+".");
