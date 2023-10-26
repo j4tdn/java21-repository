@@ -25,13 +25,14 @@ public static void main(String[] args) {
 	System.out.println("======================");
 	
 	System.out.println("Time zone . getdefault" +TimeZone.getDefault());
+	
 	//demo with Calendar  (code with style of singleton pattern)
 	//java.util.GregorianCalendar[time=1697893289994,areFieldsSet=true,areAllFieldsSet=true,lenient=true,zone=sun.util.calendar.ZoneInfo[id="Asia/Bangkok",offset=25200000,dstSavings=0,useDaylight=false,transitions=3,lastRule=null],firstDayOfWeek=2,minimalDaysInFirstWeek=1,ERA=1,YEAR=2023,MONTH=9,WEEK_OF_YEAR=43,WEEK_OF_MONTH=4,DAY_OF_MONTH=21,DAY_OF_YEAR=294,DAY_OF_WEEK=7,DAY_OF_WEEK_IN_MONTH=3,AM_PM=1,HOUR=8,HOUR_OF_DAY=20,MINUTE=1,SECOND=29,MILLISECOND=994,ZONE_OFFSET=25200000,DST_OFFSET=0]
 
 	Calendar c = Calendar.getInstance();
 	System.out.println(" calendar time:" +c);
 	
-	printAvailableTimeZone();
+	//printAvailableTimeZone();
 	
 	// calendar: fields[]
 	

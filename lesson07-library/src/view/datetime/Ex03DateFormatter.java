@@ -17,5 +17,8 @@ public class Ex03DateFormatter {
 		
 		System.out.println("Date : " +df.format(date));
 		Calendar c = Calendar.getInstance();
+		
+		Date cDate = c.getTime();
+		System.out.println("calendar: " + df.format(cDate));
 	}
 }
