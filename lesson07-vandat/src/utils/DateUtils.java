@@ -4,6 +4,7 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
@@ -25,6 +26,13 @@ public class DateUtils {
 		Objects.requireNonNull(pattern, "patern is invalid");
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern(pattern);
 		return dtf.format(localDate);
+	}
+	
+	public static String format(LocalDateTime localDateTime, String pattern) {
+		Objects.requireNonNull(localDateTime, "c should not be null");
+		Objects.requireNonNull(pattern, "patern is invalid");
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern(pattern);
+		return dtf.format(localDateTime);
 	}
 	
 	public static Date toDate(Calendar c) {

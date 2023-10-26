@@ -30,9 +30,8 @@ public class Ex03Java8 {
 	}
 	
 	private static void currentTime(String zoneId) {
-		DateTimeFormatter df = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 		LocalDateTime crTime = LocalDateTime.now(ZoneId.of(zoneId));
-		System.out.println("1. The current time in " + zoneId + ": " + crTime.format(df));
+		System.out.println("1. The current time in " + zoneId + ": " + format(crTime, "dd/MM/yyyy HH:mm:ss"));
 	}
 	
 	private static void getLastDayOfCurrentMonth() {
@@ -59,8 +58,7 @@ public class Ex03Java8 {
 	}
 	
 	private static void getLifeTime(LocalDate dob) {
-		DateTimeFormatter df = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-		System.out.println("6. Day of Birth: " + dob.format(df));
+		System.out.println("6. Day of Birth: " + format(dob, "dd/MM/yyyy"));
 		
         long daysLife = ChronoUnit.DAYS.between(dob, LocalDate.now());
         System.out.println("   You have lived for " + daysLife + " days");

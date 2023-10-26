@@ -5,6 +5,7 @@ import java.time.LocalTime;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.time.format.ResolverStyle;
 import java.util.Scanner;
 
 import static utils.DateUtils.*;
@@ -14,11 +15,12 @@ public class Ex01TheUltimateRelationshipCalculator {
 	public static void main(String[] args) {
 		Scanner ip = new Scanner(System.in);
 		
-		DateTimeFormatter df = DateTimeFormatter.ofPattern("d/M/yyyy");
+		DateTimeFormatter df = DateTimeFormatter.ofPattern("d/M/uuuu")
+												.withResolverStyle(ResolverStyle.STRICT);
 		
 		LocalDate startDays = null;
 		do {
-			System.out.print("Nhập theo mẫu ngày/tháng/năm -> ");
+			System.out.print("Nhập theo mẫu ngày/tháng/năm bắt đầu hẹn hò -> ");
 			String input = ip.nextLine();
 			try {
 				startDays = LocalDate.parse(input, df);
@@ -49,8 +51,10 @@ public class Ex01TheUltimateRelationshipCalculator {
 				String input = ip.nextLine();
 				try {
 					endDays = LocalDate.parse(input, df);
+					if (startDays.isAfter(endDays))
+						throw new IllegalArgumentException();
 					break;
-				} catch (DateTimeParseException e) {
+				} catch (DateTimeParseException | IllegalArgumentException e) {
 					System.out.println("Ngày/tháng/năm nhập vào không hợp lệ !");
 				}
 			} while (true);
