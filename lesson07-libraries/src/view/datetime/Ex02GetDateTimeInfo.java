@@ -16,7 +16,7 @@ public class Ex02GetDateTimeInfo {
 		
 		// ngay tháng năm
 		int day = c.get(Calendar.DAY_OF_MONTH);
-		int month = c.get(Calendar.MONTH) + 1;
+		int month = c.get(Calendar.MONTH) +1;
 		int year = c.get(Calendar.YEAR);
 		String dmy = day + "/" + month + "/" + year;
 		System.out.println("1. Ngày, Tháng, Năm: " + dmy);
