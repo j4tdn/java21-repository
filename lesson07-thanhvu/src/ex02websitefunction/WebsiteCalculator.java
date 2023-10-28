@@ -27,7 +27,7 @@ public class WebsiteCalculator {
 		int dayOfYear = calendar.get(Calendar.DAY_OF_YEAR);
 		int daysLeft = calendar.getActualMaximum(Calendar.DAY_OF_YEAR) - dayOfYear;
 		int weekNumber = calendar.get(Calendar.WEEK_OF_YEAR);
-		int weekNumberInMonth = calendar.get(Calendar.WEEK_OF_MONTH);
+		int weekNumberInMonth = calendar.get(Calendar.DAY_OF_WEEK_IN_MONTH);
 		int numberOfWeeksInYear = calendar.getActualMaximum(Calendar.WEEK_OF_YEAR);
 		int numberOfWeeksInMonth = calendar.getActualMaximum(Calendar.WEEK_OF_MONTH);
 		int numberOfDaysInYear = calendar.getActualMaximum(Calendar.DAY_OF_YEAR);
