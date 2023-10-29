@@ -28,7 +28,7 @@ public class Ex01TheUltimateRelationshipCalculator {
 		System.out.println("Đã chia tay? (yes/no): ");
 		String breakOf = sc.nextLine();
 		boolean isBreakup = breakOf.equalsIgnoreCase("y");
-
+		
 		Duration duration;
 		Period period;
 		if (isBreakup) {

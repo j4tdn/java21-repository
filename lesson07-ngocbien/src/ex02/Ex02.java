@@ -1,9 +1,11 @@
 package ex02;
 
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Objects;
 
 public class Ex02 {
 
@@ -41,6 +43,21 @@ public class Ex02 {
 		
 		//System.out.println("It is " );
 	}
+	
+	public static Date toDate(String text, String pattern, boolean isLenient) {
+		Objects.requireNonNull(text, "text should not be null");
+		Objects.requireNonNull(pattern, "pattern is invalid");
+		
+		DateFormat df = new SimpleDateFormat(pattern);
+		df.setLenient(isLenient);
+		Date date = null;
+		try {
+			date = df.parse(text);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		return date;
+	
 	
 
 }
