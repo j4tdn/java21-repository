@@ -26,7 +26,7 @@ public class Ex02GetDateTimeInfo {
 		
 		//+3. Ngày trong tuần (thứ mấy) 1(sunday) 2, 3, 4, 5, 6 ,7 (saturday)
 		int dow = c.get(Calendar.DAY_OF_WEEK);
-		System.out.println("3. Ngày trong tuần (thứ mấy) 1(sunday) 2, 3, 4, 5, 6 ,7 (saturday) " +dow);  //in ra số 7 --> phải chuyển thành thứ 7
+		System.out.println("3. Ngày trong tuần (thứ mấy) 1(sunday) 2, 3, 4, 5, 6 ,7 (saturday):  " +dow);  //in ra số 7 --> phải chuyển thành thứ 7
 		String [] dayOfWeeks = {"Chủ Nhật", "Thứ Hai", "Thứ Ba", "Thứ 4", "Thứ Năm", "Thứ sáu", "Thứ bảy"};
 		String dowAsString = dayOfWeeks[dow -1];
 		

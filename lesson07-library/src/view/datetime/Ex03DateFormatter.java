@@ -10,7 +10,7 @@ public class Ex03DateFormatter {
 		
 		//java 07: Date format, Simple DateFormat
 		//#format(java.util.date)
-		DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+		DateFormat df = new SimpleDateFormat("dd/MM/yyyy EEEE");
 		
 		
 		Date date = new Date()	;
