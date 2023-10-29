@@ -4,7 +4,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-import untils.DateUtils;
+import utils.DateUtils;
 
 public class Ex06TimeDuration {
 	public static void main(String[] args) {

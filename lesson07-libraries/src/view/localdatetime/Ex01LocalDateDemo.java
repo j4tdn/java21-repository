@@ -29,11 +29,25 @@ public class Ex01LocalDateDemo {
 		System.out.println("period year: " + period.getYears());
 		System.out.println("period month: " + period.getMonths());
 		System.out.println("period day: " + period.getDays());
+		int years = period.getYears();
+		int month = period.getMonths();
+		int days = period.getDays();
+		
+		System.out.println("Optional date: "
+				+ optional(years, "year")
+				+ optional(month, "month")
+				+ optional(days, "day"));
 		
 	}
 	
 	private static String format(LocalDate ldate, String pattern) {
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern(pattern);
 		return dtf.format(ldate);
+	}
+	private static String optional(int value, String unit) {
+		if (value == 0) {
+			return "";
+		}
+		return value + "" + unit + (value > 1 ? "s" : "") + " ";
 	}
 }

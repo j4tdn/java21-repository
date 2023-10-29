@@ -43,17 +43,21 @@ public class Ex01BasicDemo {
 		Calendar c = Calendar.getInstance();
 		System.out.println("Calender time: " + c);
 		
-		TimeZone tzBerlin = TimeZone.getTimeZone("");
+		System.out.println("\n\n\n===============Debug=================");
+		
+		TimeZone tzBerlin = TimeZone.getTimeZone("JST");
 		Calendar cBerlin = Calendar.getInstance(tzBerlin);
 		System.out.println("calender berlin time: " + cBerlin);
 		
 		// calendar: fields[]
-		cBerlin.set(Calendar.YEAR, 2000); // fields[1] = 2000
+		//cBerlin.set(Calendar.YEAR, 2000); // fields[1] = 2000
 		int year = cBerlin.get(Calendar.YEAR);
+		int month = cBerlin.get(Calendar.MONTH);
+		int day = cBerlin.get(Calendar.DAY_OF_MONTH);
 		int hour = cBerlin.get(Calendar.HOUR_OF_DAY);
 		int munute = cBerlin.get(Calendar.MINUTE);
 		int second = cBerlin.get(Calendar.SECOND);
-		System.out.println("Berlin time: " + year + "-" + hour + ":" + munute + ":" + second);
+		System.out.println("Berlin time: " + year +"/"+month+"/"+day + "-" + hour + ":" + munute + ":" + second);
 	}
 	
 	private static void printAvaibleTimeZones() {

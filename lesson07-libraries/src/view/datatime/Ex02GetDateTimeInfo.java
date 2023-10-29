@@ -10,6 +10,7 @@ public class Ex02GetDateTimeInfo {
 		// Locale.setDefault(new Locale("vi", "VN"));
 		
 		Calendar c = Calendar.getInstance();
+		c.set(Calendar.MONTH, 2);
 		c.set(Calendar.DAY_OF_MONTH, 21);
 		// + 1. Ngày, Tháng, Năm
 		String date = c.get(Calendar.DAY_OF_MONTH) + "/"

@@ -1,8 +1,8 @@
 package view.datatime;
 
-import java.util.Calendar;
+import static utils.DateUtils.*;
 
-import static untils.DateUtils.*;
+import java.util.Calendar;
 
 public class Ex05WeekdayCounter {
 	private static final String DEFAULT_PATTERN = "dd/MM/yyyy";

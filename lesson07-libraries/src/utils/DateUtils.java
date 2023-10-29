@@ -1,4 +1,4 @@
-package untils;
+package utils;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -46,5 +46,11 @@ public class DateUtils {
 		Calendar cloned = Calendar.getInstance();
 		cloned.setTime(c.getTime());
 		return cloned;
+	}
+	public static String optional(long value, String unit) {
+		if (value == 0) {
+			return "";
+		}
+		return value + "" + unit + (value > 1 ? "s" : "") + " ";
 	}
 }
