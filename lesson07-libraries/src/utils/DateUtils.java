@@ -66,7 +66,7 @@ public class DateUtils {
 			return "";
 
 		}
-		return value + "" + unit + (value > 1 ? "s" : "");
+		return value + "" + unit + (value > 1 ? "s " : "");
 	}
 	
 	
