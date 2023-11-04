@@ -1,4 +1,4 @@
-package view.datetime;
+	package view.datetime;
 
 import java.util.Calendar;
 
@@ -42,8 +42,9 @@ public class Ex05WeekdayCounter {
 	}
 	public static Calendar clone(Calendar c) {
 		Calendar cloned = Calendar.getInstance();
-		cloned.setTime(c.getTime());;
+		cloned.setTime(c.getTime());
 		return cloned;
+		
 	}
 //	public static Calendar clone(Calendar c) {
 //		Calendar cloned = Calendar.getInstance();

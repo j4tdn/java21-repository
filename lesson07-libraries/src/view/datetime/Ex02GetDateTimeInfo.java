@@ -13,7 +13,6 @@ public class Ex02GetDateTimeInfo {
 		// c.set(Calendar.DAY_OF_WEEK, Calendar.TUESDAY);
 		// c.set(Calendar.MONTH, Calendar.FEBRUARY);
 		
-		
 		// ngay tháng năm
 		int day = c.get(Calendar.DAY_OF_MONTH);
 		int month = c.get(Calendar.MONTH) +1;
@@ -61,7 +60,11 @@ public class Ex02GetDateTimeInfo {
 		int fmonth = cloned.get(Calendar.MONTH) + 1;
 		System.out.println("fdowAsNumber: " + fdowAsNumber + "/" + fmonth);
 		
-		
+		/*
+		 * timezone và locale
+		 * + timezone: dùng cho việc chuyển đổi thời gian giữa các múi giờ khác nhau
+		 * + locale: hiển thị dữ liệu theo định dạng phù hợp với ngôn ngữ văn hoá chỗ đó
+		 */
 		
 		
 		
