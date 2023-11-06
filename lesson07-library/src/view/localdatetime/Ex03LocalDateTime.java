@@ -20,7 +20,7 @@ public class Ex03LocalDateTime {
 		System.out.println("sdatetime:" +sdatetime);
 		System.out.println("edatetime:" +edatetime);
 		
-		if (sdatetime.isAfter(edatetime)) {
+		if (sdatetime.isAfter(edatetime)) { //isAfter hàm so sánh 
 			throw new IllegalArgumentException("Date time is invalid!!!");
 		}
 		
