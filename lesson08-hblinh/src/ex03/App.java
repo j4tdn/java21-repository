@@ -39,9 +39,9 @@ public class App {
 		boolean validString = false;
 		while (!validString) {
 			try {
-				System.out.println("\nEnter your string: ");
+				System.out.println("Nhập chuỗi tiếng Việt:  ");
 				input = sc.nextLine();
-				isValidString(input, "The string only contains Vietnamese characters with accents and space keys.");
+				isValidString(input, "Vui lòng nhập lại !");
 				validString = true;
 			} catch (InvalidInputValidation e) {
 				System.out.println("Error: " + e.getMessage());

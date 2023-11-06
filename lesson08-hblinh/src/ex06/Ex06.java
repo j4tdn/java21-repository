@@ -7,18 +7,11 @@ public static void main(String[] args) {
 	Scanner sc = new Scanner(System.in);
 	System.out.println(" Nhập K: ");
 	Integer k = sc.nextInt();
-	
-	if(k%2==0) {
-		int n = k/2;
-		String n1 = String.valueOf(n);
-		char[] nChar = n1.toCharArray();
-		System.out.println(" Số thứ "+k+" trong dãy (1) là: "+nChar[0]);
+	String numString ="";
+	for(int i = 1; i <=k; i++) {
+		String number = String.valueOf(i);
+		numString += number;
 	}
-	if(k%2==1) {
-		int n = (k-1)/2;
-		String n1 = String.valueOf(n);
-		char[] nChar = n1.toCharArray();
-		System.out.println(" Số thứ "+k+" trong dãy (1) là: "+nChar[1]);
+	System.out.println("Số thứ k trong dãy (1) là: "+numString.charAt(k-1));
 	}
-}
 }
