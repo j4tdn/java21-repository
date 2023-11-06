@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Ex06 {
 public static void main(String[] args) {
 	Scanner sc = new Scanner(System.in);
-	System.out.println(" Nhập K: ");
+	System.out.println(" Nhập K:  ");
 	Integer k = sc.nextInt();
 	String numString ="";
 	for(int i = 1; i <=k; i++) {

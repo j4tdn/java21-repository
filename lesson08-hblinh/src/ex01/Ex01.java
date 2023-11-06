@@ -12,9 +12,9 @@ public class Ex01 {
 
 		while (!validString) {
 			try {
-				System.out.println("\nNhập chuỗi tiếng Việt có dấu: ");
+				System.out.println("\nNhập chuỗi tiếng Việt có dấu:  ");
 				input = sc.nextLine();
-				isValidString(input, "Vui lòng nhập lại !");
+				isValidString(input, "Vui lòng nhập lại ! ");
 				validString = true;
 			} catch (InvalidInputValidation e) {
 				System.out.println("Error: " + e.getMessage());

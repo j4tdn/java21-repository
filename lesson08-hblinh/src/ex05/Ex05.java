@@ -15,9 +15,9 @@ public static void main(String[] args) {
 	char[] conventerStrChar = null ;
 	while (!validString) {
 		try {
-			System.out.println("\nNhập sâu S1: ");
+			System.out.println("\nNhập sâu S1:  ");
 			input1 = sc.nextLine();
-			isValidString(input1, "Sâu S1 không hợp lệ.");
+			isValidString(input1, "Sâu S1 không hợp lệ. ");
 			System.out.println("\nEnter your string: ");
 			input2 = sc.nextLine();
 			isValidString(input2, "Sâu S2 không hợp lệ");

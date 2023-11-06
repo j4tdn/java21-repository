@@ -23,9 +23,9 @@ public class Ex04 {
 		boolean validString = false;
 		while (!validString) {
 			try {
-				System.out.println(" Nhập giá trị của số a: ");
+				System.out.println(" Nhập giá trị của số a:  ");
 				String a = sc.nextLine();
-				System.out.println(" Nhập giá trị của số b");
+				System.out.println(" Nhập giá trị của số b ");
 				String b = sc.nextLine();
 				isValid(a,b, "Vui lòng nhập lại !");
 				validString = true;

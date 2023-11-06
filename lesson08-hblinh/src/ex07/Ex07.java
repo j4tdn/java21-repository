@@ -12,9 +12,9 @@ public class Ex07 {
 		
 		while (!validString) {
 			try {
-				System.out.println("Nhập chuỗi: ");
+				System.out.println("Nhập chuỗi:  ");
 				input = sc.nextLine();
-				isValidString(input, "Vui lòng nhập lại !");
+				isValidString(input, "Vui lòng nhập lại ! ");
 				validString = true;
 				
 			} catch (InvalidInputValidation e) {
