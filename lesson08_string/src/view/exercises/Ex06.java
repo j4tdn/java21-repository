@@ -16,4 +16,6 @@ public class Ex06 {
 			
 			System.out.println("Vị trí thứ " + k + " là: " + c.charAt(k - 1));
 		}
+	
+	
 }
