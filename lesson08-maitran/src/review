@@ -1,0 +1,46 @@
+
+
+3.OOP
+
+
+1/ Học tới java version nào? hiện tại tới java mấy rồi? 
+
+- interface có private method từ java 9
+
+2/ Trong một class làm thế nào để tạo ra một đối tượng từ class?
+
+- thì new trực tiếp thì hàm khởi tạo
+- new một đối tượng thông qua builder pattern
+- Singleton Pattern
+
+3/ Hàm khởi tạo dùng để khởi tạo đối tượng, thì mình cho private được không? Được
+
+Vì sao utils thì cho private constructor? utils thì để viết các hàm để tính toán, mà utils thì thường là static, lấy class để gọi
+thì tạo 100 đối tượng thì vẫn dùng chung 1 ô nhớ của static. 
++ khi dùng singleton pattern 
+
+this - super: nào lớn hơn?
+
+phân biệt this-super
+
+ngoài việc this, super chấm gì đó thì nó còn làm việc gì nữa? 
+- Dùng this để gọi hàm khởi tạo, dùng super gọi hàm khởi tạo ( bài toán classicalbook)
+
+
+
+Để so sánh 2 đối tượng trong java có bằng nhau hay không thì mình sẽ làm như thế nào? (dùng hàm equals và override lại)
+Nếu so sánh địa chỉ dùng == , giá trị thì dùng equals
+hàm equals mặc định của object là so sánh địa chỉ
+
+
+Từ khóa static? 
+
+
+java có hỗ trợ đa thừa kế hay không vì sao? khong vì trong java khi một class thừa kế từ class cha thì kh bắt buộc override
+
+phân biệt interface với abstract class
+
+
+có mấy loại exception? làm sao để biết nó là compile hay runtime
+exception đi ra từ class Exception là compile
+exception đi qua RuntimeException exception là runtime
