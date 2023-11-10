@@ -18,10 +18,13 @@ public class Ex03StringLib01 {
 			System.out.println(s.charAt(i) + "");
 		}
 		
-		System.out.println("\n\n");
-		//Duyệt từng từ trong chuỗi, các từ cách nhau bởi space
+		System.out.println("\n\n"	);
+		//Duyệt từng từ trong chuỗi, các từ cách nhau bởi space 
+		//s= s.strip();
+				//System.out.println("Strip:");
 		//Thủ công
-		s =s.strip().replaceAll("\\s+", " ");
+		s =s.strip().replaceAll("\\s+", " ")	;
+		// /s So khớp với bất kỳ ký tự trống nào (dấu cách, tab, xuống dòng), viết tắt của [\t\n\x0B\f\r]
 		System.out.println("s replaced --> |||: " +s + "|||"); //nếu có nhiều khoảng trắng thì thay bằng 1 khoảng trắng
 		String word = "";
 		for (int i = 0; i<s.length(); i++) {
