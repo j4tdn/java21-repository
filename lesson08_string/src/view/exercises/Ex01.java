@@ -1,5 +1,6 @@
 package view.exercises;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ex01 {
@@ -19,17 +20,27 @@ public class Ex01 {
 		sc.close();
 		
 		
-		
+		// Cắt 2 đầu và thay thế khoảng trắng(s) bằng " "
 		s = s.strip().replaceAll("\\s+", " ");
 		
 		for(int i = 0; i < s.length(); i++) {
 			char c = s.charAt(i);
-			System.out.println(c + " ");
+			System.out.println(c);
+		}
+		
+		System.out.println();
+		
+		// In ra mà không có space
+		for(char c : s.toCharArray()) {
+			if(c != ' ') {
+				System.out.println(c);
+			}
 		}
 		
 		System.out.println("");
 		
 		String[] tokens = s.strip().split("\\s+");
+
 		for(String token:tokens) {
 			System.out.println(token);
 		}

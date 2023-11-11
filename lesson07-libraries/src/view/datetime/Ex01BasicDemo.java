@@ -41,7 +41,6 @@ public class Ex01BasicDemo {
 		System.out.println("calender berlin time: " + cBerlin);
 		
 		// calendar: fields[]
-
 		
 		//cBerlin.set(Calendar.YEAR, 2000); // fields[1] = 2000
 		
@@ -52,7 +51,6 @@ public class Ex01BasicDemo {
 		
 		System.out.println("berlin year: " + year);
 		System.out.println("berlin time: " + (hour + ":" + minute + ":" + second));
-		
 		
 	}	
 }

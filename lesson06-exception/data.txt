@@ -1,3 +1,90 @@
 1, Le A, 16
 2, Le B, 8
 3, Le C, 10
+
+
+data structures 
+2 type: primitive, object
+
+ 
+giá trị mặc định là null
+ko cần khởi tạo
+giá trị lưu trữ ở vùng nhớ Head (constant pool), 
+
+final ở
+--> biến: ở stack
+--> hàm: ko được override ở lớp con
+--> class: ko được extend
+
+setup environment: học đến version nào rồi?
+java hiện đến version nào rồi
+ nêu một số tính ở version mà mình biết
+
+
+Làm thế nào để tạo đối tượng từ class
+tạo đối tượng: 	dùng new
+				thông qua:builder pattern
+						  singleton pattern
+				
+khởi tạo đối tượng: dùng constructor
+
+khi nào dùng private constructor
+private constructor: --> utils (chứa các hàm để tính toán phụ thuộc tham số truyền vào) là hàm static
+
+super và this: ai lớn hơn
+
+=> this lớn hơn vì super chỉ gọi được những hàm trong class cha, còn this gọi đc cả trong lớp cha và lớp hiện tại của nó
+
+
+dùng this và cả super đều gọi được hàm khởi tạo
+
+biến final thì có cập nhật giá trị đc ko?
+=> được vì final ở stack, vì khi nó là 1 đối tượng set giá trị ở head 
+
+1 class trong java mặc định thừa kế tưf class object 
+trong class object mặcđịnh có tostring, hàm equal
+
+so sánh giá trị của đối tượng: equals
+
+khi nào dùng static
+
+java ko hỗ trợ đa thừa kế ko? ko vì
+=> vì class con ko bắt buộc override method của class cha
+=> nên khi class con gọi thì ko biết gọi từ ai
+
+phân biệt interface và abstract class
+
+(coi abtract)
+
+exception
+có 2 loại exception complile time và run time
+
+phân biệt complite và runtime
+
+
+
+
+string: 
+khái niệm immutable
+			mutable
+			
+phân biệt im, mu
+
+khi nào nên dùng imm , mutable
+
+trong trường hợp so sánh thì chỉ trong TH đơn luồng, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
