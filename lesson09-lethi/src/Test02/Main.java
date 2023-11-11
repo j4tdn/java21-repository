@@ -16,9 +16,9 @@ public class Main {
 	public static String[] getLargestNumbers(String... ss) {
 		List<String> result = new ArrayList<>();
 
-		for (String s : ss) {
+		for (String string : ss) {
 
-			Matcher matcher = Pattern.compile("\\d+").matcher(s);
+			Matcher matcher = Pattern.compile("\\d+").matcher(string);
 			List<String> numbers = new ArrayList<>();
 			while (matcher.find()) {
 				numbers.add(matcher.group());
