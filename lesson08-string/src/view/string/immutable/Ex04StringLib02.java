@@ -4,11 +4,11 @@ public class Ex04StringLib02 {
 
 	public static void main(String[] args) {
 		
-		String s = "      cheers    from da     nang";
+		String s = "  cheers    from da     nang";
 		
 		// Kiểm tra chuỗi s1 có phải là chuỗi bắt đầu || kết thúc trong chuỗi s không
 		System.out.println("Start with hello --> " + s.startsWith("hello"));
-		System.out.println("Start with hello --> " + s.startsWith("cheers"));
+		System.out.println("Start with cheers --> " + s.startsWith("cheers"));
 		System.out.println("End with ng --> " + s.endsWith("ng"));
 		
 		// Thay thế chuỗi s1 bằng chuỗi s2 trong chuỗi s
