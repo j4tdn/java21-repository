@@ -8,8 +8,15 @@ import java.util.Date;
 import java.util.Objects;
 
 public class DateUtils {
-
-	public DateUtils() {
+	
+	private DateUtils() {
+	}
+	
+	public static String optional(long value, String unit) {
+		if (value == 0) {
+			return "";
+		}
+		return value + " " + unit + (value > 1 ? "s" : "") + " ";
 	}
 	
 	public static Date toDate(Calendar c) {
@@ -18,8 +25,9 @@ public class DateUtils {
 	}
 	
 	public static Date toDate(String text, String pattern, boolean isLenient) {
-		Objects.requireNonNull(text, "c should not be null");
-		Objects.requireNonNull(pattern, "patern is invalid");
+		Objects.requireNonNull(text, "text should not be null");
+		Objects.requireNonNull(pattern, "pattern is invalid");
+		
 		DateFormat df = new SimpleDateFormat(pattern);
 		df.setLenient(isLenient);
 		Date date = null;
@@ -33,28 +41,19 @@ public class DateUtils {
 	
 	public static String format(Calendar c, String pattern) {
 		Objects.requireNonNull(c, "c should not be null");
-		Objects.requireNonNull(pattern, "patern is invalid");
+		Objects.requireNonNull(pattern, "pattern is invalid");
+		
 		DateFormat df = new SimpleDateFormat(pattern);
 		return df.format(toDate(c));
 	}
 	
 	public static String format(Date date, String pattern) {
-		Objects.requireNonNull(date, "c should not be null");
-		Objects.requireNonNull(pattern, "patern is invalid");
+		Objects.requireNonNull(date, "date should not be null");
+		Objects.requireNonNull(pattern, "pattern is invalid");
+		
 		DateFormat df = new SimpleDateFormat(pattern);
 		return df.format(date);
 	}
 	
-	public static String optional(long value, String unit) {
-		if (value == 0)
-			return "";
-		return value + " " + unit + (value > 1 ? "s" : "") + " ";
-	}
 	
-	public static Calendar toCalendar(Date date) {
-		Objects.requireNonNull(date, "date should not be null");
-		Calendar c = Calendar.getInstance();
-		c.setTime(date);
-		return c;
-	}
 }
