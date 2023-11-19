@@ -1,10 +1,22 @@
 package view.thread;
 
+import java.text.Normalizer;
 import java.util.concurrent.TimeUnit;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Ex01ThreadDemo {
 	
 	public static void main(String[] args) {
+		
+		String hello = "hsauchsic92w2w";
+		boolean x = hello.matches("[abc]");
+		
+		
+		Pattern p = Pattern.compile("[abc]");
+        Matcher m = p.matcher("hsauchsic92w2w");
+        boolean y = m.matches();
+		
 		System.out.println("-- Start Main ---");
 		printCurrentThread(7);
 		
@@ -24,6 +36,13 @@ public class Ex01ThreadDemo {
 		doTask(5);
 		printCurrentThread(25);
 		System.out.println("-- End Main ---");
+	}
+	
+	public static String toNotAccentedWay1(String yourStr) { 
+		String chgString = Normalizer.normalize(yourStr, Normalizer.Form.NFD);
+		Pattern pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");
+		chgString = pattern.matcher(chgString).replaceAll("").replaceAll("đ", "d").replaceAll("Đ", "D"); 
+		return chgString;
 	}
 	
 	private static void doTask(int seconds) {

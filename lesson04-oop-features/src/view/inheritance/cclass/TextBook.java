@@ -11,7 +11,6 @@ public class TextBook extends Book {
 	}
 
 	public TextBook(String id, String name, BigDecimal salesPrice, String publisher, BookStatus bookStatus, Integer discount) {
-		super(id, name, salesPrice, publisher);
 		this.bookStatus = bookStatus;
 		this.discount = discount;
 	}
