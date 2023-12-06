@@ -3,10 +3,24 @@ package utils;
 import java.util.Arrays;
 
 import bean.Item;
+import common.SortType;
 
 public class ArrayUtils {
 
 	private ArrayUtils() {
+	}
+	
+	public static void sort(int[] elements, SortType sortType) {
+		Arrays.sort(elements);
+		if (sortType == SortType.DESC) {
+			reverse(elements);
+		}
+	}
+	
+	public static void reverse(int[] elements) {
+		for (int i = 0; i < elements.length / 2; i++) {
+			swap(elements, i, elements.length - i - 1);
+		}
 	}
 	
 	public static void generate(String prefix, int...elements) {
