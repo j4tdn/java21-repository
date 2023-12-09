@@ -6,7 +6,7 @@ public class Ex02StringCompare {
 		String s1 = "hello"; //H1
 		String s2 = "keen"; //H2
 		String s3 = "hello"; //H1
-		String s4 = new String("Hello"); //H3
+		String s4 = new String("hello"); //H3
 		System.out.println("s1 compareTo s2 --> " + s1.compareTo(s2));
 		
 		// So sánh bằng --> equals, từ class object
@@ -21,7 +21,7 @@ public class Ex02StringCompare {
 		
 		System.out.println("s1 compareTo s3 --> " + s1.equals(s3));   //  true
 		
-		System.out.println("s1 compareTo s3 --> " + s1.equals(s4));   //  true
+		System.out.println("s1 compareTo s4 --> " + s1.equals(s4));   //  true
 		
 	}
 }
