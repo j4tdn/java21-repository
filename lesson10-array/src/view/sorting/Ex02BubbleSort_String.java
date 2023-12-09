@@ -31,6 +31,7 @@ public class Ex02BubbleSort_String {
 			return s1.compareTo(s2);
 		});
 		generate("2. Elements(sort ascending - first null)", elements);
+		
 		sort(elements, (s1, s2) -> {
 			// process null elements (e.g null last)
 			if (s2 == null)
@@ -44,19 +45,20 @@ public class Ex02BubbleSort_String {
 		
 		sort(elements, (s1, s2) -> {
 			// process null elements (e.g null first)
-			if (s2 == null)
-				return 0;
 			if (s1 == null)
+				return 0;
+			if (s2 == null)
 				return 1;
 			// process non-null elements
 			return s2.compareTo(s1);
 		});
 		generate("3. Elements(sort descending - first null)", elements);
+		
 		sort(elements, (s1, s2) -> {
 			// process null elements (e.g null last)
-			if (s1 == null)
-				return 0;
 			if (s2 == null)
+				return 0;
+			if (s1 == null)
 				return 1;
 			// process non-null elements
 			return s2.compareTo(s1);

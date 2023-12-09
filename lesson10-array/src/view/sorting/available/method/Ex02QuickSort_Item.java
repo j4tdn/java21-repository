@@ -1,6 +1,7 @@
 package view.sorting.available.method;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 import bean.Item;
 import model.DataModel;
@@ -38,7 +39,26 @@ public class Ex02QuickSort_Item {
 		//		Vì sort phụ thuộc vào override compareTo trong class truyền vào 
 		
 		/*
+		 Comparator<?> 	-> Compare_Item
 		 Cách 2: Arrays.sort(T[] a, Comparator<? super T> c)
+		 
+		 T nếu có implements Comparator<?> vẫn ưu tiên Comparator
 		 */
+		
+		Arrays.sort(items, new Comparator<Item>() {
+			@Override
+			public int compare(Item i1, Item i2) {
+				return i1.getPrice().compareTo(i2.getPrice());
+			}
+		});
+		generate("2. Sort items by price(asc)", items);
+		
+		Arrays.sort(items, (i1, i2) -> {
+			if (i1.getStoreId().compareTo(i2.getStoreId()) != 0)
+				return i1.getStoreId().compareTo(i2.getStoreId());
+			return i2.getCreateAt().compareTo(i1.getCreateAt());
+		});
+		generate("3. Sort items by storeId(asc), createdAt[desc]", items);
+		
 	}
 }

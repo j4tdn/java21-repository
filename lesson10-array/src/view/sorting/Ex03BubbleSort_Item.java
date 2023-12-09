@@ -25,13 +25,13 @@ public class Ex03BubbleSort_Item {
 		// Sort items by name - descending
 		sort(items, (i1, i2) -> {
 			// null first
-			if (i2 == null)
-				return 0;
 			if (i1 == null)
-				return 1;
-			if (i2.getName() == null)
 				return 0;
+			if (i2 == null)
+				return 1;
 			if (i1.getName() == null)
+				return 0;
+			if (i2.getName() == null)
 				return 1;
 			return i2.getName().compareTo(i1.getName());
 		});
@@ -55,9 +55,9 @@ public class Ex03BubbleSort_Item {
 			if (store1.compareTo(store2) != 0)
 				return store1.compareTo(store2);
 			
-			if (i2.getPrice() == null)
-				return 0;
 			if (i1.getPrice() == null)
+				return 0;
+			if (i2.getPrice() == null)
 				return 1;
 			// compare by price - desc
 			return i2.getPrice().compareTo(i1.getPrice());
