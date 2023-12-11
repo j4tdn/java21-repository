@@ -2,6 +2,7 @@ package view;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
+import static java.util.Comparator.*;
 
 import bean.Item;
 
@@ -16,7 +17,9 @@ public class Ex03FindItems {
 	
 	private static Item[] findItemsWithHighestSalesPriceOfEachStore(Item[] items) {
 		Item[] result = new Item[items.length];
-		sort(items);
+		Arrays.sort(items, 
+						comparing(Item::getStoreId).
+						thenComparing(Item::getSalesPrice));
 		
 		int count = 0;
 		for (int i = 0; i < items.length; i++) {
@@ -28,6 +31,22 @@ public class Ex03FindItems {
 		return Arrays.copyOfRange(result, 0, count);
 	}
 	
+	private static Item[] process() {
+		return new Item[] {
+			new Item(1, "A", bd(25), 101),
+			new Item(-2, "B", bd(90), 102),
+			new Item(3, "C", bd(88), 102),
+			new Item(-4, "D", bd(40), 101),
+			new Item(5, "E", bd(60), 102),
+			new Item(6, "F", bd(18), 101),
+		};
+	}
+	
+	private static BigDecimal bd(double value) {
+		return new BigDecimal(String.valueOf(value));
+	}
+
+	/*
 	private static void sort(Item[] items) {
 		for (int i = 0; i < items.length; i++)
 			for (int j = 0; j < items.length - i - 1; j++) {
@@ -49,19 +68,5 @@ public class Ex03FindItems {
 		items[a] = items[b];
 		items[b] = temp;
 	}
-	
-	private static Item[] process() {
-		return new Item[] {
-			new Item(1, "A", bd(25), 101),
-			new Item(-2, "B", bd(90), 102),
-			new Item(3, "C", bd(88), 102),
-			new Item(-4, "D", bd(40), 101),
-			new Item(5, "E", bd(60), 102),
-			new Item(6, "F", bd(18), 101),
-		};
-	}
-	
-	private static BigDecimal bd(double value) {
-		return new BigDecimal(String.valueOf(value));
-	}
+	*/
 }
