@@ -1,5 +1,5 @@
 package view;
-import static untils.ArrayUtils.generate;
+import static utils.ArrayUtils.generate;
 
 import functional.Operator;
 public class Ex04ArrayManipultions {

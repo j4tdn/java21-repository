@@ -1,6 +1,7 @@
-package view.sorting.ad;
-import static untils.ArrayUtils.*;
+package view.sorting.available;
 import static java.util.Comparator.*;
+import static utils.ArrayUtils.*;
+
 import java.util.Arrays;
 import java.util.function.Function;
 public class Ex04QuickSort_String {

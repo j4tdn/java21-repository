@@ -1,5 +1,6 @@
 package view.sorting;
-import static untils.ArrayUtils.*;
+import static utils.ArrayUtils.*;
+
 import java.util.Arrays;
 
 public class Ex02BubbleSort_String {

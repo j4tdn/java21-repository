@@ -1,5 +1,5 @@
 package view;
-import static untils.ArrayUtils.*;
+import static utils.ArrayUtils.*;
 
 import java.util.Arrays;
 
