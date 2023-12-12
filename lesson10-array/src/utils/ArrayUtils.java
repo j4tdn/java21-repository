@@ -10,10 +10,16 @@ public class ArrayUtils {
 	private ArrayUtils() {
 	}
 	
-	public static void sort(int[] elements, SortType SortType) {
+	public static void sort(int[] elements, SortType sortType) {
 		Arrays.sort(elements);
-		if () {
-			
+		if (sortType == SortType.DESC) {
+			reverse(elements);
+		}
+	}
+	
+	public static void reverse(int[] elements) {
+		for (int i = 0; i < elements.length / 2; i++) {
+			swap(elements, i, elements.length - i - 1);
 		}
 	}
 	
