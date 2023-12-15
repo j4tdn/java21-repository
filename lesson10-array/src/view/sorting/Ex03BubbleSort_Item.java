@@ -1,27 +1,27 @@
 package view.sorting;
 
+import static utils.ArrayUtils.generate;
+import static utils.ArrayUtils.swap;
+
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
 import bean.Item;
 import functional.Compare_Item;
+import model.DataModel;
 
-import static utils.ArrayUtils.*;
-
-public class Ex03BubbleSortItem {
+public class Ex03BubbleSort_Item {
 	
 	public static void main(String[] args) {
-		Item[] items = {
-			new Item(11, "Item 11", bd("22"), 1, dt("16/11/2023 15:12:22")),
-			new Item(14, "ZItem 14", bd("77"), 1, dt("18/12/2023 16:12:22")),
-			new Item(22, "AItem 22", bd("66"), 2, dt("22/08/2023 17:12:22")),
-			new Item(21, "KItem 21", bd("18"), 2, dt("05/05/2023 18:12:22")),
-			new Item(12, "Item 12", bd("99"), 1, dt("24/12/2023 12:12:22")),
-			new Item(55, "Item 55", bd("55"), 5, dt("17/11/2023 11:12:22")),
-		};
+		Item[] items = DataModel.mockItems_NullValues();
 		
 		sort(items, (i1, i2) -> {
+			// null first
+			if (i1 == null) {
+				return -1;
+			}
+			if (i2 == null) {
+				return 1;
+			}
 			Integer id1 = i1.getId();
 			Integer id2 = i2.getId();
 			if (id1 > id2) {
@@ -33,8 +33,28 @@ public class Ex03BubbleSortItem {
 		generate("1. Items(sort by id[asc])", items);
 		
 		sort(items, (i1, i2) -> {
+			// null first
+			if (i1 == null) {
+				return -1;
+			}
+			if (i2 == null) {
+				return 1;
+			}
+			
+			// non-null items
+			
 			String name1 = i1.getName();
 			String name2 = i2.getName();
+			
+			// null-last for name
+			if (name1 == null) {
+				return -1;
+			}
+			if (name2 == null) {
+				return 1;
+			}
+			
+			// name[desc]
 			if (name1.compareTo(name2) < 0) {
 				return 1; // hoán vị
 			}
@@ -44,6 +64,14 @@ public class Ex03BubbleSortItem {
 		
 		
 		sort(items, (i1, i2) -> {
+			// null first
+			if (i1 == null) {
+				return -1;
+			}
+			if (i2 == null) {
+				return 1;
+			}
+			
 			Integer store1 = i1.getStoreId();
 			Integer store2 = i2.getStoreId();
 			
@@ -74,13 +102,5 @@ public class Ex03BubbleSortItem {
 		}
 	}
 	
-	private static LocalDateTime dt(String value) {
-		return LocalDateTime.parse(value, 
-				DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"));
-	}
-	
- 	private static BigDecimal bd(String value) {
-		return new BigDecimal(value);
-	}
 	
 }

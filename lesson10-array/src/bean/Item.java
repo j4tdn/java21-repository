@@ -3,7 +3,7 @@ package bean;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-public class Item {
+public class Item implements Comparable<Item>{
 	
 	private Integer id;
 	private String name;
@@ -66,6 +66,14 @@ public class Item {
 	public String toString() {
 		return "Item [id=" + id + ", name=" + name + ", price=" + price + ", storeId=" + storeId + ", createdAt="
 				+ createdAt + "]\n";
+	}
+
+	@Override
+	public int compareTo(Item o) {
+		// khi gọi hàm Arrays.sort(Item[] items)
+		// lúc compile --> gọi hàm compareTo từ Comparable
+		// lúc runtime --> gọi hàm compareTo từ Item
+		return this.getId().compareTo(o.getId());
 	}
 	
 	
