@@ -26,7 +26,5 @@ public class Ex04_QuickSort_String {
 		});
 		generate("3. Sort null first", sequencesnull);
 		
-		Arrays.sort(sequencesnull,
-				nuLLsast(comparing(Function.identity(), reverseOrder())));
-	}
-}
+	}}
+
