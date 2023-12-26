@@ -1,18 +1,16 @@
 package view.list;
 
+import static utils.CollectionUtils.generate;
+
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
-import java.util.function.Consumer;
 
 import bean.Item;
 import functional.ItemCond;
 import model.DataModel;
-
-import static utils.CollectionUtils.*;
 
 public class Ex03AList_ObjectType {
 	
