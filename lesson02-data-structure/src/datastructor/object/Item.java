@@ -18,6 +18,7 @@ public class Item {
 	
 	// constructor
 	// constructor name = class name
+	// no return type
 	public Item(){
 		
 	}

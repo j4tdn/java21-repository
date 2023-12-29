@@ -1,5 +1,4 @@
 package generic.class_interface;
-
 import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.function.Consumer;
@@ -26,11 +25,12 @@ public class K21CustomerList<E> implements K21List<E> {
 
 	@Override
 	public boolean add(E e) {
-		// TODO Auto-generated method st
 		if (size == elements.length) {
 			elements = grow();
 		}
-		return false;
+		elements[size] = e;
+		size++;
+		return true;
 	}
 
 	@Override
@@ -53,13 +53,13 @@ public class K21CustomerList<E> implements K21List<E> {
 
 	@Override
 	public E get(int index) {
-		
+		checkIndex(index);
+		return elements[index];
 	}
 
 	@Override
 	public E getOrDefault(int index, E defaultValue) {
-		checkIndex(index);
-		E value = elements[index];
+		E value = get(index);
 		return value != null ? value : defaultValue;
 		
 	}
@@ -72,22 +72,22 @@ public class K21CustomerList<E> implements K21List<E> {
 
 	@Override
 	public int size() {
-		// TODO Auto-generated method stub
-		return 0;
+		return size;
 	}
 
 	@Override
 	public int capacity() {
-		// TODO Auto-generated method stub
-		return 0;
+		return elements.length;
 	}
 
 	@Override
 	public void forEach(Consumer<E> consumer) {
-		// TODO Auto-generated method stub
-
+		for(int i = 0; i < size; i++) {
+			consumer.accept(elements[i]);
+		}
 	}
 
+	@SuppressWarnings("unchecked")
 	private E[] createGenericArray(int length) {
 		return (E[])Array.newInstance(Object.class, length);
 	}
@@ -100,7 +100,7 @@ public class K21CustomerList<E> implements K21List<E> {
 	
 	private void checkIndex(int index) {
 		if (index < 0 || index >= size) {
-			throw new ArrayIndexOutOfBoundsException(index);
+			throw new ArrayIndexOutOfBoundsException("index is out of range = " + size);
 		}
 	}
 	

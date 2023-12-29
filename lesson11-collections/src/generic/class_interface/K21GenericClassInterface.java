@@ -11,7 +11,16 @@ public class K21GenericClassInterface {
 		sequences.add("e");
 		
 		System.out.println("size--> " + sequences.size());
-		System.out.println();
+		System.out.println("capacity--> " + sequences.capacity());
+		
+		sequences.add("f");
+		
+		System.out.println("size new--> " + sequences.size());
+		System.out.println("capacity new--> " + sequences.capacity());
+		
+		sequences.forEach(seq -> {
+			System.out.println(seq);
+		});
 		
 	}
 }
