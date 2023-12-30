@@ -2,6 +2,7 @@ package bean;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 public class Item {
 
@@ -10,7 +11,7 @@ public class Item {
 	private BigDecimal price;
 	private Integer storeId;
 	private LocalDateTime createdAt;
-	
+
 	public Item() {
 	}
 
@@ -61,7 +62,12 @@ public class Item {
 	public void setCreatedAt(LocalDateTime createdAt) {
 		this.createdAt = createdAt;
 	}
-	
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(getId());
+	}
+
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) {
@@ -70,7 +76,7 @@ public class Item {
 		if (!(o instanceof Item)) {
 			return false;
 		}
-		Item that = (Item)o;
+		Item that = (Item) o;
 		return getId().equals(that.getId());
 	}
 
@@ -79,5 +85,5 @@ public class Item {
 		return "Item [id=" + id + ", name=" + name + ", price=" + price + ", storeId=" + storeId + ", createdAt="
 				+ createdAt + "]";
 	}
-	
+
 }

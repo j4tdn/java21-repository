@@ -40,7 +40,7 @@ public class Ex02MapSortingDemo {
 		vehicles.put(null, "B Việt Nam");
 		vehicles.put(74, "F Quảng Trị");
 		vehicles.put(73, "C Quảng Bình");
-		vehicles.put(73, "C Quảng Bình");
+		vehicles.put(73, "Z Quảng Bình");
 		vehicles.put(11, "Cao Bằng");
 		
 		
