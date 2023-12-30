@@ -38,6 +38,8 @@ public class Ex01TransactionApp {
 		transValueGreater300.sort(Comparator.comparing(t -> t.getTrader().getCity()));
 		generate("--> Sort by trader’s city", transValueGreater300);
 
+		System.out.println("\n================================================\n");
+		
 		// 3. What are all the unique cities where the traders work?
 
 		System.out.println("\n4. Find all traders from Cambridge and sort them by name desc\n");
@@ -47,6 +49,8 @@ public class Ex01TransactionApp {
 		tradersFromCambridge.sort(Comparator.comparing(t -> t.getTrader().getName(), reverseOrder()));
 		
 		generate("--> Sort by name desc", tradersFromCambridge);
+		
+		System.out.println("\n================================================\n");
 		
 		// 5. Return a string of all traders’ names sorted alphabetically.
 
