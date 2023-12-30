@@ -61,11 +61,24 @@ public class Item {
 	public void setCreatedAt(LocalDateTime createdAt) {
 		this.createdAt = createdAt;
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		
+		if(! (obj instanceof Item)) {
+			return false;
+		}
+		Item that = (Item) obj;
+		return this.getStoreId().equals(that.getStoreId());
+	}
 
 	@Override
 	public String toString() {
 		return "Item [id=" + id + ", name=" + name + ", price=" + price + ", storeId=" + storeId + ", createdAt="
-				+ createdAt + "]\n";
+				+ createdAt + "]";
 	}
 
 }

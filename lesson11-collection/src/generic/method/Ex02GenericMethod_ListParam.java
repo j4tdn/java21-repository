@@ -51,7 +51,7 @@ public class Ex02GenericMethod_ListParam {
 	// CharSequence
 	public static <T extends Number> void generate(String prefix, List<T> lists) {
 		System.out.println(prefix + " --> ");
-		for (Object item: lists) {
+		for (T item: lists) {
 			System.out.println("+ " + item);
 		}
 		System.out.println();
