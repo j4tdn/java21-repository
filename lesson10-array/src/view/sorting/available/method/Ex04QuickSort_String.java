@@ -10,7 +10,6 @@ public class Ex04QuickSort_String {
 	public static void main(String[] args) {
 		String[] sequences = {"A1", "Z7", "K8", "E9", "B2"};
 		
-		
 		Arrays.sort(sequences);
 		generate("1. Sort sequences asc", sequences);
 

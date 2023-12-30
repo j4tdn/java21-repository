@@ -53,7 +53,6 @@ public class Ex02QuickSort_Item {
 		// T nếu nó có implements Comparable<?> vẫn ưu tiên Comparator
 		
 		Arrays.sort(items, new Comparator<Item>() {
-
 			@Override
 			public int compare(Item i1, Item i2) {
 				return i1.getPrice().compareTo(i2.getPrice());
@@ -70,7 +69,7 @@ public class Ex02QuickSort_Item {
 				return -1;
 			}
 			
-			
+			// phải chuyển về int để compareTo vì nếu dùng integer thì có null ko compare được
 			int storeIdCompare = i1.getStoreId().compareTo(i2.getStoreId());
 			if(storeIdCompare!= 0) {
 				return storeIdCompare;

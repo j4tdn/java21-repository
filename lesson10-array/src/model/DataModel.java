@@ -7,13 +7,13 @@ import java.time.format.DateTimeFormatter;
 import beam.Item;
 
 public class DataModel {
-
-	
 	
 	private DataModel() {
+		
 	}
+	
 	public static Item[]mockItem(){	
-	return new Item[]  {
+		return new Item[]  {
 				
 				new Item(11, "Item 11", bd("22"), 1, dt("16/11/2023 15:12:22")),
 				new Item(14, "Item 14", bd("77"), 1, dt("18/12/2023 16:12:22")),
@@ -43,6 +43,6 @@ public class DataModel {
 	}
 	
 	private static LocalDateTime dt(String value) {
-		return LocalDateTime.parse(	value, DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"));
+		return LocalDateTime.parse(value, DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"));
 	}
 }

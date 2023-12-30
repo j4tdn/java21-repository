@@ -1,0 +1,36 @@
+package generic.wildcard;
+
+import java.util.List;
+
+public class Ex02WildCardBasicDemo {
+
+	public static void main(String[] args) {
+		List<Integer> ints = List.of(1,2,3,4,5);
+		List<Long> longs = List.of(11L,22L,33L,44L,55L);
+		List<Double> doubles = List.of(1.1d,2.2d,3.3d,4.4d,5.5d);
+		List<String> strings = List.of("a","b","c","d","e");
+		List<Object> objects = List.of("a", 1, 2d, 7L);
+		
+		generate("1. Ints", ints);
+		//generate("2. Longs", longs);
+		//generate("3. Doubles", doubles);
+		//generate("4. Strings", strings);
+		generate("5. Objects", objects);
+	}
+	
+	// Cho phép truyền vào 1 list of elements(KDL bất kỳ, đối tượng)
+	// List<?> = List<T>
+	// generic Type : T --> extends
+	// generic wildcar: ? --> extends, super
+	// extends X --> X hoặc là con của X
+	// super X --> X hoặc là cha của X
+	public static void generate(String prefix, List<? super Integer> collection) {
+		System.out.println(prefix + " --> ");
+		for (Object item: collection) {
+			System.out.println("+ " + item);
+		}
+		System.out.println();
+	}
+	
+}
+

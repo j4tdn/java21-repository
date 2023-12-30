@@ -23,6 +23,8 @@ public class Ex02ArrayCrud {
 		generate("2. Numbers after removed", removed);
 	}
 	
+	
+	
 	private static int[] add(int[] origin, int posToBeAdded, int newValue) {
 		if(posToBeAdded < 0 || posToBeAdded >= origin.length) {
 			System.out.println("ERROR >> Index Out Of Bound Exception");
@@ -59,5 +61,6 @@ public class Ex02ArrayCrud {
 
 		return Arrays.copyOfRange(target, 0, target.length-1);
 	}
-	
 }
+	
+	

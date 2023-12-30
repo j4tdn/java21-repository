@@ -27,7 +27,6 @@ public class Ex03BubbleSort_Item {
 		
 		// Sort items by id - ascending
 		sort(items, (i1,i2) -> {
-			
 			if(i1 == null) {
 				return -1;
 			}
