@@ -9,6 +9,7 @@ import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.TreeSet;
 import java.util.function.Predicate;
 
 import bean.Trader;
@@ -61,13 +62,20 @@ public class Ex01TransactionApp {
 		
 		System.out.println("================================================");
 		
-		// 5. Return a string of all traders’ names sorted alphabetically.
+		System.out.println("\n5. Return a string of all traders’ names sorted alphabetically\n");
+		Set<String> uniqueNames = new TreeSet<>();
+		for (Transaction transaction : transactions) {
+			uniqueNames.add(transaction.getTrader().getName());
+		}
+		generate("--> A string of all traders’ names sorted alphabetically", uniqueNames);
+		
+		System.out.println("================================================");
 
 		// 6. Are any traders based in Milan?
 
-		// 7. Count the number of traders in Milan.
+		System.out.println("\n7. Count the number of traders in Milan\n");
 		List<Transaction> tradersInMilan = findAllTransaction(transactions, t -> t.getTrader().getCity().equals("Milan"));
-		System.out.println("The number of traders in Milan: " + tradersInMilan.size());
+		System.out.println("The number of traders in Milan: " + tradersInMilan.size() + "\n");
 
 		System.out.println("================================================");
 		
