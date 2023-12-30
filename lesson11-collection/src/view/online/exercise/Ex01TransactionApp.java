@@ -6,7 +6,9 @@ import static utils.CollectionUtils.generate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.function.Predicate;
 
 import bean.Trader;
@@ -29,7 +31,7 @@ public class Ex01TransactionApp {
 		
 		generate("--> Sort by value (small to high)", transIn2011);
 		
-		System.out.println("\n================================================\n");
+		System.out.println("================================================");
 
 		System.out.println("\n2. Find all transactions have value greater than 300 and sort them by trader’s city\n");
 		List<Transaction> transValueGreater300 = findAllTransaction(transactions, t -> t.getValue() > 300);
@@ -38,9 +40,16 @@ public class Ex01TransactionApp {
 		transValueGreater300.sort(Comparator.comparing(t -> t.getTrader().getCity()));
 		generate("--> Sort by trader’s city", transValueGreater300);
 
-		System.out.println("\n================================================\n");
+		System.out.println("================================================");
 		
-		// 3. What are all the unique cities where the traders work?
+		System.out.println("\n3. What are all the unique cities where the traders work?\n");
+		Set<String> uniqueCities = new HashSet<>();
+		for (Transaction transaction : transactions) {
+			uniqueCities.add(transaction.getTrader().getCity());
+		}
+		generate("--> All the unique cities where the traders work", uniqueCities);
+		
+		System.out.println("================================================");
 
 		System.out.println("\n4. Find all traders from Cambridge and sort them by name desc\n");
 		List<Transaction> tradersFromCambridge = findAllTransaction(transactions, t -> t.getTrader().getCity().equals("Cambridge"));
@@ -50,19 +59,24 @@ public class Ex01TransactionApp {
 		
 		generate("--> Sort by name desc", tradersFromCambridge);
 		
-		System.out.println("\n================================================\n");
+		System.out.println("================================================");
 		
 		// 5. Return a string of all traders’ names sorted alphabetically.
 
 		// 6. Are any traders based in Milan?
 
 		// 7. Count the number of traders in Milan.
+		List<Transaction> tradersInMilan = findAllTransaction(transactions, t -> t.getTrader().getCity().equals("Milan"));
+		System.out.println("The number of traders in Milan: " + tradersInMilan.size());
 
+		System.out.println("================================================");
+		
 		// 8. Print all transactions’ values from the traders living in Cambridge.
 
 		// 9. What’s the highest value of all the transactions?
 
 		// 10. Find the transaction with the smallest value.
+		
 
 		System.out.println("--- ___ * END * ___ ---");
 	}
