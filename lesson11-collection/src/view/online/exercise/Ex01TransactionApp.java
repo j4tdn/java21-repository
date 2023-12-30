@@ -71,20 +71,50 @@ public class Ex01TransactionApp {
 		
 		System.out.println("================================================");
 
-		// 6. Are any traders based in Milan?
+		System.out.println("\n6. Are any traders based in Milan?\n");
+		List<Transaction> tradersInMilan = findAllTransaction(transactions, t -> t.getTrader().getCity().equals("Milan"));
+		if(tradersInMilan.size() > 0) {
+			System.out.println("Yes, any traders based in Milan\n");
+		} else {
+			System.out.println("No, any traders didn't base in Milan\n");
+		}
+		
+		System.out.println("================================================");
 
 		System.out.println("\n7. Count the number of traders in Milan\n");
-		List<Transaction> tradersInMilan = findAllTransaction(transactions, t -> t.getTrader().getCity().equals("Milan"));
 		System.out.println("The number of traders in Milan: " + tradersInMilan.size() + "\n");
 
 		System.out.println("================================================");
 		
-		// 8. Print all transactions’ values from the traders living in Cambridge.
-
-		// 9. What’s the highest value of all the transactions?
-
-		// 10. Find the transaction with the smallest value.
+		System.out.println("\n8. Print all transactions’ values from the traders living in Cambridge\n");
+		for (Transaction t : tradersFromCambridge) {
+			System.out.println("The values of trader " + t.getTrader().getName() + ": " + t.getValue());
+		}
+		System.out.println();
 		
+		System.out.println("================================================");
+
+		System.out.println("\n9. What’s the highest value of all the transactions?\n");
+		int highestValue = Integer.MIN_VALUE;
+		for (Transaction t : transactions) {
+			highestValue = Math.max(highestValue, t.getValue());
+		}
+		System.out.println("The highest value of all the transactions: " + highestValue);
+		System.out.println();
+		
+		System.out.println("================================================");
+
+		System.out.println("\n10. Find the transaction with the smallest value.\n");
+		int smallestValue = Integer.MAX_VALUE;
+		for (Transaction t : transactions) {
+			smallestValue = Math.min(smallestValue, t.getValue());
+		}
+		for (Transaction t : transactions) {
+			if (t.getValue() == smallestValue) {
+				System.out.println(t);
+			}
+		}
+		System.out.println();
 
 		System.out.println("--- ___ * END * ___ ---");
 	}
