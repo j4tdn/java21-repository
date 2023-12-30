@@ -1,5 +1,6 @@
 package view.online.exercise;
 
+import static java.util.Comparator.reverseOrder;
 import static utils.CollectionUtils.generate;
 
 import java.util.ArrayList;
@@ -43,7 +44,9 @@ public class Ex01TransactionApp {
 		List<Transaction> tradersFromCambridge = findAllTransaction(transactions, t -> t.getTrader().getCity().equals("Cambridge"));
 		generate("--> All traders from Cambridge", tradersFromCambridge);
 		
-		tradersFromCambridge.sort(Comparator.comparing(t -> t.getTrader().getName()));
+		tradersFromCambridge.sort(Comparator.comparing(t -> t.getTrader().getName(), reverseOrder()));
+		
+		generate("--> Sort by name desc", tradersFromCambridge);
 		
 		// 5. Return a string of all traders’ names sorted alphabetically.
 
