@@ -69,13 +69,13 @@ public class Item {
 				+ createdAt + "]\n";
 	}
 
-	@Override
-	public int compareTo(Item o) {
+	//@Override
+	//public int compareTo(Item o) {
 		// Khi gọi hàm Arrays.sort(Item[] items)
 		// Lúc compile ---> gọi hàm compareTo từ Comparable
 		// Lúc runtime ---> gọi hàm compareTo từ Item
-		Item i1 = this;  // this là phần tử bên trái, hay phần tử trước
-		Item i2 = o;     // o là phần tử bên phải, hay phânf tử đứng sau
-		return i1.getPrice().compareTo(i2.getPrice());
-	}
+		//Item i1 = this;  // this là phần tử bên trái, hay phần tử trước
+		//Item i2 = o;     // o là phần tử bên phải, hay phânf tử đứng sau
+		//return i1.getPrice().compareTo(i2.getPrice());
+	//}
 }
