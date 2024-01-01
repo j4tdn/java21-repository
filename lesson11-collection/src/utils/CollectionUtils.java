@@ -32,19 +32,12 @@ public class CollectionUtils {
 		System.out.println("}\n");
 	}
 	
-	public static void generateStrings(String prefix, List<String> elements) {
+	public static <E> void generate(String prefix, List<E> elements) {
 		System.out.println(prefix + " {");
 		elements.forEach(seq -> {
-			System.out.print("    " + seq);
+			System.out.println("    " + seq);
 		});
 		System.out.println("\n}");
 	}
 	
-	public static void generateInts(String prefix, List<Integer> elements) {
-		System.out.println(prefix + " {");
-		elements.forEach(seq -> {
-			System.out.print("    " + seq);
-		});
-		System.out.println("\n}");
-	}
 }

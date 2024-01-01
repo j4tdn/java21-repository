@@ -3,7 +3,7 @@ package view.list;
 import java.util.ArrayList;
 import java.util.List;
 
-import static utils.CollectionUtils.generateInts;
+import static utils.CollectionUtils.generate;
 
 public class Ex05AList_AddRemoveRetainAll {
 
@@ -13,14 +13,14 @@ public class Ex05AList_AddRemoveRetainAll {
 		
 		var list1 = new ArrayList<>(listA);
 		list1.addAll(listB);
-		generateInts("list1 add all", list1); // phép hợp
+		generate("list1 add all", list1); // phép hợp
 		
 		var list2 = new ArrayList<>(listA);
 		list2.removeAll(listB);
-		generateInts("list2 remove all", list2); // phép hiệu
+		generate("list2 remove all", list2); // phép hiệu
 		
 		var list3 = new ArrayList<>(listA);
 		list3.retainAll(listB);
-		generateInts("list3 retain all", list3); // phép giao
+		generate("list3 retain all", list3); // phép giao
 	}
 }

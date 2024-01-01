@@ -1,6 +1,6 @@
 package view.list;
 
-import static utils.CollectionUtils.generateStrings;
+import static utils.CollectionUtils.generate;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -71,7 +71,7 @@ public class Ex03AList_ObjectType {
 			or: sequences.forEach(System.out::println);
 		 */
 
-		generateStrings("sequences", sequences);
+		generate("sequences", sequences);
 		
 		// ==============================================================
 		
