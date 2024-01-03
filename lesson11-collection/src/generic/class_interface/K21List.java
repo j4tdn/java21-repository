@@ -4,7 +4,7 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 public interface K21List<E> {
-
+	
 	boolean add(E e);
 	
 	boolean add(int index, E e);
@@ -25,6 +25,5 @@ public interface K21List<E> {
 	
 	int capacity();
 	
-	void forEach(Consumer<E> consumer);
-	
+	void forEach(Consumer<E> consumer, Predicate<E> predicate);
 }

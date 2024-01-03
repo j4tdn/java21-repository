@@ -1,5 +1,7 @@
 package generic.class_interface;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
@@ -11,16 +13,25 @@ public class K21CustomList<E> implements K21List<E> {
 	private E[] elements;
 	
 	public K21CustomList() {
-		
+		elements = createGenericArray(DEFAULT_CAPACITY);
 	}
 	
 	public K21CustomList(int initialCapacity) {
-		
+		int capacity = DEFAULT_CAPACITY;
+		if (initialCapacity > capacity) {
+			capacity = initialCapacity;
+		}
+		elements = createGenericArray(capacity);
 	}
-
+	
 	@Override
 	public boolean add(E e) {
-		return false;
+		if (size == elements.length) {
+			elements = grow();
+		}
+		elements[size] = e;
+		size++;
+		return true;
 	}
 
 	@Override
@@ -45,30 +56,57 @@ public class K21CustomList<E> implements K21List<E> {
 
 	@Override
 	public E get(int index) {
-		return null;
+		checkIndex(index);
+		return elements[index];
 	}
 
 	@Override
 	public E getOrDefault(int index, E defaultValue) {
-		return null;
+		E value = get(index);
+		return value != null ? value : defaultValue;
 	}
 
 	@Override
-	public void set(int index) {
-		
+	public void set(int index, E value) {
+		checkIndex(index);
+		elements[index] = value;
 	}
 
 	@Override
 	public int size() {
-		return 0;
+		return size;
 	}
 
+	@Override
 	public int capacity() {
-		return 0;
+		return elements.length;
 	}
 
-	public void forEach(Consumer<E> consumer) {
-		
+	@Override
+	public void forEach(Consumer<E> consumer, Predicate<E> predicate) {
+		for (int i = 0; i < size; i++) {
+			E e = elements[i];
+			if (predicate.test(e)) {
+				consumer.accept(e);
+			}
+		}
+	}
+	
+	@SuppressWarnings("unchecked")
+	private E[] createGenericArray(int length) {
+		return (E[])Array.newInstance(Object.class, length);
+	}
+	
+	private E[] grow() {
+		int capacity = elements.length;
+		int newCapacity = capacity * 3 / 2;
+		return Arrays.copyOf(elements, newCapacity);
+	}
+	
+	private void checkIndex(int index) {
+		if (index < 0 || index >= size) {
+			throw new ArrayIndexOutOfBoundsException("Index is out of range, size = " + size);
+		}
 	}
 
 }
