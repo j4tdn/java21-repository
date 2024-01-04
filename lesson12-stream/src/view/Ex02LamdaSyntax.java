@@ -1,0 +1,30 @@
+package view;
+
+import java.util.concurrent.Callable;
+import java.util.function.Function;
+import java.util.function.Supplier;
+import java.util.function.UnaryOperator;
+
+public class Ex02LamdaSyntax {
+	public static void main(String[] args) {
+		
+		// Khi code cho 1 lamda(đúng)
+		// --> suy ra được "hàm trừu tượng" của KDL trả về functional interface
+		
+		Runnable runnable = () -> {};  // --> void method()
+		
+		Supplier<String> supplier = () -> "Raul"; // () -> T
+		Callable<String> callale = () -> "Raul"; //type inference
+		
+		Function<Integer, String> function = (Integer i)-> "Alan" + i; // R method(T t)
+		
+		System.out.println("apply 15 --> " + function.apply(15));
+		
+		UnaryOperator<String> uo = (String s) ->  "Iron Man"; //T method(T t)
+		System.out.println("uo --> " + uo.apply("abc"));
+		
+		// 
+		
+		
+	}
+}
