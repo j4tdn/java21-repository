@@ -12,38 +12,16 @@ public class Ex01OppositeTriangles {
 	}
 	
 	private static void print(int n) {
-		for (int i = 1; i < n; i++) {
-			int count = 1;
-			for (int k = 0; k < i; k++) {
-				System.out.print(count + " ");
-				count++;
-			}
-			for (int k = 1; k < 2*n-2*i; k++) {
-				System.out.print("  ");
-				count++;
-			}
-			for (int k = 0; k < i; k++) {
-				System.out.print(count + " ");
-				count++;
-			}
-			System.out.println();
-		}
-		for (int i = 1; i <= 2*n-1; i++)
-			System.out.print(i + " ");
-		System.out.println();
-		for (int i = n+1; i <= 2*n-1; i++) {
-			int count = 1;
-			for (int k = i; k <= 2*n-1; k++) {
-				System.out.print(count + " ");
-				count++;
-			}
-			for (int k = 2*n+1; k <= 2*i-1; k++) {
-				System.out.print("  ");
-				count++;
-			}
-			for (int k = i; k <= 2*n-1; k++) {
-				System.out.print(count + " ");
-				count++;
+		// duyệt từng dòng
+		for (int i = 1; i <= 2*n-1; i++) {
+			// duyệt từng cột
+			for (int k = 1; k <= 2*n-1; k++) {
+				// để in dòng [n+1,2n-1] đối xứng được với [n-1,1] -> count
+				int count = i <= n ? i : 2*n-i;
+				if (k <= count || k >= 2*n - count)
+					System.out.print(k + " ");
+				else
+					System.out.print("  ");
 			}
 			System.out.println();
 		}
