@@ -31,7 +31,7 @@ public class Ex01Calculator {
 		// 'functional interface' is interface has ONE abstract method
 		// 'anonymous function' is function without name to override abstract method of functional interface 
 		
-		// 'anonymous function' --> lambda expression
+		// 'anonymous function' --> lambda expression is a short way of writing
 		
 //		Strategy mulStrategy = new Strategy() {
 //			
