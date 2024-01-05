@@ -44,4 +44,5 @@ public class Ex02AList_SingleType {
 			System.out.print(sequences.get(i) + delimeter);
 		}
 	}
+	
 }

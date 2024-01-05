@@ -26,7 +26,6 @@ public class Ex01TransactionApp {
 		}
 
 		generate("1. Transaction in 2021", transactionsIn2011);
-		
 			
 		// 2. Find all transactions have value greater than 300 and sort them by trader’s city
 		List<Transaction> highValueTransactions = new ArrayList<>();
@@ -35,8 +34,8 @@ public class Ex01TransactionApp {
                 highValueTransactions.add(transaction);
             }
         }
+        
         generate("2. High value transactions sorted by trader's city", highValueTransactions);
-		
 		
 		// 3. What are all the unique cities where the traders work?
         Set<String> uniqueCities = new HashSet<>();

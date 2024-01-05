@@ -26,9 +26,10 @@ public class Ex03MapIdeaOfOverLappingKeys {
 		Map<Store, List<Item>> storeItemsMap = new LinkedHashMap<>();
 
 		// ---------------------------------------------------------------
-		storeItemsMap.put(new Store(1, "Store 1"), List.of(new Item(11, "Item 11", bd(11), 1, LocalDateTime.now()),
-				new Item(11, "Item 11", bd(11), 1, LocalDateTime.now())));
-
+		storeItemsMap.put(new Store(1, "Store 1"), 
+				List.of(new Item(11, "Item 11", bd(11), 1, LocalDateTime.now()),
+						new Item(12, "Item 12", bd(11), 1, LocalDateTime.now())));
+		
 		storeItemsMap.put(new Store(2, "Store 2"),
 				List.of(new Item(21, "Item 21", bd(11), 2, LocalDateTime.now()),
 						new Item(22, "Item 22", bd(11), 2, LocalDateTime.now()),
@@ -45,6 +46,7 @@ public class Ex03MapIdeaOfOverLappingKeys {
 		// ---------------------------------------------------------------
 
 		// Khi put 1 entry mới vào map --> map.put(k, v)
+		
 		// kiểm tra
 		// 1. hashcode của key có trùng với hashcode của keys nào bên trong map chưa
 		// 2. kiểm tra key này có equals với keys nào trong map chưa
@@ -83,7 +85,7 @@ public class Ex03MapIdeaOfOverLappingKeys {
 			System.out.println(storeId + " --> " + itemIds);
 		});
 	}
-
+	
 	private static BigDecimal bd(Number number) {
 		if (number == null) {
 			return null;

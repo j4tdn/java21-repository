@@ -1,11 +1,5 @@
 package view.map;
-
-import static java.util.Comparator.comparing;
-import static java.util.Comparator.nullsFirst;
-import static java.util.Comparator.reverseOrder;
-
-import java.util.Comparator;
-import java.util.LinkedHashMap;
+import static java.util.Comparator.*;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -23,15 +17,15 @@ public class Ex01MapBasicDemo {
 		 
 		 Map: put(K,V)
 		 --> ngoài việc lưu trữ giá trị của K,V vào memory, còn hashing giá trị của K theo hàm
-		 hashcode(công thức, trả về 1 dãy số) và lưu hashing value này vào memory
+		 hashcode(công thức, trả về 1 dãy số) và lưu hashing giá trị này vào memory
 		 --> khi tìm kiếm 1 phần tử theo K, hashing key ra hashing value --> tìm theo hashing 
 		 value --> hỗ trợ tìm kiếm luôn luôn là 0(1) khi search theo K
 		 
-		 HashMap: ko đảm bảo thứ tự đúng như lúc put vào
+		 HashMap	  : ko đảm bảo thứ tự đúng như lúc put vào
 		 LinkedHashMap: đảm bảo duy trì đúng thứ tự các phần tử đưa vào
-		 TreeMap: hỗ trự tự động sort theo K, yêu cầu K extends Comparable<?>
-		 		: nếu K không phải là extends Comparable<?> thì nó báo lỗi lúc runtime, casting...
-		 		: có thê sử dụng comparator để sort
+		 TreeMap	  : hỗ trự tự động sort theo K, yêu cầu K extends Comparable<?>
+		 		      : nếu K không phải là extends Comparable<?> thì nó báo lỗi lúc runtime, casting...
+		 		      : có thê sử dụng comparator để sort
 		 		
 		 		--> ko hỗ trợ sort by value
 		 		
@@ -75,6 +69,7 @@ public class Ex01MapBasicDemo {
 			}
 		});  */
 		
+		// khai báo sort trước, put sau
 		Map<Integer, String> vehicles = new TreeMap<>(nullsFirst(comparing(k -> k, reverseOrder())));
 		
 		vehicles.put(92, "Quang Nam");
@@ -102,8 +97,8 @@ public class Ex01MapBasicDemo {
 	private static void printf(String prefix, Map<Integer, String>  map) {
 		System.out.println(prefix + " {");
 		
-		
 		Set<Entry<Integer, String>> entries = map.entrySet();
+		
 		for(Entry<Integer, String> entry: entries) {
 			System.out.println("   " + entry.getKey() + "--> " + entry.getValue());
 		}

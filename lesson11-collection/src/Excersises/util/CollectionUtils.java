@@ -1,4 +1,4 @@
-package utils;
+package Excersises.util;
 
 import java.util.Collection;
 import java.util.List;

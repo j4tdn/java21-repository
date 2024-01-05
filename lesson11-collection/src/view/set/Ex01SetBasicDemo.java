@@ -1,11 +1,9 @@
 package view.set;
 
-import java.util.HashSet;
-import java.util.LinkedHashSet;
+import static utils.CollectionUtils.generate;
+
 import java.util.Set;
 import java.util.TreeSet;
-
-import static utils.CollectionUtils.*;
 public class Ex01SetBasicDemo {
 
 	public static void main(String[] args) {
@@ -13,7 +11,7 @@ public class Ex01SetBasicDemo {
 		// HashSet --> ko đảm bảo đúng thứ tự các phần tử đưa vào
 		// LinkedHashSet --> đảm bảo đúng thứ tự các phần tử đưa vào
 		// TreeSet --> tự động sắp xếp các phần tử
-		// 		   --> yêu cầu: T phải là con cảu Comparable<T>
+		// 		   --> yêu cầu: T phải là con của Comparable<T>
 		Set<Integer> numbers = new TreeSet<>();
 		
 		numbers.add(35);

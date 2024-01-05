@@ -1,9 +1,6 @@
 package generic.method;
 
-import java.util.Collection;
 import java.util.List;
-
-import bean.Item;
 
 public class Ex02GenericMethod_ListParam {
 
@@ -45,7 +42,6 @@ public class Ex02GenericMethod_ListParam {
 		System.out.println();
 	}
 	
-	
 	// <T> cho phéo truyền bất kỳ KDL đối tượng nào vào
 	// <T extend Number>: T cho phéo truyền bất kỳ KDL đối tượng nào vào
 	//					: giới hạn trên
@@ -56,5 +52,5 @@ public class Ex02GenericMethod_ListParam {
 		}
 		System.out.println();
 	}
-
+	
 }

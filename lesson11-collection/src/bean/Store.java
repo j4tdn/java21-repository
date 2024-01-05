@@ -37,11 +37,14 @@ public class Store {
 		return "Store [id=" + id + ", name=" + name + "]";
 	}
 	
+	// map -> put(K, V)
 	@Override
 	public int hashCode() {
 		return Objects.hash(getId());
 	}
 	
+	// list --> remove(o), contains(o)
+	// map --> put(K, V)
 	@Override
 	public boolean equals(Object o) {
 		if(this == o) {
