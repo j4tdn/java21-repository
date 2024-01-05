@@ -109,4 +109,10 @@ public class K21CustomList<E> implements K21List<E> {
 		}
 	}
 
+	@Override
+	public void forEach(Consumer<E> consumer) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
