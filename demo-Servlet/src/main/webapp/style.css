@@ -1,0 +1,130 @@
+.flex{
+    display: flex;
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
+.search{
+    margin-top: 65px;
+}
+.search-content{
+    width: 100%;
+}
+.head-right{
+    margin-top: 48px;
+}
+.menu{
+    background-color: #20bfbc;
+}
+.img1 img{
+    width: 100%;
+    margin-top: -20px;
+}
+.title1{
+    color: #2cbee5;
+}
+.img2 img{
+    width: 100%;
+    margin-left: -15px;
+    padding-top: 8px;
+}
+.content2 h2{
+    color: #3fa73f;
+}
+.content2 p{
+    font-size: 17px;
+}
+.justify2{
+    text-align: justify;
+}
+.book h4{
+    color: orange;
+    text-align: center;
+    margin-top: 58px;
+}
+.book p{
+    background-color: #62ceff;
+    height: 15%;
+    text-align: center;
+    width: 61%;
+    margin-left: 20%;
+    padding-top: 10px;
+    color: white;
+    
+}
+
+.height240{
+    height: 240px;
+}
+.banner img{
+    width: 100%;
+    margin-left: -15px;
+    padding-bottom: 10px;
+}
+.info{
+    margin-top: 15px;
+}
+.tour1{
+    text-align: center;
+}
+.cl-gr{
+    color: green;
+}
+.send{
+    width: 10%;
+    background-color: orange;
+}
+.footer{
+    background-color: #27ccc8;
+    color: white;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.center-text{
+    text-align: center;
+}
+.padding12{
+    padding-left: 12%;
+    padding-top: 20px;
+}
+.full{
+    margin-left: -15px;
+    margin-right: -15px;
+}
+@media screen and (max-width: 480px){
+    .block1{
+        display: block;
+    }
+    .center1{
+        display: flex;
+        justify-content: center;
+    }
+    .list{
+        text-align: center;
+    }
+    .mgl0 img{
+        margin-left: -1px;
+    }
+    .end1{
+        display: flex;
+        justify-content: end;
+    }
+    .book p{
+        padding-bottom: 10px;
+    }
+    .send{
+        width: 20%;
+        margin-bottom: 15px;
+    }
+    .padding12{
+        padding-left: 15px;
+    }
+    .search1{
+        margin-top: -60px;
+    }
+    .head-right{
+        margin-top: -28px;
+    }
+}
+    

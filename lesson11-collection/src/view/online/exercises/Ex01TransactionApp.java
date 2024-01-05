@@ -78,9 +78,8 @@ public class Ex01TransactionApp {
 		// 9. What’s the highest value of all the transactions?
 		System.out.println("the highest value of all the transactions --> " + highestValueOfTransaction(transactions));
 		// 10. Find the transaction with the smallest value.
-		List<Transaction> transaction10 = new ArrayList<>();
-		transaction10 = smallestTransaction(transactions);
-		generate("10. the transaction with the smallest value ", transaction10);
+		
+		System.out.println("10. Find the transaction with the smallest value --> " + smallestTransaction(transactions));
 	}
 	public static List<Transaction> getTransactions() {
 		Trader raoul = new Trader("Raoul", "Cambridge");
@@ -185,14 +184,16 @@ public class Ex01TransactionApp {
 		return max;
 	}
 	
-	public static List<Transaction> smallestTransaction(List<Transaction> transactions) {
-		if (transactions.isEmpty()) {
-	        return Collections.emptyList(); // Trả về danh sách rỗng nếu không có giao dịch nào
-	    }
+//	public static List<Transaction> smallestTransaction(List<Transaction> transactions) {
+//		transactions.sort(comparing(Transaction::getValue));
+//		List<Transaction> minTransaction = new ArrayList<>();
+//		minTransaction.add(transactions.get(0));
+//		return minTransaction;
+//	}
+	
+	public static Transaction smallestTransaction(List<Transaction> transactions) {
 		transactions.sort(comparing(Transaction::getValue));
-		List<Transaction> minTransaction = new ArrayList<>();
-		minTransaction.add(transactions.get(0));
-		return minTransaction;
+		return transactions.get(0);
 	}
 	
 }
