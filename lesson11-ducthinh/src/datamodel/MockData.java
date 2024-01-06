@@ -1,5 +1,6 @@
 package datamodel;
 
+import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
 import bean.CD;
@@ -9,8 +10,8 @@ public class MockData {
 	public MockData() {
 		
 	}
-	private static Set<CD> mockCDs() {
-		var listCD = new LinkedHashSet<CD>();
+	public static Set<CD> mockCDs() {
+		var listCD = new HashSet<CD>();
 		listCD.add(new CD(112, "Loại 1", "Ca sĩ A", 2, bd(15.6d)));
 		listCD.add(new CD(21, "Loại 1", "Ca sĩ B", 4, bd(25.3d)));
 		listCD.add(new CD(30, "Loại 2", "Ca sĩ C", 1, bd(5.6d)));
