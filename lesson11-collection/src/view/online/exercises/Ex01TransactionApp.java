@@ -99,14 +99,5 @@ public class Ex01TransactionApp {
 
 		return result;
 	}
-	public static List<Transaction> findAllTransaction(List<Transaction> transactions, Predicate<Transaction> p) {
-		List<Transaction> trans = new ArrayList<>();
-		for (Transaction t : transactions) {
-			if (p.test(t)) {
-				trans.add(t);
-			}
-		}
-		return trans;
-	}
 	
 }
