@@ -3,6 +3,7 @@ package view.online.exercises;
 import static utils.CollectionUtils.generate;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
@@ -22,8 +23,9 @@ public class Ex01TransactionApp {
 		
 		var trans2021  = filter(inventory, t -> t.getYear() == 2011);
 		generate("Find all transactions in the year 2011", trans2021);
-
 		
+		trans2021.sort(Comparator.comparing(t -> t.getTrader().getCity()));
+		trans2021.sort(Comparator.comparing(t -> t.getValue()));
 		trans2021.sort(Comparator.comparingInt(t -> t.getValue()));
 		
 		generate("Sort them by value (small to high)", trans2021);
@@ -34,9 +36,9 @@ public class Ex01TransactionApp {
 		var transGreaterThan300 = filter(inventory, t -> t.getValue() > 300);
 		generate("Transactions have value greater than 300", transGreaterThan300);
 		
-		transGreaterThan300.sort(Comparator.comparing(t -> t.getValue()));
-		generate("Sort them by trader’s city", transGreaterThan300);
+		transGreaterThan300.sort(Comparator.comparing(t -> t.getTrader().getCity()));
 		
+		generate("sort them by trader’s city", transGreaterThan300);
 		//3. What are all the unique cities where the traders work?
 		System.out.println("\n3.What are all the unique cities where the traders work? \n");
 		Set<String> uniqueCities = new HashSet<>();
@@ -72,8 +74,22 @@ public class Ex01TransactionApp {
 		
 		//9. What’s the highest value of all the transactions?
 		
-		//10. Find the transaction with the smallest value.
-	}
+			int max = Integer.MIN_VALUE;
+			for (Transaction t : inventory) {
+				max = Math.max(max, t.getValue());
+			}
+			System.out.println("9. the highest value of all the transactions " +max);
+			
+			//10. Find the transaction with the smallest value.
+			
+			int min = Integer.MAX_VALUE;
+			for (Transaction t :inventory) {
+				min = Math.min(min, t.getValue());
+			}
+			System.out.println("10. transaction with the smallest value " +min);
+			
+		}
+		
 
 	public static List<Transaction> getTransactions() {
 		Trader raoul = new Trader("Raoul", "Cambridge");
