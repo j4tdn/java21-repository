@@ -59,9 +59,7 @@ public class Ex01StrategyPattern_Review {
 		generate("4. Red and Heavy Apples", redAndHeavyApples);
 		
 		// filter all apples from viet nam
-		var vnApples = filter(inventory, apple -> 
-			"vietnam".equalsIgnoreCase(apple.getCountry())
-		);
+		var vnApples = filter(inventory, Ex01StrategyPattern_Review::isVietNam);
 		generate("5. Viet Nam Apples", vnApples);
 		
 		
@@ -95,6 +93,20 @@ public class Ex01StrategyPattern_Review {
 		
 		// Thường dùng khi các đoạn code có dạng strategy pattern
 	}
+	
+	
+	/*
+	 
+	 var vnApples = filter(inventory, apple -> 
+			"vietnam".equalsIgnoreCase(apple.getCountry())
+		);
+	 
+	 */
+	
+	private static boolean isVietNam(Apple apple) {
+		return "vietnam".equalsIgnoreCase(apple.getCountry());
+	}
+	
 	
 	// công thức chung của các điều kiện: boolean method(Apple apple)
 	// thường: tạo ra 1 functional interface chứa hàm trừu tượng trên

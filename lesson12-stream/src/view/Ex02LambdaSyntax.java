@@ -38,7 +38,7 @@ public class Ex02LambdaSyntax {
 		System.out.println("uo --> " + uo.apply("abc"));
 		
 		
-		// Predicate<T>     --> T      -> boolean
+		// Predicate<T>     --> T      -> boolean  --> signature, descriptor
 		// Consumer<T>      --> T      -> void
 		// Comparator<T>    --> (T, T) -> int
 		// Comparable<T>    --> T      -> int
@@ -49,6 +49,10 @@ public class Ex02LambdaSyntax {
 		// Runnable         --> ()     -> void
 		
 		
+	}
+	
+	public static int min(int a, int b) {
+		return a < b ? a : b;
 	}
 	
 }
