@@ -23,7 +23,7 @@ public class Ex02LambdaSyntax {
 		System.out.println("uo-- 22" + ua.apply("abc"));
 		
 		
-		// Predicate<T>     --> T     -> boolean
+		// Predicate<T>     --> T     -> boolean  --> signature , descriptor
 		// Consumer<T>      --> T     -> void
 		// Comparator<T>    --> (T,T) -> int
 		// Function<T,R>    --> T     -> R
