@@ -69,14 +69,14 @@ public class Item {
 
 	@Override
 	public boolean equals(Object o) {
-		if (this == o) {
+		if(this == o) {
 			return true;
 		}
-		if (!(o instanceof Item)) {
+		if(!(o instanceof Item)) {
 			return false;
 		}
-		Item that = (Item) o;
-		return getId().equals(that.getId());
+		Item items = (Item)o;
+		return getId().equals(items.getId());
 	}
 
 	@Override

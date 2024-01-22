@@ -43,7 +43,7 @@ public class Ex03QuickSort_Item_SimpleCases {
 		
 		items = DataModel.mockItems_NullValues();
 		
-		Arrays.sort(items, nullsLast(comparing(Item::getStoreId).thenComparing(Item::getCreatedAt)));
+		Arrays.sort(items, nullsLast(comparing(Item::getStoreId).thenComparing(Item::getCreatedAt, reverseOrder())));
 		generate("2.Sort Item by StoreID[asc], creatAt[desc]", items);
 	}
 }

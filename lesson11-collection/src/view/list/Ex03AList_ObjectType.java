@@ -13,6 +13,7 @@ import function.ItemCond;
 import model.DataModel;
 
 public class Ex03AList_ObjectType {
+	
 	public static void main(String[] args) {
 		/*
 		 Demo methods CRUD with customer object type
@@ -70,7 +71,7 @@ public class Ex03AList_ObjectType {
 		// Xóa những mặt hàng có storeId = 1
 		// removeItemsByStoreId(items);
 		// removeItems(items, item -> item.getStoreId() == 1);
-		items.removeIf(item -> item.getStoreId() == 1);
+		items.removeIf(Item-> Item.getStoreId() == 1);
 		generate("2. Items after removed(storeId = 1)", items);
 		
 		// Xóa những mặt hàng có price > 30
@@ -107,7 +108,7 @@ public class Ex03AList_ObjectType {
 		Iterator<Item> iterator = items.iterator();
 		while(iterator.hasNext()) {
 			Item item = iterator.next();
-			if (item.getStoreId() == 1) {
+			if(item.getStoreId() == 1) {
 				iterator.remove();
 			}
 		}
@@ -132,4 +133,5 @@ public class Ex03AList_ObjectType {
 		return LocalDateTime.parse(value, 
 				DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"));
 	}
+	
 }

@@ -57,7 +57,7 @@ public class Transaction {
 	}
 	
 	@Override
-	public int hashCode() {
+	public int hashCode() {	
 		return Objects.hash(getTrader(), getYear(), getValue());
 	}
 

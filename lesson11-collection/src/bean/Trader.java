@@ -30,7 +30,6 @@ public class Trader {
 	public void setCity(String city) {
 		this.city = city;
 	}
-
 	@Override
 	public int hashCode() {
 		return Objects.hash(getName());
@@ -38,13 +37,13 @@ public class Trader {
 
 	@Override
 	public boolean equals(Object o) {
-		if (this == o) {
+		if(this == o) {
 			return true;
 		}
-		if (!(o instanceof Trader)) {
+		if(!(o instanceof Trader)) {
 			return false;
 		}
-		Trader that = (Trader) o;
+		Trader that =(Trader)o;
 		return getName().equals(that.getName());
 	}
 
