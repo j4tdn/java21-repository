@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
+import java.util.Map.Entry;
 import java.util.function.Predicate;
 
 import bean.Apple;
@@ -15,11 +15,11 @@ public class CollectionUtils {
 	private CollectionUtils() {	
 	}
 	
-	private static <T> List<T> filter(List<T> elements, Predicate<T> predicate){
+	public static <T> List<T> filter(List<T> elements, Predicate<T> predicate) {
 		var result = new ArrayList<T>();
 		
-		for(var element : elements) {
-			if(predicate.test(element)) {
+		for (var element: elements) {
+			if (predicate.test(element)) {
 				result.add(element);
 			}
 		}
