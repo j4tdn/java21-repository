@@ -17,7 +17,7 @@ public class Ex01StrategyPattern_Review {
 
 		// filter all green apples in inventory
 
-		// Cách 1:
+		// Cách 1: Implementation class
 		var greenApples = filterApples(inventory, new GreenApplePredicate());
 		generate("1. Green Apple(use implementation class)", greenApples);
 
@@ -31,7 +31,20 @@ public class Ex01StrategyPattern_Review {
 		});
 		generate("2. Green Apple(use anonymous class)", greenApples);
 
-		// Cách 3: Anonymous Function = Lambda expression
+		/*
+		 Cách 3: Anonymous function = Lambda expression
+		 Là đoạn code override hàm trừu tượng bên trong functional interface nhưng mà ko có tên hàm.
+		 Cấu trúc: 
+		 (danh sách tham số của hàm trừu tượng) -> {
+			    body, override hàm trừu tượng	
+		 }
+		 
+		 Lưu ý:
+		 + tham số của lambda --> ko yêu cầu phải điền KDL
+		 + nếu chỉ có 1 tham số --> có thể bỏ luôn (...)
+		 + nếu body chỉ có 1 dòng --> bỏ luôn {}, bỏ luôn ;
+		   . nếu return type !void --> bỏ luôn chữ return
+		*/
 		greenApples = filterApples(inventory, apple -> "green".equals(apple.getColor()));
 		generate("3. Green Apple(use anonymous function)", greenApples);
 
@@ -42,11 +55,48 @@ public class Ex01StrategyPattern_Review {
 		generate("4. Red and Heavy Apple(use anonymous function)", redAndHeavyApples);
 
 		// filter all apples from Vietnam
-
 		var vnApple = filter(inventory, apple -> "vietnam".equalsIgnoreCase(apple.getCountry()));
 		generate("5. Apple from Vietnam(use anonymous function)", vnApple);
-	}
-
+	    // vnApple.forEach(apple -> System.out.println(apple)); forEach
+		
+		/* Lambda là gì ?
+		
+		 Lambda(anonymous function) là cách viết ngắn gọn để tạo ra giá trị/đối tượng
+		 cho biến KDl functional interface
+		
+		 Dùng lambda chỗ nào ?
+		
+		 Chỗ nào cần khởi tạo function interface -> dùng lambda cho code ngắn gọn thay vì
+		 phải dùng anonymous class | implementation class
+		
+		 Vì sao lambda chỉ khởi tạo dc cho function interface thôi, interface bình thường dc ko ?
+		
+		 không, vì lambda(hàm ko tên) override hàm trừu tượng trong interface ko có tên
+		 nếu interface có nhiều 1 hàm trừu tượng, nếu các hàm trừu tượng đó có cùng số lượng tham số, KDL
+		 lúc override sẽ ko biết đang override cho hàm nào
+		
+		 Predicate<T>
+		 boolean test(T t);
+		 boolean isTrue(T t);
+		
+		 Predicate<Apple> pre = (apple) -> true;
+		
+		 Functional interface là gì ?
+		
+		 Là interface chỉ có 1 abstract method
+		
+		 Dùng function interface chỗ nào ?
+		
+		 Thường dùng khi các đoạn code có dạng strategy pattern
+		 
+		*/
+	}									
+	
+	// công thức chung của các điều kiện: boolean method(Apple apple)
+	// thường: tạo ra 1 functional interface chứa hàm trừu tượng trên
+	
+	// Java có sẵn: Predicate<T>
+	
 	private static List<Apple> filterApples(List<Apple> inventory, Predicate<Apple> predicate) {
 		var result = new ArrayList<Apple>();
 		for (var apple : inventory) {
@@ -54,8 +104,6 @@ public class Ex01StrategyPattern_Review {
 				result.add(apple);
 			}
 		}
-
 		return result;
 	}
-
 }
