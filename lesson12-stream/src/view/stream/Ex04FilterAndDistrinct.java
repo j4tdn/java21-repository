@@ -1,8 +1,13 @@
 package view.stream;
 
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.function.Function;
 import java.util.stream.Collectors;
+
+import bean.Apple;
+import model.DataModel;
 
 import static utils.StreamUtils.generate;
 
@@ -67,5 +72,26 @@ public class Ex04FilterAndDistrinct {
 				.map(e -> e.getKey())
 				.collect(Collectors.joining(", "));
 		System.out.println("4. Unique elements --> " + uniqueElements);
+		
+		System.out.println("\n============ distinct by key/property ============\n");
+
+		// Liệt kê danh sách các Apple (k được trùng origin/color)
+		var menu = DataModel.mockApples();
+		
+		// Cách 1: Dùng set để distinct danh sách theo thuộc tính
+		//         nếu có n phần tử trùng nhau -> luôn chọn phần tử đầu tiên
+		var nonOverlapOrigin = new HashSet<String>();
+		
+		var applesDisOrigin = menu.stream()
+				.filter(a -> nonOverlapOrigin.add(a.getOrigin()))
+				.toList();
+		generate("5. Apples non duplicate origin", applesDisOrigin);
+		
+		// Cách 2: Dùng map để distinct, chọn đc phần tử đầu/cuối khi thuộc tính trùng nhau
+		var applesDisColor = menu.stream()
+				.collect(Collectors.toMap(Apple::getColor, Function.identity(), (a1, a2) -> a1))
+				.values();
+		// a -> a = Function.identity()
+		generate("6. Apples non duplicate color", applesDisColor);
 	}
 }

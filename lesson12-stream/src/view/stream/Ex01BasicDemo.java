@@ -38,8 +38,8 @@ public class Ex01BasicDemo {
 		var veggieDishes = menu.stream()	// Stream<Dish>
 				.filter(d -> Category.VEGGIE.equals(d.getCategory())) // Stream<Dish>
 				.map(Dish::getName)         // Stream<String>
-				.toArray();                 // String[]
-				// can using .toArray(String[]::new) if Stream<undefined>
+				.toArray(String[]::new);    // String[]
+				// if using .toArray(no parameter) --> Object[]
 		generate("3. Get name of veggie dishes", veggieDishes);
 		
 		var weekdays = DataModel.mockWeekdays();

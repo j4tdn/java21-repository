@@ -46,8 +46,8 @@ public class Ex01LambdaTests {
 		// Runnable         : ()     -> void
 		// Callable<T>      : () throws Exception -> T
 		
-		// BiPredicate<T>   : (L, R) -> boolean
-		// BiConsumer<T>    : (T, U) -> void
-		// BiFunction<T, R> : (T, U) -> R
+		// BiPredicate<L, R>   : (L, R) -> boolean
+		// BiConsumer<T, U>    : (T, U) -> void
+		// BiFunction<T, U, R> : (T, U) -> R
 	}
 }

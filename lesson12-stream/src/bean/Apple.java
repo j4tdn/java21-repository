@@ -1,6 +1,7 @@
 package bean;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class Apple {
 	
@@ -49,6 +50,21 @@ public class Apple {
 
 	public void setExpiredDate(LocalDate expiredDate) {
 		this.expiredDate = expiredDate;
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o)
+			return true;
+		if (!(o instanceof Apple))
+			return false;
+		Apple that = (Apple)o;
+		return getId().equals(that.getId());
+	}
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(getId());
 	}
 	
 	public static boolean testExpDate(Apple apple) {
