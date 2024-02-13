@@ -36,4 +36,5 @@ public class Ex02Filter {
 		}
 		return result;
 	}
+	
 }

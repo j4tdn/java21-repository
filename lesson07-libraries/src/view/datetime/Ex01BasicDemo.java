@@ -23,7 +23,7 @@ public class Ex01BasicDemo {
 		Date date = new Date();
 		System.out.println("date: " + date); // Sat Oct 21 19:43:45 ICT 2023(os time)
 		
-		Date configureDate = new Date(1000000000);
+		Date configureDate = new Date(1000000);
 		System.out.println("configureDate: " + configureDate);
 		
 		System.out.println("\n======\n");

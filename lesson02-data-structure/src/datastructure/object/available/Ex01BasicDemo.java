@@ -1,7 +1,5 @@
 package datastructure.object.available;
 
-import datastructure.object.custom.Item;
-
 public class Ex01BasicDemo {
 
 	public static void main(String[] args) {

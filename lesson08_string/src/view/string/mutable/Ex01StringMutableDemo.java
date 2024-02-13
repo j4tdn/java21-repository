@@ -17,9 +17,9 @@ public class Ex01StringMutableDemo {
 	
 	System.out.println("sb append --> " + sb1);
 
-	sb1.deleteCharAt(0)
-		.setCharAt(0, 'a');
-	
+//	sb1.deleteCharAt(0)
+//		.setCharAt(0, 'a');
+//	
 	System.out.println("sb deleted --> " + sb1);
 
 	System.out.println("sb hash 01: " + System.identityHashCode(sb1));

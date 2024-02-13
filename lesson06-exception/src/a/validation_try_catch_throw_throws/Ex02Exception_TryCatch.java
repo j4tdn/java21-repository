@@ -10,7 +10,7 @@ public class Ex02Exception_TryCatch {
 	// Enter year of birth --> calculate age of candidate 
 		public static void main(String[] args) {
 			
-		
+		// lỗi ggioonhs nhau ok đe em xme thu
 		Scanner ip = new Scanner(System.in);
 		
 		int yob = 0;

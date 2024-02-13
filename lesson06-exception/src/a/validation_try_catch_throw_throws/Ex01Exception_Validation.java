@@ -6,10 +6,9 @@ import java.util.Scanner;
 public class Ex01Exception_Validation {
  
 	// Enter year of birth --> calculate age of candidate 
-	
+	// chạy đi a :)) rị ra dùm em đi
 	public static void main(String[] args) {
 		Scanner ip = new Scanner(System.in);
-		
 		
 		// validation
 		String yobAsText =  "";

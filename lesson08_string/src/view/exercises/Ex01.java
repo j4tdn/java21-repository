@@ -21,7 +21,7 @@ public class Ex01 {
 		
 		
 		// Cắt 2 đầu và thay thế khoảng trắng(s) bằng " "
-		s = s.strip().replaceAll("\\s+", " ");
+		s = s.strip().replaceAll("\\s+", " "); 
 		
 		for(int i = 0; i < s.length(); i++) {
 			char c = s.charAt(i);
