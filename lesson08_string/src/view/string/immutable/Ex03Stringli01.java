@@ -50,10 +50,5 @@ public class Ex03Stringli01 {
 		System.out.println("vị trí đầu tiên của 'c' --> " + s.indexOf("c"));
 		System.out.println("vị trí kết thúc của 'c' --> " + s.lastIndexOf("c"));
 		
-		
-		
-		
-		
-		
 	}
 }

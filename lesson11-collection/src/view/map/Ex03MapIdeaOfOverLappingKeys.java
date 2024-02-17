@@ -79,7 +79,7 @@ public class Ex03MapIdeaOfOverLappingKeys {
 		storeItemsMap.forEach((store, items) -> {
 			var storeId = store.getId();
 			var itemIds = new ArrayList<Integer>();
-			for (var item : items) {
+			for(var item: items) {
 				itemIds.add(item.getId());
 			}
 			System.out.println(storeId + " --> " + itemIds);

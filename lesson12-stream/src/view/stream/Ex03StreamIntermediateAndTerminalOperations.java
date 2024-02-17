@@ -17,7 +17,7 @@ public class Ex03StreamIntermediateAndTerminalOperations {
 		
 		List<Dish> menu = DataModel.mockDishes();
 		
-		System.out.println("menu size: " +menu.size());
+		System.out.println("menu size: " + menu.size());
 		
 		// B1. Duyệt(12) từ phần tử trong menu, lấy những dish có calo > 300 --> 5 phần tử
 		// B2. Lấy name của 5 dish được chọn từ B1

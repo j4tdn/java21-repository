@@ -23,7 +23,7 @@ public class Ex05StringExercises {
 			if(song.endsWith(".mp3")) {
 				int lastSlashIndex = song.lastIndexOf("/");
 				int lastDotIndex = song.lastIndexOf(".");
-				String name = song.substring(lastSlashIndex+1, lastDotIndex);
+				String name = song.substring(lastSlashIndex + 1, lastDotIndex);
 				result[count++] = name;
 			}
 		}
