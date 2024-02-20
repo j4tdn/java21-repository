@@ -20,7 +20,7 @@ public class Ex02StringCompare {
 		Ex02StringCompare o1 = new Ex02StringCompare();
 		Ex02StringCompare o2 = new Ex02StringCompare();
 		
-		System.out.println("\no1 equals o2 -->" + o1.equals(o2)); // true
+		System.out.println("\no1 equals o2 -->" + o1.equals(o2)); // false
 
 		System.out.println("\ns1 equals s3 -->" + s1.equals(s3)); // true
 		
