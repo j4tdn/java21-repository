@@ -5,87 +5,84 @@ import java.util.Objects;
 
 public class Store {
 
-	private Item item;
-	private Integer storeId;
-	private String storeDesc;
-	private BigDecimal storePotential;
-	private Integer whId;
+    private Long storeId;
+    private Long referenceStoreId;
+    private BigDecimal stockPreviousDay;
+    private BigDecimal expectedSales;
+    private Boolean isSelected;
 
-	public Store() {
-	}
+    public Store() {
 
-	public Store(Item item, Integer storeId, String storeDesc, BigDecimal storePotential, Integer whId) {
-		this.item = item;
-		this.storeId = storeId;
-		this.storeDesc = storeDesc;
-		this.storePotential = storePotential;
-		this.whId = whId;
-	}
+    }
 
-	public Item getItem() {
-		return item;
-	}
+    public Store(final Long storeId, final Long referenceStoreId, final BigDecimal stockPreviousDay, final BigDecimal expectedSales, final Boolean isSelected) {
+        this.storeId = storeId;
+        this.referenceStoreId = referenceStoreId;
+        this.stockPreviousDay = stockPreviousDay;
+        this.expectedSales = expectedSales;
+        this.isSelected = isSelected;
+    }
 
-	public void setItem(Item item) {
-		this.item = item;
-	}
+    public Long getStoreId() {
+        return storeId;
+    }
 
-	public Integer getStoreId() {
-		return storeId;
-	}
+    public void setStoreId(final Long storeId) {
+        this.storeId = storeId;
+    }
 
-	public void setStoreId(Integer storeId) {
-		this.storeId = storeId;
-	}
+    public Long getReferenceStoreId() {
+        return referenceStoreId;
+    }
 
-	public String getStoreDesc() {
-		return storeDesc;
-	}
+    public void setReferenceStoreId(final Long referenceStoreId) {
+        this.referenceStoreId = referenceStoreId;
+    }
 
-	public void setStoreDesc(String storeDesc) {
-		this.storeDesc = storeDesc;
-	}
+    public BigDecimal getStockPreviousDay() {
+        return stockPreviousDay;
+    }
 
-	public BigDecimal getStorePotential() {
-		return storePotential;
-	}
+    public void setStockPreviousDay(final BigDecimal stockPreviousDay) {
+        this.stockPreviousDay = stockPreviousDay;
+    }
 
-	public void setStorePotential(BigDecimal storePotential) {
-		this.storePotential = storePotential;
-	}
+    public BigDecimal getExpectedSales() {
+        return expectedSales;
+    }
 
-	public Integer getWhId() {
-		return whId;
-	}
-	
-	public void setWhId(Integer whId) {
-		this.whId = whId;
-	}
-	
-	@Override
-	public boolean equals(Object o) {
-		if (this == o) {
-			return true;
-		}
+    public void setExpectedSales(final BigDecimal expectedSales) {
+        this.expectedSales = expectedSales;
+    }
 
-		if (!(o instanceof Store)) {
-			return false;
-		}
+    public Boolean getSelected() {
+        return isSelected;
+    }
 
-		Store that = (Store) o;
-
-		return getStoreId().equals(that.getStoreId());
-	}
+    public void setSelected(final Boolean selected) {
+        isSelected = selected;
+    }
 
 	@Override
-	public int hashCode() {
-		return Objects.hash(getStoreId());
-	}
+    public boolean equals(final Object o) {
+        if (this == o) return true;
 
-	@Override
+        if (o == null || getClass() != o.getClass()) return false;
+
+        final Store store = (Store) o;
+
+        return getStoreId().equals(store.getStoreId());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(storeId);
+    }
+    
+    @Override
 	public String toString() {
-		return "Store [itemId = " + item.getItemId() + ", storeId=" + storeId + ", storeDesc=" + storeDesc
-				+ ", storePotential=" + storePotential + ", whId " + whId + "]";
-	}
-
+		return "Store [storeId=" + storeId + ", referenceStoreId=" + referenceStoreId + ", stockPreviousDay="
+				+ stockPreviousDay + ", expectedSales=" + expectedSales + ", isSelected=" + isSelected + "]";
+	};
+    
 }
