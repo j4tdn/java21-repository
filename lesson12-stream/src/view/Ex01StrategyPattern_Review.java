@@ -41,6 +41,7 @@ public class Ex01StrategyPattern_Review {
 		// filter all red apples and weight heavier than 150g
 		var greenApples4 = filter(inventory, a -> a.getColor().equals("red") && a.getWeight() > 150);
 		generate("4. Red and heavier than 150g Apples", greenApples4);
+		var vnApples = filter(inventory, Ex01StrategyPattern_Review::isVietNam);
 		/*
 		 Lưu ý:
 		 + Tham số của lambda --> không yêu cầu điền KDL
@@ -55,5 +56,7 @@ public class Ex01StrategyPattern_Review {
 	
 	// Java có sẵn
 	
-	
+	private static boolean isVietNam(Apple apple) {
+		return "vietnam".equalsIgnoreCase(apple.getCountry());
+	}
 }

@@ -1,0 +1,7 @@
+--> lambda có body gọi constructor để trả về đối tượng
+
++ filter(List<T>, Predicate<T>
++ reduce(List<T>, BinaryOperator<T>): max, min, sum
++ map(List<T>, Function<T, R>)
+
+====== STREAM ======
