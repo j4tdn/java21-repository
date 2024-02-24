@@ -2,10 +2,17 @@ package view.stream.practice;
 
 import static utils.CollectionUtils.generate;
 
+import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Set;
+import java.util.function.Function;
 import java.util.stream.Collectors;
+
+import bean.Dish;
+import model.DataModel;
 
 public class Ex01FilterDistinctLimit {
 
@@ -54,7 +61,31 @@ public class Ex01FilterDistinctLimit {
 		 System.out.println("2. Liệt kê các ptử xuất hiện duy nhất 1 lần --> " + uniqueElements);
 		 
 		 // distinct by key/property
+		 List<Dish> menu = DataModel.mockDishes();
+		 
+		 // Cách 1:
+		 generate(
+				 "3.1. Liệt kê các ptử trong ds, các ptử trùng nhau chỉ lấy 1 lần", 
+				 distinctByKey(menu, Dish::getName)
+		 );
+		 
+		 // Cách 2:
+		 Collection<Dish> collection = menu.stream()
+				 .collect(Collectors.toMap(Dish::getName, Function.identity(), (e1, e2) -> e2))
+				 .values();
+		 
+		 generate(
+				 "3.2. Liệt kê các ptử trong ds, các ptử trùng nhau chỉ lấy 1 lần", 
+				 collection
+		 );
+	}
+	
+	private static <T, R> List<T> distinctByKey(List<T> elements, Function<T, R> keyExtrator){
+		Set<R> nonOverlapKeys = new HashSet<>();
 		
+		return elements.stream()
+				.filter(d -> nonOverlapKeys.add(keyExtrator.apply(d)))
+				.collect(Collectors.toList());
 	}
 
 }
