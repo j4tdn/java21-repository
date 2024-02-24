@@ -11,6 +11,7 @@ public class Apple {
 	public Apple() {
 	}
 
+	
 	public Apple(Integer id, String color, Double weight, String country) {
 		this.id = id;
 		this.color = color;
@@ -50,6 +51,8 @@ public class Apple {
 		this.country = country;
 	}
 
+
+	
 	@Override
 	public String toString() {
 		return "Apple [id=" + id + ", color=" + color + ", weight=" + weight + ", country=" + country + "]";
