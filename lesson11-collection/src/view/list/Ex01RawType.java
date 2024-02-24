@@ -31,7 +31,7 @@ public class Ex01RawType {
 			listA.add(1); // add(Object a);
 			listA.add(2);
 			listA.add("3");
-			listA.add("bon");
+			listA.add("4");
 			
 			// duyệt và in ra
 			for (Object element: listA) {

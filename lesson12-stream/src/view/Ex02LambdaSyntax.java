@@ -1,5 +1,6 @@
 package view;
 
+import java.util.Comparator;
 import java.util.concurrent.Callable;
 import java.util.function.Function;
 import java.util.function.Supplier;
@@ -23,8 +24,7 @@ public class Ex02LambdaSyntax {
 		
 		UnaryOperator<String> uo = (String s) -> "Iron Man"; // T method(T t)
 		System.out.println("uo --> " + uo.apply("abc"));
-		
-		// Predicate<T>     --> T      -> boolean
+		// Predicate<T>     --> T      -> boolean --> signature, descriptor 
 		// Consumer<T>      --> T      -> void
 		// Comparator<T>    --> (T, T) -> int
 		// Comparable<T>    --> T      -> int

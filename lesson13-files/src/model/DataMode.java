@@ -1,7 +1,6 @@
 package model;
 
 import java.math.BigDecimal;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -31,22 +30,6 @@ public class DataMode {
 				new Item(104, "Item 104", new BigDecimal("564"), List.of(s1, s2, s3 , s4, s5))
 	);
 	}	
-	
-	public static Map<Integer, String> mockVehicles() {
-		var vehicles = new HashMap<Integer, String>();
-		
-		vehicles.put(92, "A Quảng Nam");
-		vehicles.put(43, "Z Đà Nẵng");
-		vehicles.put(75, "K Thừa Thiên Huế");
-		// vehicles.put(null, "B Việt Nam");
-		vehicles.put(74, "F Quảng Trị");
-		vehicles.put(73, "C Quảng Bình");
-		vehicles.put(73, "Z Quảng Bình");
-		vehicles.put(11, "Cao Bằng");
-		
-		return vehicles;
-	}
-	
 	public static List<Dish> mockDishes() {
 		return List.of(
 			new Dish("D01", "Dish D10", 220, Category.FISH),	

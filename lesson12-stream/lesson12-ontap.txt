@@ -1,0 +1,23 @@
+Strategy Pattern
+	
+	Lambda Expression
+	
+	Using Local Variable
+	
+	Method Reference
+	--> Lambda biến thành hàm static bất kỳ --> Class:tenMethod
+	--> Một số dạng cho non-static method reference
+	Constructor Reference
+	--> Lambda có body gọi constructor để trả về đối tượng
+	
+	-->  generic method
+	+filter (List<T>, Predicate<T>)
+	+reduce (List<T>, BinaryOperator<T>)
+	+map (List <T>, Function<T,R>)
+	
+	=========STREAM========
+	
+	Từ 1 CTDL bất kỳ( danh sách [collection, array])
+	-> chuyển sang CTDL Stream<T>
+	
+	-> gọi các hàm bên trong Stream để xử lý

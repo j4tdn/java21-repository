@@ -49,7 +49,7 @@ public class Ex01StrategyPattern_Review {
 		  + nếu body chỉ có 1 dòng --> bỏ luôn {}, bỏ luôn ;
 		    . nếu return type !void --> bỏ luôn chữ return
 		 */
-		greenApples = filter(inventory, apple -> "green".equals(apple.getColor()));
+		greenApples = filter(inventory, d -> "green".equals(d.getColor()));
 		generate("3. Green Apples(use anonymous function)", greenApples);
 		
 		// filter all red apples and weight heavier than 150g
