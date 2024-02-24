@@ -17,6 +17,10 @@ public class Apple {
 		this.weight = weight;
 		this.country = country;
 	}
+	
+	public String toLine() {
+		return id + ", " + color + ", " + weight + ", " + country;
+	}
 
 	public Integer getId() {
 		return id;
