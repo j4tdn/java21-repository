@@ -1,11 +1,15 @@
 package view.stream;
 
+import static java.util.Comparator.comparing;
+import static java.util.Comparator.reverseOrder;
 import static utils.CollectionUtils.generate;
 
+import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
-import java.util.function.IntFunction;
 import java.util.stream.Collectors;
 
 import bean.Dish;
@@ -47,7 +51,33 @@ public class Ex01StreamBasicDemo {
 			System.out.println("veggie dish -> " + dish);
 		}
 		
-		// 4. Sorted a budget map
+		// Map<K, V> -> Set<Entry<K, V>> --> List<Entry<K, V>> --> sort --> LinkedHashMap<K, V>
 		
+		// Map<K, V> -> Set<Entry<K, V>> --> Stream<Entry<K, V>> --> sort --> LinkedHashMap<K, V>
+		
+		// Stream<Entry<K, V>> -> toList() --> List<Entry<K, V>>
+		
+		// Stream<T> -> toMap() --> Map<K, V>
+		
+		// Entry.comparingByKey = comparing(Entry::getKey)
+		
+		// Collectors.toMap(Entry::getKey, Entry::getValue)
+		// nếu key trước sau trùng nhau --> lỗi
+		// mặc định trả về hashmap
+		
+		// Collectors.toMap(Entry::getKey, Entry::getValue, (v1, v2) -> v2)
+		// --> key chuyển sang có thể trùng nhau, chọn value trước/sau
+		
+		// Collectors.toMap(Entry::getKey, Entry::getValue, (v1, v2) -> v2, LinkedHashMap::new)
+		// --> key chuyển sang có thể trùng nhau, chọn value trước/sau
+		// --> xác định kiểu Map lúc runtime
+		
+		// 4. Sorted a budget map by key [null, first, descending]	
+		final Map<Integer, String> vehicles = DataModel.mockVehicles();
+		Map<Integer, String> sortedMap = vehicles.entrySet().stream() // Stream<Entry<K, V>>
+			.sorted(Entry.comparingByKey(reverseOrder())) // Stream <Entry<K, V>>
+			.collect(Collectors.toMap(Entry::getKey, Entry::getValue, (v1, v2) -> v2, LinkedHashMap::new));
+		
+		generate("3. Sorted Map", sortedMap);
 	}
 }

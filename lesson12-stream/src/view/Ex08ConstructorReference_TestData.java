@@ -17,7 +17,7 @@ import view.Ex07ConstructorReferenceExamples.TestCon;
 public class Ex08ConstructorReference_TestData {
 	
 	public static void main(String[] args) {
-		List<String> lines = readFile("testcon_data.txt");
+		List<String> lines = readFile("textcon_data.txt");
 		
 		lines.forEach(line -> {
 			System.out.println("line -> " + line);
