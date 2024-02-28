@@ -4,8 +4,9 @@
  */
 package view.Exercises;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Arrays;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 /**
  *
@@ -14,38 +15,15 @@ import java.util.Map;
 public class Ex02MostFrequentChar {
 
     public static void main(String[] args) {
-        String input1 = "aaaababbbddc";
-        String input2 = "aaaaccdcec";
+        String[] array = {"a", "a", "a", "b", "c", "d", "b"};
 
-        System.out.println("Output 1: " + findMostFrequentChar(input1));
-        System.out.println("Output 2: " + findMostFrequentChar(input2));
-    }
+        var countMap = Arrays.stream(array).collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 
-    public static String findMostFrequentChar(String input) {
-        Map<Character, Integer> charCount = new HashMap<>();
+        Long maxCount = countMap.values().stream().max((a, b) -> Long.compare(a, b)).orElse(null);
 
-        // Đếm số lần xuất hiện của từng ký tự
-        for (char ch : input.toCharArray()) {
-            if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) {
-                charCount.put(ch, charCount.getOrDefault(ch, 0) + 1);
-            }
-        }
+        var result = countMap.entrySet().stream().filter(t -> t.getValue() == maxCount).map(t -> t.getKey())
+                .collect(Collectors.joining(", "));
 
-        int maxCount = 0;
-        StringBuilder result = new StringBuilder();
-
-        // Tìm số lần xuất hiện nhiều nhất
-        for (Map.Entry<Character, Integer> entry : charCount.entrySet()) {
-            int count = entry.getValue();
-            if (count > maxCount) {
-                maxCount = count;
-                result = new StringBuilder(entry.getKey().toString());
-            } else if (count == maxCount) {
-                result.append(", ").append(entry.getKey());
-            }
-        }
-
-        return result.toString();
+        System.out.println("Phần tử xuất hiện nhiều nhất là: " + result);
     }
 }
-
