@@ -1,10 +1,10 @@
 package model;
 
 import java.util.List;
-import java.util.Locale.Category;
 
 import bean.Apple;
 import bean.Dish;
+import common.Category;
 
 public class DataModel {
 
