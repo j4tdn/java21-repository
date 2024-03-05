@@ -1,11 +1,14 @@
 package model;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import bean.Apple;
+import bean.BankTransaction;
 import bean.Dish;
 import bean.Item;
 import bean.Store;
@@ -14,17 +17,25 @@ import common.Category;
 public class DataModel {
 	private DataModel() {
 	}
-	
-	
+
+	// lập lịch vào 23H hàng ngày, kiểm tra xem hệ thống có giao dịch nào bị lỗi
+	public static List<BankTransaction> mockBankTransaction() {
+		return List.of(new BankTransaction("A1", "B1", bd("200"), time("02/03/2024 20:52:10"), true),
+				new BankTransaction("A1", "B1", bd("200"), time("02/03/2024 20:52:10"), true),
+				new BankTransaction("A1", "B1", bd("200"), time("02/03/2024 20:52:10"), false),
+				new BankTransaction("A1", "B1", bd("200"), time("02/03/2024 20:52:10"), false),
+				new BankTransaction("A1", "B1", bd("200"), time("02/03/2024 20:52:10"), true));
+
+	}
+
 	public static List<Item> mockItems() {
 		Store s1 = new Store(1, "Store 1");
 		Store s2 = new Store(2, "Store 2");
 		Store s3 = new Store(3, "Store 3");
 		Store s4 = new Store(4, "Store 4");
 		Store s5 = new Store(5, "Store 5");
-		
-		return List.of(
-				new Item(101, "Item 101", new BigDecimal("202"), List.of(s1, s2)),
+
+		return List.of(new Item(101, "Item 101", new BigDecimal("202"), List.of(s1, s2)),
 				new Item(102, "Item 102", new BigDecimal("303"), List.of(s1, s2, s3)),
 				new Item(103, "Item 103", new BigDecimal("404"), List.of(s1, s4, s5)),
 				new Item(104, "Item 104", new BigDecimal("505"), List.of(s1, s2, s3, s4, s5)));
@@ -37,22 +48,15 @@ public class DataModel {
 	}
 
 	public static List<Dish> mockDishes() {
-		return List.of(
-				new Dish("D01", "Dish D10", 220, Category.FISH), 
-				new Dish("D02", "Dish E12", 782, Category.MEAT),
-				new Dish("D03", "Dish A3", 100, Category.VEGGIE), 
-				new Dish("D04", "Dish A4", 150, Category.EGG),
-				new Dish("D05", "Dish B5", 220, Category.FISH), 
-				new Dish("D06", "Dish B6", 782, Category.MEAT),
-				new Dish("D07", "Dish C7", 111, Category.VEGGIE), 
-				new Dish("D08", "Dish C8", 1020, Category.EGG),
-				new Dish("D09", "Dish D9", 220, Category.FISH), 
-				new Dish("D10", "Dish D10", 777, Category.MEAT),
-				new Dish("D11", "Dish E11", 111, Category.EGG), 
-				new Dish("D12", "Dish E12", 1500, Category.EGG));
+		return List.of(new Dish("D01", "Dish D10", 220, Category.FISH), new Dish("D02", "Dish E12", 782, Category.MEAT),
+				new Dish("D03", "Dish A3", 100, Category.VEGGIE), new Dish("D04", "Dish A4", 150, Category.EGG),
+				new Dish("D05", "Dish B5", 220, Category.FISH), new Dish("D06", "Dish B6", 782, Category.MEAT),
+				new Dish("D07", "Dish C7", 111, Category.VEGGIE), new Dish("D08", "Dish C8", 1020, Category.EGG),
+				new Dish("D09", "Dish D9", 220, Category.FISH), new Dish("D10", "Dish D10", 777, Category.MEAT),
+				new Dish("D11", "Dish E11", 111, Category.EGG), new Dish("D12", "Dish E12", 1500, Category.EGG));
 	}
 
-	public static Map<Integer, String> mockVehicles(){
+	public static Map<Integer, String> mockVehicles() {
 		var vehicles = new HashMap<Integer, String>();
 
 		vehicles.put(92, "Quang Nam");
@@ -62,5 +66,13 @@ public class DataModel {
 		vehicles.put(73, "Quang Binh");
 		vehicles.put(11, "Cao Bang");
 		return vehicles;
+	}
+
+	public static LocalDateTime time(String val) {
+		return LocalDateTime.parse(val, DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"));
+	}
+
+	public static BigDecimal bd(String value) {
+		return new BigDecimal(value);
 	}
 }

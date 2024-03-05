@@ -1,11 +1,16 @@
 package bean;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 import common.Category;
 
-public class Dish {
+public class Dish implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5870107942398243722L;
 	private String id;
 	private String name;
 	private Integer calories;
