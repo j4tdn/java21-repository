@@ -1,8 +1,13 @@
 package model;
 
+import java.awt.image.BandCombineOp;
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import bean.Apple;
+import bean.BankTransaction;
 import bean.Dish;
 import common.Category;
 
@@ -11,6 +16,17 @@ public class DataModel {
 	private DataModel() {
 		
 	}
+	
+	public static List<BankTransaction> mockBankTransaction(){
+		return List.of(
+				new BankTransaction("A1","B1",bd("200"),time("03/03/2024 20:52:10"), true),
+				new BankTransaction("A2","B2",bd("300"),time("03/03/2024 20:52:10"), false),
+				new BankTransaction("A3","B3",bd("400"),time("03/03/2024 20:52:10"), true),
+				new BankTransaction("A4","B4",bd("500"),time("03/03/2024 20:52:10"), false),
+				new BankTransaction("A5","B5",bd("600"),time("03/03/2024 20:52:10"), true)
+				);
+	}
+	
 	
 	public static List<Apple> getApples() {
 		return List.of(
@@ -38,6 +54,13 @@ public class DataModel {
 			new Dish("D11", "Dish E11", 111, Category.EGG),
 			new Dish("D12", "Dish E12", 1500, Category.EGG)
 		);
+	}
+	
+	public static LocalDateTime time(String val) {
+		return LocalDateTime.parse(val,DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"));
+	}
+	public static BigDecimal bd(String bigDecimal) {
+		return new BigDecimal(bigDecimal);
 	}
 	
 }

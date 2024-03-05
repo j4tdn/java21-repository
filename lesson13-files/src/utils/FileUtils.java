@@ -8,12 +8,12 @@ public class FileUtils {
 
 	public FileUtils() {
 	}
-	
+
 	public static void open(File f) {
 		try {
-			
+
 			Desktop.getDesktop().open(f);
-			
+
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -49,6 +49,18 @@ public class FileUtils {
 		}
 		return root;
 
+	}
+
+	public static void close(AutoCloseable... aotuCloseables) {
+		for (AutoCloseable aotuCloseable : aotuCloseables) {
+			if (aotuCloseable != null) {
+				try {
+					aotuCloseable.close();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		}
 	}
 
 }

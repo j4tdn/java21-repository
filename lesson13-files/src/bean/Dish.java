@@ -1,9 +1,13 @@
 package bean;
 
+import java.io.Serializable;
+
 import common.Category;
 
-public class Dish {
+public class Dish implements Serializable {
 	
+	
+	private static final long serialVersionUID = 3866523732101252261L;
 	private String id;
 	private String name;
 	private Integer calories;
