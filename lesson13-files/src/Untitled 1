@@ -1,0 +1,3 @@
+Đọc file
+Files.write..(
+Serrialize để phân biệt giữa 2 object có cùng các giá trị và thuộc tính khi dịch ra byteStream

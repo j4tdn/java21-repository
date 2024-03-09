@@ -1,6 +1,8 @@
 package model;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -8,6 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 import bean.Apple;
+import bean.BankTransaction;
 import bean.Dish;
 import bean.Item;
 import bean.Store;
@@ -16,6 +19,14 @@ import common.Kind;
 public class Datamodel {
 	private Datamodel() {
 		
+	}
+	
+	public static List<BankTransaction> mockBankTransactions(){
+		return List.of(new BankTransaction("A1", "B1", bd("100"), time("02/03/2024 20:52:10"), true),
+				new BankTransaction("A2", "B2", bd("200"), time("02/03/2024 20:52:10"), false),
+				new BankTransaction("A3", "B3", bd("300"), time("02/03/2024 20:52:10"), false),
+				new BankTransaction("A4", "B4", bd("400"), time("02/03/2024 20:52:10"), true),
+				new BankTransaction("A5", "B5", bd("500"), time("02/03/2024 20:52:10"), true));
 	}
 	
 	public static List<Apple> getApples() {
@@ -70,5 +81,12 @@ public class Datamodel {
 				
 				);
 				
+	}
+	
+	public static LocalDateTime time(String val) {
+		return LocalDateTime.parse(val, DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"));
+	}
+	public static BigDecimal bd(String value) {
+		return new BigDecimal(value);
 	}
 }

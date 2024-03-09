@@ -6,8 +6,5 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="D:/workspace/java21/2.JAVA/lesson13-files/lib/quartz-2.2.3.jar"/>
-	<classpathentry kind="lib" path="D:/workspace/java21/2.JAVA/lesson13-files/lib/quartz-jobs-2.2.3.jar"/>
-	<classpathentry kind="lib" path="D:/workspace/java21/2.JAVA/lesson13-files/lib/slf4j-api-1.7.7.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

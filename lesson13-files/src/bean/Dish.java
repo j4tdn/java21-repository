@@ -1,12 +1,13 @@
 package bean;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 import common.Kind;
 
-public class Dish {
+public class Dish implements Serializable{
 	
-
+	
 	private String id;
 	private String name;
 	private double calories;
