@@ -10,6 +10,7 @@ import bean.Dish;
 import model.DataModel;
 import utils.FileUtils;
 
+// Os -> output stream
 public class Ex01FileOs {
 	
 	public static void main(String[] args) {
@@ -23,18 +24,22 @@ public class Ex01FileOs {
 			fos = new FileOutputStream(file);
 			oos = new ObjectOutputStream(fos);
 			
-			// data 
+			// data
 			List<Dish> menu = DataModel.mockDishes();
 			
 			// ghi file
 			oos.writeObject(menu);
+			
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
-		
+			// close and save file
+			FileUtils.close(oos, fos);
 		}
 		
 		// open file
 		FileUtils.open(file);
+		
 	}
+	
 }

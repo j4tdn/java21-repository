@@ -7,6 +7,7 @@ import java.io.ObjectInputStream;
 import java.util.List;
 
 import bean.Dish;
+import utils.FileUtils;
 
 public class Ex02FileIs {
 	
@@ -24,22 +25,27 @@ public class Ex02FileIs {
 		ObjectInputStream ois = null;
 		
 		try {
-			
 			fis = new FileInputStream(file);
 			ois = new ObjectInputStream(fis);
 			
 			Object object = ois.readObject();
 			
 			@SuppressWarnings("unchecked")
-			List<Dish> menu = (List<Dish>) object;
+			List<Dish> menu = (List<Dish>)object;
 			
 			System.out.println("Dữ liệu từ file serialized.txt");
-			System.out.println("=================================");
+			System.out.println("==============================");
 			menu.forEach(System.out::println);
 			
-		} catch (IOException | ClassNotFoundException e) {
+		} catch(IOException | ClassNotFoundException e) {
 			e.printStackTrace();
+		} finally {
+			FileUtils.close(ois, fis);
 		}
+		
+		// https://repo.maven.apache.org/maven2/org/quartz-scheduler/quartz/2.2.3/
+		// https://repo.maven.apache.org/maven2/org/quartz-scheduler/quartz-jobs/2.2.3/
+		
 	}
 	
-}
+}	
