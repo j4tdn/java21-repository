@@ -4,7 +4,7 @@
 -- USE java21_shopping; -- set database java21_shopping as default
 
 -- disable foreign key check
-SET FOREIGN_KEY_CHECKS = 0;
+-- SET FOREIGN_KEY_CHECKS = 0;
 
 DROP TABLE IF EXISTS T02_ITEM_GROUP;
 CREATE TABLE T02_ITEM_GROUP(
@@ -73,4 +73,4 @@ ADD CONSTRAINT FK_GALLERY_ITEM FOREIGN KEY (C13_ITEM_ID)
 						       REFERENCES T01_ITEM(C01_ITEM_ID);
                                
 -- enable foreign key check
-SET FOREIGN_KEY_CHECKS = 1;
+-- SET FOREIGN_KEY_CHECKS = 1;
