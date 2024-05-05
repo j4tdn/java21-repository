@@ -1,5 +1,6 @@
 package utils;
 
+import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -21,8 +22,8 @@ public class StreamUtils {
 				.filter(predicate).toList();
 	}
 	
-	public static <E, K, V> Map<K, V> toMap(List<E> list, Function<E, K> keyMapper, Function<E, V> valueMapper){
-		return list.stream().collect(LinkedHashMap::new, (m, e) -> m.put(keyMapper.apply(e), valueMapper.apply(e)),
+	public static <E, K, V> Map<K, V> toMap(Collection<E> collection, Function<E, K> keyMapper, Function<E, V> valueMapper){
+		return collection.stream().collect(LinkedHashMap::new, (m, e) -> m.put(keyMapper.apply(e), valueMapper.apply(e)),
 				LinkedHashMap::putAll);
 	}
 }
