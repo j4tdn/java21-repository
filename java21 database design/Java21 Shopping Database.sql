@@ -5,70 +5,69 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema java21_shopping_testing
+-- Schema mydb
 -- -----------------------------------------------------
-DROP SCHEMA IF EXISTS `java21_shopping_testing` ;
+DROP SCHEMA IF EXISTS `mydb` ;
 
 -- -----------------------------------------------------
--- Schema java21_shopping_testing
+-- Schema mydb
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `java21_shopping_testing` DEFAULT CHARACTER SET utf8 ;
-USE `java21_shopping_testing` ;
+CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
+USE `mydb` ;
 
 -- -----------------------------------------------------
--- Table `java21_shopping_testing`.`T02_ITEM_GROUP`
+-- Table `mydb`.`T02_ITEM_GROUP`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `java21_shopping_testing`.`T02_ITEM_GROUP` ;
+DROP TABLE IF EXISTS `mydb`.`T02_ITEM_GROUP` ;
 
-CREATE TABLE IF NOT EXISTS `java21_shopping_testing`.`T02_ITEM_GROUP` (
+CREATE TABLE IF NOT EXISTS `mydb`.`T02_ITEM_GROUP` (
   `C02_ID` INT NOT NULL,
-  `C02_NAME` VARCHAR(110) NOT NULL,
+  `C02_NAME` VARCHAR(100) NOT NULL,
   PRIMARY KEY (`C02_ID`),
   UNIQUE INDEX `C02_NAME_UNIQUE` (`C02_NAME` ASC) VISIBLE)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `java21_shopping_testing`.`T01_ITEM`
+-- Table `mydb`.`T01_ITEM`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `java21_shopping_testing`.`T01_ITEM` ;
+DROP TABLE IF EXISTS `mydb`.`T01_ITEM` ;
 
-CREATE TABLE IF NOT EXISTS `java21_shopping_testing`.`T01_ITEM` (
+CREATE TABLE IF NOT EXISTS `mydb`.`T01_ITEM` (
   `C01_ID` INT NOT NULL,
-  `C01_NAME` VARCHAR(110) NOT NULL,
-  `T02_ITEM_GROUP_ID` INT NOT NULL,
+  `C01_NAME` VARCHAR(100) NOT NULL,
+  `C01_ITEM_GROUP_ID` INT NOT NULL,
   PRIMARY KEY (`C01_ID`),
   UNIQUE INDEX `C02_NAME_UNIQUE` (`C01_NAME` ASC) VISIBLE,
-  INDEX `fk_T01_ITEM_T02_ITEM_GROUP_idx` (`T02_ITEM_GROUP_ID` ASC) VISIBLE,
+  INDEX `fk_T01_ITEM_T02_ITEM_GROUP_idx` (`C01_ITEM_GROUP_ID` ASC) VISIBLE,
   CONSTRAINT `fk_T01_ITEM_T02_ITEM_GROUP`
-    FOREIGN KEY (`T02_ITEM_GROUP_ID`)
-    REFERENCES `java21_shopping_testing`.`T02_ITEM_GROUP` (`C02_ID`)
+    FOREIGN KEY (`C01_ITEM_GROUP_ID`)
+    REFERENCES `mydb`.`T02_ITEM_GROUP` (`C02_ID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `java21_shopping_testing`.`T03_SIZE`
+-- Table `mydb`.`T03_SIZE`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `java21_shopping_testing`.`T03_SIZE` ;
+DROP TABLE IF EXISTS `mydb`.`T03_SIZE` ;
 
-CREATE TABLE IF NOT EXISTS `java21_shopping_testing`.`T03_SIZE` (
+CREATE TABLE IF NOT EXISTS `mydb`.`T03_SIZE` (
   `C03_ID` INT NOT NULL,
-  `C03_SIZE` VARCHAR(45) NOT NULL,
+  `C03_SIZE` VARCHAR(5) NOT NULL,
   `C03_GENDER` BIT NOT NULL,
   `C03_DESC` TEXT NOT NULL,
-  `T03_SIZEcol` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`C03_ID`))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `java21_shopping_testing`.`T04_ITEM_DETAIL`
+-- Table `mydb`.`T04_ITEM_DETAIL`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `java21_shopping_testing`.`T04_ITEM_DETAIL` ;
+DROP TABLE IF EXISTS `mydb`.`T04_ITEM_DETAIL` ;
 
-CREATE TABLE IF NOT EXISTS `java21_shopping_testing`.`T04_ITEM_DETAIL` (
+CREATE TABLE IF NOT EXISTS `mydb`.`T04_ITEM_DETAIL` (
   `C04_ITEM_ID` INT NOT NULL,
   `C04_SIZE_ID` INT NOT NULL,
   `C04_SALES_PRICE` DOUBLE NOT NULL,
@@ -79,12 +78,12 @@ CREATE TABLE IF NOT EXISTS `java21_shopping_testing`.`T04_ITEM_DETAIL` (
   INDEX `fk_T01_ITEM_has_T03_SIZE_T01_ITEM1_idx` (`C04_ITEM_ID` ASC) VISIBLE,
   CONSTRAINT `fk_T01_ITEM_has_T03_SIZE_T01_ITEM1`
     FOREIGN KEY (`C04_ITEM_ID`)
-    REFERENCES `java21_shopping_testing`.`T01_ITEM` (`C01_ID`)
+    REFERENCES `mydb`.`T01_ITEM` (`C01_ID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_T01_ITEM_has_T03_SIZE_T03_SIZE1`
     FOREIGN KEY (`C04_SIZE_ID`)
-    REFERENCES `java21_shopping_testing`.`T03_SIZE` (`C03_ID`)
+    REFERENCES `mydb`.`T03_SIZE` (`C03_ID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
