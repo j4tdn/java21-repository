@@ -1,3 +1,6 @@
+CREATE DATABASE java21_shopping_test02 CHAR SET utf8mb4;
+USE java21_shopping_test02;
+
 -- 01.sql --> Liên quan đến ITEM
 -- T01_ITEM, T02_ITEMGROUP, T06_SIZE, T12_ITEM_DETAIL, T13_GALLERY
 

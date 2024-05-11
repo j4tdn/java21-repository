@@ -18,3 +18,4 @@ CREATE DATABASE java21_shopping CHAR SET utf8mb4;
 
 -- 04.sql --> Liên quan đến thống kê statistic
 -- T09_ITEM_STATISTIC, T10_REVENUE
+
