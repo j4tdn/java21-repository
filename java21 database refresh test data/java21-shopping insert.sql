@@ -129,7 +129,7 @@ VALUES
 (13,	str_to_date('28.04.2024 08:10:20', '%d.%m.%Y %h:%i:%s'),	40,	'Địa chỉ 13',	'258369741',	0,	1,	5);
 
 -- T07_EMPLOYE
-CALL insert_into_employee(10);
+CALL insert_into_employee(22);
 UPDATE t07_employee SET C07_TITLE_ID = 2 WHERE C07_EMPLOYEE_ID IN (3,7);
 UPDATE t07_employee SET C07_TITLE_ID = 3 WHERE C07_EMPLOYEE_ID IN (8); 
 UPDATE t07_employee SET C07_TITLE_ID = 4 WHERE C07_EMPLOYEE_ID IN (10);
