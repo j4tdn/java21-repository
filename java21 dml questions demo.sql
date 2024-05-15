@@ -371,6 +371,7 @@ SELECT it.C01_ITEM_ID    ITEM_ID,
     AND DATE(C03_ORDER_TIME) != str_to_date('18/4/2024','%d/%m/%Y')
 )
 SELECT * FROM CTE_BE_SALED_ITEMS;
+-- giải thích kết quả chạy: NOT IN, NOT EXISTS
 
 -- 27. Cập nhật giá bán của tất cả các mặt hàng thuộc loại hàng 'Áo' thành 199
 UPDATE t12_item_detail itd
@@ -467,6 +468,7 @@ WITH CTE_TOTAL_OF_MONEY AS (
          ON odd.C14_ITEM_DETAIL_ID = itd.C12_ITEM_DETAIL_ID
 	   GROUP BY odd.C14_ORDER_ID
 )
+SELECT * FROM CTE_TOTAL_OF_MONEY
 SELECT cte.CTE_ORDER_ID,
        cte.TOTAL_OF_MONEY 
   FROM CTE_TOTAL_OF_MONEY cte ON DUPLICATE KEY;
@@ -478,4 +480,4 @@ SELECT cte.CTE_ORDER_ID,
     -- 02   TenMH:GiaBan:SoLuong     100
 
 
--- 23 <xem lại cách làm>,26<50/50>,30<nhờ anh giải thích lại>,31<insert data chưa được>,32
+-- 26<50/50>,31<insert data chưa được>,32
