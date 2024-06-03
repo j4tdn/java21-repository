@@ -4,6 +4,9 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- Nên dùng DELETE hay TRUNCATE để xóa dữ liệu
 
 -- TRUNCATE: drop and recreate table without data (DML, DDL tùy hệ quản trị)
+--         : reset auto increment value to 0
+--         : ALTER TABLE tablename AUTO_INCREMENT = 1
+
 -- DELETE: xóa dữ liệu (DML)
 
 TRUNCATE t01_item;
