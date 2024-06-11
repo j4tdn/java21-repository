@@ -1,0 +1,26 @@
+-Các bước để thiết kế cơ sở dữ liệu (Từ yêu cầu)
++B1: Mô hình quan niệm
+     -> Từ đề bài, yêu cầu, xác định các 'đối tượng', 'thuộc tính' cần lưu trữ cho bài toán
+     -> Mỗi thuộc tính có thể là đơn(số, chuỗi), đối tượng, danh sách 
+     -> Chưa nhất thiết phải chính xác 100% 
++B2: Mô hình logic
+	+ Cách 1: Mô hình logic trên cơ sở đối tượng (ERD - Entity Relationship diagram) -> Vẽ ra (Đồ án, viết wiki cho khách hàng)
+	+ Cách 2: Mô hình logic trên cơ sở mẫu tin (Note ra, ko vẽ - quen cách làm, làm cho nhanh)
+	-> 1. Xác định các tập thực thể
+	   Đối tượng(B1) - Tập thực thể(B2) [Mỗi dòng dữ liệu gọi là Thực thể] : JAVA: class(Tập thực thể), Object(thực thể)
+	-> 2. Xác định lại các thuộc tính của mỗi tập thực thể
+	   Thuộc tính(B1) - Xử lý - Thuộc tính(B2)
+	   Có các loại thuộc tính sau: Đơn trị, đa trị, kết hợp, dẫn xuất
+	   Yêu cầu: KDL phải KDL đơn(số, chuỗi, ngày/tháng/năm) không thể là 1 đối tượng, danh sách
+	-> 3. Xác định KHÓA của mỗi tập thực thể
+	-> 4. Xác định mối quan hệ giữa các tập thể thể
+	   Có 3 loại: 1-1, 1-n, n-n
++B3: Mô hình quan hệ(mô hình vật lý (database) -> sử dụng thiết kế từ mô hình quan hệ để code, tạo ra CSDL trong chương trình)
+	-> 1. Xác định các TABLE(bảng) của CSDL
+	   Entity - Tập thực thể(B2) - Table(B3)
+	-> 2. Xác định các COLUMNS của từng TABLE trong CSDL
+	   Thuộc tính(B2) - COLUMN(B3)
+	-> 3. Xác định KHÓA CHÍNH - PRIMARY KEY cho từng BẢNG [nếu cần]
+	   KHÓA(B2) được chọn - KHÓA CHÍNH(B3) - Mỗi bảng chỉ có duy nhất 1 KHÓA CHÍNH hoặc không có
+	-> 4. Xác định KHÓA NGOẠI - FOREIGN KEY cho từng BẢNG 
+	   Dựa vào các mối quan hệ đã xác định(B2) để tạo ra các COLUMN KHÓA NGOẠI tương ứng

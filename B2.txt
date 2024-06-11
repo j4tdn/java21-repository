@@ -1,0 +1,26 @@
+Object --> Objects: có chung thuộc tính, phương thức
+--> Class: attribute, method
+
+Thực thể: 1 dòng dữ liệu trong bảng dữ liệu
+
+Tập thực thể: Là tập các thực thể có chung thuộc tính
+Khóa : tập các thuộc tính mà thông qua đó có thể phân biệt giữa 2 dòng dữ liệu khác nhau
+Khóa chính: khóa được lựa chọn khi thiết kế, cài đặt để nhận biết thực thể
+
+Kết quả của mối quan hệ >>> 1-1 >> Tạo thêm column (Khóa ngoại) - Bỏ bên nào cũng được... Unique
+				+ Tên column khóa ngoại không nhất thiết phải trùng với tên khóa chính ở bảng cha
+				+ KDL và miền giá trị của FK phải trùng với PK bên bảng cha
+				+ Giá trị của FK "không" thể trùng nhau
+			>>> 1-N >> Tạo column (khóa ngoại) bên bảng nhiều, liên kết với khóa chính bên bảng bảng 1 (dữ liệu phải tồn tại bên bảng 1)
+				+ khi thực hiện cập nhật/ xóa dữ liệu bên bảng 1(cha) kiểm tra tính hợp lệ xem dữ liệu đó có đang bị tham chiếu bên bảng N(con) hay không
+				  mới cho xóa
+				+ Tên column khóa ngoại không nhất thiết phải trùng với tên khóa chính ở bảng cha
+				+ KDL và miền giá trị của FK phải trùng với PK bên bảng cha
+				+ Giá trị của FK "có" thể trùng nhau
+			>>> N-N >> Tạo bảng mới(liên kết) được tạo ra từ 2 hay nhiều bảng n-n >> Tạo bảng mới gồm
+				+ Gồm ít nhất là 2 thuộc tính (là khóa ngoại liên kết đến từng(2) bảng n-n) và các thuộc tính khác
+				+ Khóa chính là 2 columns khóa ngoại liên kết đến n-n
+
+			
+
+			
