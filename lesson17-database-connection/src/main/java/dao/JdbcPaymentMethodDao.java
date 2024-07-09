@@ -14,7 +14,7 @@ public class JdbcPaymentMethodDao extends GenericDao implements PaymentMethodDao
 
 	@Override
 	public List<PaymentMethod> getAll() {
-		return getElements(GET_ALL_PAYMENT_METHODS, () -> transform());
+		return getElements(GET_ALL_PAYMENT_METHODS, this::transform);
 	}
 	
 	private PaymentMethod transform() {
