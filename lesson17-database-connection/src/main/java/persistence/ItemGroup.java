@@ -1,5 +1,7 @@
 package persistence;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class ItemGroup {
@@ -9,6 +11,7 @@ public class ItemGroup {
 	
 	private Integer id;
 	private String name;
+	private List<Item> items = new ArrayList<>();
 	
 	public ItemGroup() {
 		
@@ -18,21 +21,46 @@ public class ItemGroup {
 		this.id = id;
 		this.name = name;
 	}
+	
+	public ItemGroup(Integer id, String name, List<Item> items) {
+		this.id = id;
+		this.name = name;
+		this.items = items;
+	}
+	
+	public static ItemGroup of() {
+		return new ItemGroup();
+	}
+	
+	public static ItemGroup of(String name) {
+		return of().withName(name);
+	}
 
 	public Integer getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public ItemGroup withId(Integer id) {
 		this.id = id;
+		return this;
 	}
 
 	public String getName() {
 		return name;
 	}
 
-	public void setName(String name) {
+	public ItemGroup withName(String name) {
 		this.name = name;
+		return this;
+	}
+	
+	public List<Item> getItems(){
+		return items;
+	}
+	
+	public ItemGroup withItems(List<Item> items){
+		this.items = items;
+		return this;
 	}
 	
 	@Override
@@ -55,7 +83,7 @@ public class ItemGroup {
 
 	@Override
 	public String toString() {
-		return "ItemGroup [id=" + id + ", name=" + name + "]";
+		return "ItemGroup [id=" + id + ", name=" + name + ", items = " + items + "]";
 	}
 	
 }
