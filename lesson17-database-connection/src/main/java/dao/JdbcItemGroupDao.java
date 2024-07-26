@@ -2,10 +2,11 @@ package dao;
 
 import java.sql.JDBCType;
 import java.sql.SQLException;
-import java.sql.SQLType;
 import java.util.List;
 
 import persistence.ItemGroup;
+import persistence.ItemGroupDto;
+import transformer.ItemGroupTransformer;
 import utils.SqlUtils;
 
 public class JdbcItemGroupDao extends GenericDao implements ItemGroupDao {
@@ -19,7 +20,13 @@ public class JdbcItemGroupDao extends GenericDao implements ItemGroupDao {
 			+ "SELECT C02_ITEM_GROUP_ID " + ItemGroup.PROP_ID + ", \n"
 			+ "       C02_ITEM_GROUP_NAME " + ItemGroup.PROP_NAME + "\n"
 			+ "  FROM t02_item_group\n"
-			+ " WHERE C02_ITEM_GROUP_ID = ";
+			+ " WHERE C02_ITEM_GROUP_ID = ?";
+	
+	private static final String GET_ITEM_GROUP_BY_NAME = ""
+			+ "SELECT C02_ITEM_GROUP_ID " + ItemGroup.PROP_ID + ", \n"
+			+ "       C02_ITEM_GROUP_NAME " + ItemGroup.PROP_NAME + "\n"
+			+ "  FROM t02_item_group\n"
+			+ " WHERE C02_ITEM_GROUP_NAME = ?";
 	
 	private static final String INSERT_ITEM_GROUP = ""
 			+ "INSERT INTO t02_item_group(C02_ITEM_GROUP_NAME)\n"
@@ -33,15 +40,48 @@ public class JdbcItemGroupDao extends GenericDao implements ItemGroupDao {
 	private static final String MERGE_ITEM_GROUP = ""
 			+ "CALL merge_item_group(?, ?)";
 	
+	private static final String GET_ITEM_GROUP_DETAILS = ""
+			+ "SELECT t2.C02_ITEM_GROUP_ID " + ItemGroupDto.PROP_ID + ",\n"
+			+ "       t2.C02_ITEM_GROUP_NAME " + ItemGroupDto.PROP_NAME + ",\n"
+			+ "       sum(t12.C12_AMOUNT) " + ItemGroupDto.PROP_AMOUNT_OF_ITEMS + ",\n"
+			+ "       GROUP_CONCAT(concat(t1.C01_ITEM_NAME,'-',t6.C06_SIZE_NAME,'-',t12.C12_AMOUNT)) " + ItemGroupDto.PROP_ITEM_DETAILS + "\n"
+			+ "  FROM t02_item_group t2\n"
+			+ "  JOIN t01_item t1 ON t1.C01_ITEM_GROUP_ID = t2.C02_ITEM_GROUP_ID\n"
+			+ "  JOIN t12_item_detail t12 ON t12.C12_ITEM_ID = t1.C01_ITEM_ID\n"
+			+ "  JOIN t06_size t6 ON t12.C12_SIZE_ID = t6.C06_SIZE_ID\n"
+			+ "  GROUP BY t2.C02_ITEM_GROUP_ID,\n"
+			+ "           t2.C02_ITEM_GROUP_NAME";
+	
 	@Override
 	public List<ItemGroup> getAll() {
-		return getElements(GET_ALL_ITEM_GROUPS, this::transform);
+		return getElements(GET_ALL_ITEM_GROUPS, ItemGroupTransformer::transformItemGroup);
+	}
+	
+	@Override
+	public List<ItemGroupDto> getItemGroupDetails() {
+		return getElements(GET_ITEM_GROUP_DETAILS, ItemGroupTransformer::transformItemGroupDto);
 	}
 	
 	@Override
 	public ItemGroup get(int id) {
-		String sql = GET_ITEM_GROUP_BY_ID + id;
-		return getElement(sql, this::transform);
+		return getElement(GET_ITEM_GROUP_BY_ID, ItemGroupTransformer::transformItemGroup, (pst) -> {
+			try {
+				pst.setInt(1, id);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		});
+	}
+	
+	@Override
+	public ItemGroup get(String name) {
+		return getElement(GET_ITEM_GROUP_BY_NAME, ItemGroupTransformer::transformItemGroup, (pst) -> {
+			try {
+				pst.setString(1, name);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		});
 	}
 	
 	@Override
@@ -50,6 +90,30 @@ public class JdbcItemGroupDao extends GenericDao implements ItemGroupDao {
 			pst = connection.prepareStatement(INSERT_ITEM_GROUP);
 			pst.setString(1, group.getName());
 			pst.executeUpdate();
+		} catch (SQLException e) {
+			System.out.println("We found errors when save new group: " + e.getMessage());
+		} finally {
+			SqlUtils.close(pst);
+		}
+	}
+	
+	@Override
+	public void save(List<ItemGroup> groups) {
+		try {
+			pst = connection.prepareStatement(INSERT_ITEM_GROUP);
+			
+			int batchCount = 0;
+			for (ItemGroup group: groups) {
+				pst.setString(1, group.getName());
+				pst.addBatch();
+				if (++batchCount % BATCH_SIZE == 0) {
+					pst.executeBatch();
+				}
+			}
+			
+			// if size of list is not divided by BATCH_SIZE
+			// remaining will be executed here
+			pst.executeBatch();
 		} catch (SQLException e) {
 			System.out.println("We found errors when save new group: " + e.getMessage());
 		} finally {
@@ -84,14 +148,4 @@ public class JdbcItemGroupDao extends GenericDao implements ItemGroupDao {
 		}
 	}
 	
-	private ItemGroup transform() {
-		ItemGroup group = null;
-		try {
-			group = new ItemGroup(rs.getInt(ItemGroup.PROP_ID), rs.getString(ItemGroup.PROP_NAME));
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		return group;
-	}
-
 }

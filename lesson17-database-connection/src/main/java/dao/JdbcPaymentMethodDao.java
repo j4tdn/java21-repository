@@ -1,5 +1,6 @@
 package dao;
 
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -17,7 +18,7 @@ public class JdbcPaymentMethodDao extends GenericDao implements PaymentMethodDao
 		return getElements(GET_ALL_PAYMENT_METHODS, this::transform);
 	}
 	
-	private PaymentMethod transform() {
+	private PaymentMethod transform(ResultSet rs) {
 		PaymentMethod pmethod = null;
 		try {
 			pmethod = new PaymentMethod(rs.getInt(PaymentMethod.PROP_ID), rs.getString(PaymentMethod.PROP_DESCRIPTION));

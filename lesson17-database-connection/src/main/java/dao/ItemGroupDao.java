@@ -3,6 +3,7 @@ package dao;
 import java.util.List;
 
 import persistence.ItemGroup;
+import persistence.ItemGroupDto;
 
 public interface ItemGroupDao {
 
@@ -12,6 +13,13 @@ public interface ItemGroupDao {
 	 * @return list of {@link ItemGroup}
 	 */
 	List<ItemGroup> getAll();
+	
+	/**
+	 * Get/count item groups with item amount.
+	 * 
+	 * @return list of {@link ItemGroupDto}
+	 */
+	List<ItemGroupDto> getItemGroupDetails();
 
 	/**
 	 * Get item group with given id
@@ -20,6 +28,14 @@ public interface ItemGroupDao {
 	 * @return {@link ItemGroup}
 	 */
 	ItemGroup get(int id);
+	
+	/**
+	 * Get item group with given name
+	 * 
+	 * @param name name
+	 * @return {@link ItemGroup}
+	 */
+	ItemGroup get(String name);
 
 	/**
 	 * Add new item group
@@ -27,6 +43,13 @@ public interface ItemGroupDao {
 	 * @param group {@link ItemGroup}
 	 */
 	void save(ItemGroup group);
+	
+	/**
+	 * Add new item groups
+	 * 
+	 * @param groups list of {@link ItemGroup}
+	 */
+	void save(List<ItemGroup> groups);
 	
 	/**
 	 * Update item group
