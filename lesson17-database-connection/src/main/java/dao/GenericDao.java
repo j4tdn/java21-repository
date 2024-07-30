@@ -8,6 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.function.Function;
 import java.util.function.Supplier;
 
 import com.mysql.cj.xdevapi.PreparableStatement;
@@ -36,7 +37,7 @@ public class GenericDao {
 		connection = DbConnection.getConnection();
 	}
 
-	<E> List<E> getElements(String sql, Supplier<E> supplier) {
+	<E> List<E> getElements(String sql, Function<ResultSet, E> function) {
 		List<E> result = new ArrayList<>();
 		try {
 //			st = connection.createStatement();
@@ -44,7 +45,7 @@ public class GenericDao {
 			pst = connection.prepareStatement(sql);
 			rs = pst.executeQuery();
 			while (rs.next()) {
-				result.add(supplier.get());
+				result.add(function.apply(rs));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -54,15 +55,33 @@ public class GenericDao {
 		return result;
 	}
 	
-	<E> E getElement(String sql, Supplier<E> supplier, Runnable runnable) {
+	<E> List<E> getElements(String sql, Function<ResultSet, E> function, Consumer<PreparedStatement> argumentsSetter) {
+		List<E> result = new ArrayList<>();
+		try {
+			pst = connection.prepareStatement(sql);
+			// use pst to set parameters
+			argumentsSetter.accept(pst);
+			rs = pst.executeQuery();
+			while (rs.next()) {
+				result.add(function.apply(rs));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			SqlUtils.close(rs, pst);
+		}
+		return result;
+	}
+	
+	<E> E getElement(String sql, Function<ResultSet, E> function, Consumer<PreparedStatement> argumentsSetter) {
 		E result = null;
 		try {
 			pst = connection.prepareStatement(sql);
 			// use pst to set parameters
-			runnable.run();
+			argumentsSetter.accept(pst);
 			rs = pst.executeQuery();
 			if (rs.next()) {
-				result = supplier.get();
+				result = function.apply(rs);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

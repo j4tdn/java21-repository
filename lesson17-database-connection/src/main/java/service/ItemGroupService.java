@@ -7,6 +7,11 @@ import persistence.ItemGroup;
 public interface ItemGroupService {
 	
 	/**
+	 * Test jdbc transaction management
+	 */
+	void updateNGroups();
+	
+	/**
 	 * Get all item groups
 	 * 
 	 * @return list of {@link ItemGroup}

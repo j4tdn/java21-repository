@@ -20,10 +20,12 @@ public class Ex02ItemGroupView {
 	public static void main(String[] args) {
 //		itemGroupService.mergeP(new ItemGroup(null, "Loại hàng 12"));
 		
-		var newGroups = List.of(ItemGroup.of("Loại hàng 13"), ItemGroup.of("Loại hàng 14"), ItemGroup.of("Loại hàng 15"));
+//		var newGroups = List.of(ItemGroup.of("Loại hàng 13"), ItemGroup.of("Loại hàng 14"), ItemGroup.of("Loại hàng 15"));
+//		
+//		newGroups.forEach(g -> System.out.println(g));
+//		itemGroupService.save(newGroups);
 		
-		newGroups.forEach(g -> System.out.println(g));
-		itemGroupService.save(newGroups);
+		itemGroupService.updateNGroups();
 		
 		generate(
 				"1A. Liệt kê các loại hàng trong hệ thống",

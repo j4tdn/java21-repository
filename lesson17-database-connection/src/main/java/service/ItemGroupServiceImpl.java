@@ -11,29 +11,34 @@ import dao.JdbcItemGroupDao;
 import persistence.Item;
 import persistence.ItemGroup;
 
-public class ItemGroupServiceImpl implements ItemGroupService{
-	
+public class ItemGroupServiceImpl implements ItemGroupService {
+
 	private ItemGroupDao itemGroupDao;
 	private ItemDao itemDao;
-	
+
 	public ItemGroupServiceImpl() {
 		itemGroupDao = new JdbcItemGroupDao();
 		itemDao = new JdbcItemDao();
 	}
 
 	@Override
+	public void updateNGroups() {
+		itemGroupDao.updateNGroups();
+	}
+
+	@Override
 	public List<ItemGroup> getAll() {
 		return itemGroupDao.getAll();
 	}
-	
+
 	@Override
 	public List<ItemGroup> getAllWithItems() {
 		List<ItemGroup> result = new ArrayList<>();
 		List<Item> items = itemDao.getAll();
-		
+
 		for (Item item : items) {
 			ItemGroup group = item.getGroup();
-			
+
 			ItemGroup existedGroup = get(result, group);
 			if (existedGroup != null) {
 				existedGroup.getItems().add(item);
@@ -42,15 +47,15 @@ public class ItemGroupServiceImpl implements ItemGroupService{
 				result.add(group);
 			}
 		}
-		
+
 		return result;
 	}
-	
+
 	@Override
 	public ItemGroup get(int id) {
 		return itemGroupDao.get(id);
 	}
-	
+
 	@Override
 	public ItemGroup get(String name) {
 		Objects.requireNonNull(name, "Item group must be not null");
@@ -62,7 +67,7 @@ public class ItemGroupServiceImpl implements ItemGroupService{
 		Objects.requireNonNull(itemGroup, "Item group must be not null");
 		itemGroupDao.save(itemGroup);
 	}
-	
+
 	@Override
 	public void save(List<ItemGroup> groups) {
 		if (groups == null || groups.isEmpty()) {
@@ -76,7 +81,7 @@ public class ItemGroupServiceImpl implements ItemGroupService{
 		Objects.requireNonNull(itemGroup, "Item group must be not null");
 		itemGroupDao.update(itemGroup);
 	}
-	
+
 	@Override
 	public void merge(ItemGroup itemGroup) {
 		Objects.requireNonNull(itemGroup, "Item group must be not null");
@@ -87,17 +92,15 @@ public class ItemGroupServiceImpl implements ItemGroupService{
 			update(itemGroup);
 		}
 	}
-	
+
 	@Override
 	public void mergeP(ItemGroup itemGroup) {
 		Objects.requireNonNull(itemGroup, "Item group must be not null");
 		itemGroupDao.mergeP(itemGroup);
 	}
-	
+
 	private ItemGroup get(List<ItemGroup> groups, ItemGroup checkGroup) {
-		return groups.stream()
-				.filter(group -> group.equals(checkGroup))
-				.findFirst().orElse(null);
+		return groups.stream().filter(group -> group.equals(checkGroup)).findFirst().orElse(null);
 	}
 
 }

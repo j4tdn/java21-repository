@@ -1,5 +1,6 @@
 package service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import dao.ItemDao;
@@ -17,5 +18,10 @@ public class ItemServiceImpl implements ItemService{
 	@Override
 	public List<Item> getAll() {
 		return itemDao.getAll();
+	}
+	
+	@Override
+	public List<Item> getItemsBySaleDate(LocalDate salesDate) {
+		return itemDao.getItemsBySaleDate(salesDate);
 	}
 }

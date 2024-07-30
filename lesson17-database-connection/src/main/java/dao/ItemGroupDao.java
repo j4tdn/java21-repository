@@ -3,8 +3,14 @@ package dao;
 import java.util.List;
 
 import persistence.ItemGroup;
+import persistence.ItemGroupDto;
 
 public interface ItemGroupDao {
+	
+	/**
+	 * Test jdbc transaction management
+	 */
+	void updateNGroups();
 	
 	/**
 	 * Get all item groups
@@ -12,6 +18,13 @@ public interface ItemGroupDao {
 	 * @return list of {@link ItemGroup}
 	 */
 	List<ItemGroup> getAll();
+	
+	/**
+	 * Get count item groups with item amount
+	 * 
+	 * @return list of {@link ItemGroup}
+	 */
+	List<ItemGroupDto> getItemGroupDetails();
 	
 	/**
 	 * Get item group with given id
