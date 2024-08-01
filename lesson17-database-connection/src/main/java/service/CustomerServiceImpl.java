@@ -20,4 +20,11 @@ public class CustomerServiceImpl implements CustomerService {
 		customerDao.save(customer);
 	}
 	
+	@Override
+	public Customer login(String username, String password) {
+		Objects.requireNonNull(username);
+		Objects.requireNonNull(password);
+		return customerDao.login(username, password);
+	}
+	
 }

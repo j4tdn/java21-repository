@@ -6,6 +6,11 @@ import persistence.ItemGroup;
 import persistence.ItemGroupDto;
 
 public interface ItemGroupService {
+	
+	/**
+	 * Test jdbc transaction management
+	 */
+	void updateNGroups();
 
 	/**
 	 * Get all item groups.

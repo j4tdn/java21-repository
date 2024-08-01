@@ -6,7 +6,12 @@ import persistence.ItemGroup;
 import persistence.ItemGroupDto;
 
 public interface ItemGroupDao {
-
+	
+	/**
+	 * Test jdbc transaction management
+	 */
+	void updateNGroups();
+	
 	/**
 	 * Get all item groups.
 	 * 

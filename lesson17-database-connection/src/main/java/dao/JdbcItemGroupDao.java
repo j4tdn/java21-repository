@@ -52,6 +52,38 @@ public class JdbcItemGroupDao extends GenericDao implements ItemGroupDao {
 			+ "  GROUP BY t2.C02_ITEM_GROUP_ID,\n"
 			+ "           t2.C02_ITEM_GROUP_NAME";
 	
+	private static final String TS_UPDATE_Q1 = ""
+			+ "UPDATE t02_item_group SET C02_ITEM_GROUP_NAME = ? WHERE C02_ITEM_GROUP_ID = ?";
+	
+	private static final String TS_DELETE_Q2 = ""
+			+ "DELETE FROM t02_item_group WHERE C02_ITEM_GROUP_ID = ?";
+	
+	@Override
+	public void updateNGroups() {
+		try {
+			connection.setAutoCommit(false);
+			
+			// sql1
+			pst = connection.prepareStatement(TS_UPDATE_Q1);
+			pst.setString(1, "Cập nhật");
+			pst.setInt(2, 10);
+			pst.executeUpdate();
+			
+			// sql2
+			pst = connection.prepareStatement(TS_DELETE_Q2);
+			// pst.setInt(-1, 19);
+			pst.setInt(1, 18);
+			pst.executeUpdate();
+			
+			connection.commit();
+		} catch (SQLException e) {
+			SqlUtils.rollback(connection);
+			e.printStackTrace();
+		} finally {
+			SqlUtils.close(pst);
+		}
+	}
+	
 	@Override
 	public List<ItemGroup> getAll() {
 		return getElements(GET_ALL_ITEM_GROUPS, ItemGroupTransformer::transformItemGroup);

@@ -20,6 +20,10 @@ public class Ex02ItemGroupView {
 		// var newGroups = List.of(ItemGroup.of("Loại hàng 18"), ItemGroup.of("Loại hàng 19"), ItemGroup.of("Loại hàng 20"));
 		// itemGroupService.save(newGroups);
 		
+		itemGroupService.updateNGroups();
+		
+		System.out.println("===================================");
+		
 		IoUtils.generate(
 				"1A. Liệt kê các loại hàng trong hệ thống", 
 				itemGroupService.getAllWithItems()

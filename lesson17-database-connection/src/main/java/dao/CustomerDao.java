@@ -10,5 +10,14 @@ public interface CustomerDao {
 	 * @param customer {@link Customer}
 	 */
 	void save(Customer customer);
-	
+
+	/**
+	 * Tests login function
+	 * 
+	 * @param username username
+	 * @param password password
+	 * @return {@link Customer} if exists account
+	 */
+	Customer login(String username, String password);
+
 }
