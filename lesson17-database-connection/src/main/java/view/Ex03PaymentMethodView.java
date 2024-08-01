@@ -17,8 +17,6 @@ public class Ex03PaymentMethodView {
 				"1A. Liệt kê các phương thức thanh toán", 
 				paymentMethodService.getAll()
 		);
-		
-		
 	}
 	
 }

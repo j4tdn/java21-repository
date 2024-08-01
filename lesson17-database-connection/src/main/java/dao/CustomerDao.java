@@ -11,4 +11,5 @@ public interface CustomerDao {
 	 */
 	void save(Customer customer);
 	
+	Customer login(String username, String password);
 }

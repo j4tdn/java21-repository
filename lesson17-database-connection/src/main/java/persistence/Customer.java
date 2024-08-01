@@ -3,6 +3,12 @@ package persistence;
 import java.util.Objects;
 
 public class Customer {
+	
+	public static final String PROP_ID = "id";
+	public static final String PROP_NAME = "name";
+	public static final String PROP_EMAIL = "email";
+	public static final String PROP_ADDRESS = "address";
+	public static final String PROP_PHONE = "phone";
 
 	private Integer id;
 	private String name;
