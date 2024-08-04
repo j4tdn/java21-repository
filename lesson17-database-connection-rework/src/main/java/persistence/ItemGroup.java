@@ -29,7 +29,7 @@ public class ItemGroup {
 		this.items = items;
 	}
 	
-	public ItemGroup of() {
+	public static ItemGroup of() {
 		return new ItemGroup();
 	}
 
@@ -78,7 +78,7 @@ public class ItemGroup {
 
 	@Override
 	public String toString() {
-		return "ItemGroup [id=" + id + ", name=" + name + ", items=" + items + "]";
+		return "ItemGroup [id=" + id + ", name=" + name + "]";
 	}
 	
 	

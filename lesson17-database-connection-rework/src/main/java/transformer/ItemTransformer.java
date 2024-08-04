@@ -6,8 +6,7 @@ import java.sql.SQLException;
 import persistence.Item;
 import persistence.ItemGroup;
 
-public class CustomerTranformer {
-	
+public class ItemTransformer {
 	private ItemTransformer() {
 	}
 	
@@ -39,5 +38,4 @@ public class CustomerTranformer {
 		}
 		return item;
 	}
-	
 }

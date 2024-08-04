@@ -12,4 +12,18 @@ public interface ItemGroupService {
 	 * @return list of {@link ItemGroup}
 	 */
 	List<ItemGroup> getAll();
+	
+	/**
+	 * Get all item groups with items
+	 * 
+	 * @return list of {@link ItemGroup}
+	 */
+	List<ItemGroup> getAllWithItems();
+	
+	/**
+	 * Get all item groups with items
+	 * 
+	 * @return list of {@link ItemGroup}
+	 */
+	ItemGroup get(int id);
 }

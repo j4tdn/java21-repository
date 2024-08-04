@@ -13,8 +13,7 @@ public class JdbcCustomerDao extends GenericDao implements CustomerDao{
 			+ "    C11_CUSTOMER_PHONE, C11_CUSTOMER_USERNAME, C11_CUSTOMER_PASSWORD)\n"
 			+ "VALUES(?, ?, ?, ?, ?, ?)";
 	
-	private static final String GET_CUSTOMER = ""
-			+ ""
+	
 	@Override
 	public void save(Customer customer) {
 		
