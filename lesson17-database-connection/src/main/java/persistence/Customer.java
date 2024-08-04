@@ -32,60 +32,71 @@ public class Customer {
 		this.password = password;
 	}
 
+	public static Customer of() {
+		return new Customer();
+	}
+	
 	public Integer getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public Customer withId(Integer id) {
 		this.id = id;
+		return this;
 	}
 
 	public String getName() {
 		return name;
 	}
 
-	public void setName(String name) {
+	public Customer withName(String name) {
 		this.name = name;
+		return this;
 	}
 
 	public String getEmail() {
 		return email;
 	}
 
-	public void setEmail(String email) {
+	public Customer withEmail(String email) {
 		this.email = email;
+		return this;
 	}
 
 	public String getAddress() {
 		return address;
 	}
 
-	public void setAddress(String address) {
+	public Customer withAddress(String address) {
 		this.address = address;
+		return this;
 	}
 
 	public String getPhone() {
 		return phone;
 	}
 
-	public void setPhone(String phone) {
+	public Customer withPhone(String phone) {
 		this.phone = phone;
+		return this;
 	}
 
 	public String getUsername() {
 		return username;
 	}
 
-	public void setUsername(String username) {
+	public Customer withUsername(String username) {
 		this.username = username;
+		return this;
 	}
 
 	public String getPassword() {
 		return password;
 	}
 
-	public void setPassword(String password) {
+	public Customer withPassword(String password) {
 		this.password = password;
+		return this;
 	}
 	
 	@Override

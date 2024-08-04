@@ -21,6 +21,11 @@ public class ItemGroupServiceImpl implements ItemGroupService {
 		itemGroupDao = new JdbcItemGroupDao();
 		itemDao = new JdbcItemDao();
 	}
+	
+	@Override
+	public void updateNGroups() {
+		itemGroupDao.updateNGroups();
+	}
 
 	@Override
 	public List<ItemGroup> getAll() {
