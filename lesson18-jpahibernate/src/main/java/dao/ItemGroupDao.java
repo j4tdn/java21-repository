@@ -2,6 +2,7 @@ package dao;
 
 import java.util.List;
 
+import persistence.dto.ItemGroupDto;
 import persistence.entities.ItemGroup;
 
 public interface ItemGroupDao {
@@ -12,6 +13,13 @@ public interface ItemGroupDao {
 	 * @return list of {@link ItemGroup}
 	 */
 	List<ItemGroup> getAll();
+	
+	/**
+	 * Get/count item groups with item amount.
+	 * 
+	 * @return list of {@link ItemGroupDto}
+	 */
+	List<ItemGroupDto> getItemGroupDetails();
 	
 	/**
 	 * Get item group by given id

@@ -38,4 +38,21 @@ public class GenericDao {
 		return elements;
 	}
 	
+	protected List<?> getElementsWithTransaction(String sql) {
+		List<?> elements = new ArrayList<>();
+		Session session = getCurrentSession();
+		Transaction transaction = session.beginTransaction(); // open transaction
+		try {
+			elements = session.createNativeQuery(sql).getResultList();
+			transaction.commit();
+		} catch (Exception e) {
+			transaction.rollback();
+		}
+		return elements;
+	}
+	
+	@SuppressWarnings("unchecked")
+	protected <T> List<T> safeList(List<?> rawList) {
+		return (List<T>)rawList;
+	}
 }

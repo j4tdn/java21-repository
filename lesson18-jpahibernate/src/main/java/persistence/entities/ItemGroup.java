@@ -1,14 +1,15 @@
 package persistence.entities;
 
+import java.util.List;
 import java.util.Objects;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
-import javax.persistence.NamedNativeQueries;
-import javax.persistence.NamedNativeQuery;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -50,6 +51,9 @@ public class ItemGroup {
 	@Column(name = "C02_ITEM_GROUP_NAME", nullable = false)
 	private String name;
 	
+	@OneToMany(mappedBy = "group")
+	private List<Item> items;
+	
 	/**
 	 * JPA/Hibernate required constructor
 	 */
@@ -75,6 +79,14 @@ public class ItemGroup {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	public List<Item> getItems() {
+		return items;
+	}
+	
+	public void setItems(List<Item> items) {
+		this.items = items;
 	}
 	
 	@Override

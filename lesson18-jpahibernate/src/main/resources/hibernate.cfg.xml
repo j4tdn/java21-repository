@@ -18,6 +18,7 @@
 
 		<!-- Set the current session context getCurrentSession -->
 		<property name="current_session_context_class">thread</property>
+		<property name="hibernate.enable_lazy_load_no_trans">true</property>
 	
 		<!-- 2nd level cache -->
 		<!-- <property name="hibernate.cache.use_second_level_cache">true</property> -->
@@ -26,6 +27,7 @@
 		
 		<!-- Entity Class Mapping  -->
 		<mapping class="persistence.entities.ItemGroup"/>
+		<mapping class="persistence.entities.Item"/>
 		
 	</session-factory>
 
