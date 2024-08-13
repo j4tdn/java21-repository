@@ -21,13 +21,15 @@
 		<property name="hibernate.enable_lazy_load_no_trans">true</property>
 	
 		<!-- 2nd level cache -->
-		<!-- <property name="hibernate.cache.use_second_level_cache">true</property> -->
-		<!-- <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property> -->
-		<!-- <property name="hibernate.cache.provider_configuration_file_resource_path">ehcache.xml</property> -->
+		<property name="hibernate.cache.use_second_level_cache">true</property>
+		<property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+		<property name="hibernate.cache.provider_configuration_file_resource_path">ehcache.xml</property>
 		
 		<!-- Entity Class Mapping  -->
 		<mapping class="persistence.entities.ItemGroup"/>
 		<mapping class="persistence.entities.Item"/>
+		<mapping class="persistence.entities.OrderDetail"/>
+		<mapping class="persistence.entities.Order"/>
 		
 	</session-factory>
 
