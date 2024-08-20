@@ -5,7 +5,6 @@ import java.util.List;
 
 import dto.ItemDetailDto;
 import dto.OrderItemDto;
-import entity.Item;
 
 public interface ItemService {
 	

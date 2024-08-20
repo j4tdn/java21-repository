@@ -5,7 +5,6 @@ import static constant.QueryConstants.GET_ALL_ITEM_DETAIL;
 import static constant.QueryConstants.GET_TOP3_SELLING_ITEM_BY_YEAR;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.transform.Transformers;
@@ -21,26 +20,16 @@ import utils.GenericDao;
 
 public class HibernateItemDao extends GenericDao implements ItemDao {
 	
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings({ "unchecked", "deprecation" })
 	@Override
 	public List<OrderItemDto> getAllItemToday(LocalDate date) {
-	    List<Object[]> results = openSession().createNativeQuery(GET_ALL_ITEM_BY_TODAY)
+	    return openSession().createNativeQuery(GET_ALL_ITEM_BY_TODAY)
 	            .addScalar(OrderItemDto.PROP_ITEM_ID, IntegerType.INSTANCE)
 	            .addScalar(OrderItemDto.PROP_ITEM_NAME, StringType.INSTANCE)
 	            .addScalar(OrderItemDto.PROP_ORDER_TIME, LocalDateType.INSTANCE)
+	            .setResultTransformer(Transformers.aliasToBean(OrderItemDto.class))
 	            .setParameter("date", date)
 	            .getResultList();
-	    
-	    List<OrderItemDto> items = new ArrayList<>();
-	    for (Object[] result : results) {
-	        OrderItemDto dto = new OrderItemDto();
-	        dto.setId((Integer) result[0]);
-	        dto.setName((String) result[1]);
-	        dto.setDate((LocalDate) result[2]);
-	        items.add(dto);
-	    }
-	    
-	    return items;
 	}
 
 	

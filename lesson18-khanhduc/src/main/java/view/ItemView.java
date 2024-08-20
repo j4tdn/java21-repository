@@ -22,10 +22,10 @@ public class ItemView {
 		generate("1. Mặt hàng có trong ngày "+date+ " là: ", 
 				itemService.getAllItemToday(date));
 		
-//		generate("3. Top 3 mặt hàng bán nhiều nhất là:", 
-//				itemService.getTop3SellingItemsByYear(2024));
-//		
-//		generate("4. Danh sách chi tiết các mặt hàng của mỗi loại hàng", 
-//				itemService.getAllItemDetail());
+		generate("3. Top 3 mặt hàng bán nhiều nhất là:", 
+				itemService.getTop3SellingItemsByYear(2024));
+		
+		generate("4. Danh sách chi tiết các mặt hàng của mỗi loại hàng", 
+				itemService.getAllItemDetail());
 	}
 }
