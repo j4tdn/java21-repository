@@ -1,5 +1,6 @@
--- Dạng 1: Bài toán LIỆT KÊ
 USE java21_shopping;
+-- Dạng 1: Bài toán LIỆT KÊ
+
 -- Liệt kê các loại hàng trong hệ thông
 SELECT C02_ITEM_GROUP_ID c2_id, 
        C02_ITEM_GROUP_NAME c2_name

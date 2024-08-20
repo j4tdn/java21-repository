@@ -1,5 +1,7 @@
 package utils;
 
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.Objects;
 
 import org.apache.commons.codec.digest.DigestUtils;
@@ -7,6 +9,14 @@ import org.apache.commons.codec.digest.DigestUtils;
 public class SqlUtils {
 
 	private SqlUtils() {
+	}
+
+	public static void rollback(Connection connection) {
+		try {
+			connection.rollback();
+		} catch (SQLException e1) {
+			e1.printStackTrace();
+		}
 	}
 
 	public static void close(AutoCloseable... objectsNeedToBeClosed) {
