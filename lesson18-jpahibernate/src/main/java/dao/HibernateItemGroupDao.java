@@ -5,6 +5,7 @@ import java.util.List;
 import org.hibernate.type.StringType;
 
 import dao.base.GenericDao;
+import persistence.dto.ItemGroupDto;
 import persistence.entities.ItemGroup;
 
 public class HibernateItemGroupDao extends GenericDao implements ItemGroupDao {
@@ -27,6 +28,17 @@ public class HibernateItemGroupDao extends GenericDao implements ItemGroupDao {
 	
 	// CirteriaQuery     ==> Java
 	
+	private static final String GET_ITEM_GROUP_DETAILS = ""
+			+ "SELECT t2.C02_ITEM_GROUP_ID " + ItemGroupDto.PROP_ID + ",\n"
+			+ "       t2.C02_ITEM_GROUP_NAME " + ItemGroupDto.PROP_NAME + ",\n"
+			+ "       sum(t12.C12_AMOUNT) " + ItemGroupDto.PROP_AMOUNT_OF_ITEMS + ",\n"
+			+ "       GROUP_CONCAT(concat(t1.C01_ITEM_NAME,'-',t6.C06_SIZE_NAME,'-',t12.C12_AMOUNT)) " + ItemGroupDto.PROP_ITEM_DETAILS + "\n"
+			+ "  FROM t02_item_group t2\n"
+			+ "  JOIN t01_item t1 ON t1.C01_ITEM_GROUP_ID = t2.C02_ITEM_GROUP_ID\n"
+			+ "  JOIN t12_item_detail t12 ON t12.C12_ITEM_ID = t1.C01_ITEM_ID\n"
+			+ "  JOIN t06_size t6 ON t12.C12_SIZE_ID = t6.C06_SIZE_ID\n"
+			+ "  GROUP BY t2.C02_ITEM_GROUP_ID,\n"
+			+ "           t2.C02_ITEM_GROUP_NAME";
 	private static final String GET_ALL_ITEM_GROUP = ""
 			+ "SELECT * FROM t02_item_group";
 	
@@ -77,7 +89,16 @@ public class HibernateItemGroupDao extends GenericDao implements ItemGroupDao {
 	public List<ItemGroup> getAll() {
 		return getElementsWithTransaction(GET_ALL_ITEM_GROUP, getEntityClass());
 	}
-	
+	@Override
+	public List<ItemGroupDto> getItemGroupDetails() {
+		// List<Object[]>
+		var list = getCurrentSession()
+			.createQuery(GET_ITEM_GROUP_DETAILS)
+			.getResultList();
+		
+		System.out.println("list runtime --> " + list.getClass());
+		return null;
+	}
 	@Override
 	public ItemGroup get(Integer id) {
 		return openSession().get(getEntityClass(), id);
@@ -104,5 +125,7 @@ public class HibernateItemGroupDao extends GenericDao implements ItemGroupDao {
 	private Class<ItemGroup> getEntityClass() {
 		return ItemGroup.class;
 	}
+	
+	
 
 }

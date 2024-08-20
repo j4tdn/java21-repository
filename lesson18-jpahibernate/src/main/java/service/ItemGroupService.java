@@ -2,6 +2,7 @@ package service;
 
 import java.util.List;
 
+import persistence.dto.ItemGroupDto;
 import persistence.entities.ItemGroup;
 
 public interface ItemGroupService {
@@ -27,4 +28,11 @@ public interface ItemGroupService {
 	 */
 	ItemGroup get(String name);
 	
+
+	/**
+	 * Get/count item groups with item amount.
+	 * 
+	 * @return list of {@link ItemGroupDto}
+	 */
+	List<ItemGroupDto> getItemGroupDetails();
 }
