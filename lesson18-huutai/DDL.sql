@@ -1,0 +1,24 @@
+-- 1.
+use java21_shopping;
+
+ALTER TABLE t01_item
+ADD C01_ITEM_CREATED_TIME DATETIME;
+
+-- SELECT * FROM t01_item
+-- WHERE cast(C01_ITEM_CREATED_TIME AS DATE) = '24-04-10 ORDER BY C01_ITEM_ID ASC';
+
+
+WITH CTE AS (
+	SELECT t1.C01_ITEM_GROUP_ID idc , t12.C12_AMOUNT amount
+    FROM t12_item_detail t12
+    JOIN t01_item t1
+    ON t12.C12_ITEM_ID = t1.C01_ITEM_ID
+    GROUP BY t1.C01_ITEM_ID
+)
+SELECT t2.C02_ITEM_GROUP_ID,
+	   t2.C02_ITEM_GROUP_NAME,
+       CTE.amount
+  FROM t02_item_group t2
+  JOIN CTE
+  ON CTE.idc = t2.C02_ITEM_GROUP_ID
+
