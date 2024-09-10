@@ -15,6 +15,9 @@ public class HibernateItemDao extends GenericDao implements ItemDao {
 	private static final String Q_Get_All = ""
 			+ "SELECT * FROM t01_item";
 	
+	// Tên biến tất cả nên upper case nếu là final còn nếu để như e thì dùng camel case và ko có _
+	// Logic sai, bán theo ngày khác với bán từ ngày nào ...
+	// Phải get data từ table item, order và các table trung gian ...
 	private static final String Get_Item_By_Created_Time = ""
 			+ "select t1.C01_ITEM_ID"+ ItemDto.ITEM_ID +",\n"
 			+ "		t1.C01_ITEM_NAME"+ ItemDto.ITEM_NAME +",\n"

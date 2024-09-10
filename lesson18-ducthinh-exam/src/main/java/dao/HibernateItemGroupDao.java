@@ -30,6 +30,7 @@ public class HibernateItemGroupDao extends GenericDao implements ItemGroupDao {
 	
 	// CirteriaQuery     ==> Java
 	
+	// ok
 	private static final String GET_ITEM_GROUP_DETAILS = ""
 			+"select t2.C02_ITEM_GROUP_ID " + ItemGroupDto.PROP_ID + ",\n"
 			+ "	   t2.C02_ITEM_GROUP_NAME " + ItemGroupDto.PROP_NAME + ",\n"
@@ -42,6 +43,9 @@ public class HibernateItemGroupDao extends GenericDao implements ItemGroupDao {
 			+ "SELECT * FROM t02_item_group";
 	
 	
+	// Hình như e hiểu sai đề rồi
+	// Bảng thống kê nào là lưu data theo kiểu date_from đến date_util e ko thể so sánh như này được
+	// 1 là dùng data từ bảng order, 2 là nếu dùng trong này thì phải YEAR(t9.C09_DATE_FROM) <= :year <= YEAR(t9.C09_DATE_UNTIL)
 	private static final String GET_ITEM_GROUP_TOP3_BY_YEAR = ""
 			+ "select t2.C02_ITEM_GROUP_ID " + ItemGroupDto.PROP_ID + ",\n"
 			+ "		t2.C02_ITEM_GROUP_NAME " + ItemGroupDto.PROP_NAME + ",\n"
