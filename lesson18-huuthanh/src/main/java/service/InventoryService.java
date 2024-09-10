@@ -10,6 +10,10 @@ import javax.persistence.Persistence;
 import java.util.Date;
 import java.util.List;
 
+// Tương tự, class name pattern
+// khó phân biệt được đầu là cha, con, declaration, implementation
+
+// service ko làm nhiệm vụ của dao truy vấn DB
 public class InventoryService implements InventoryServiceInterface {
 
     private EntityManagerFactory emf;
@@ -23,6 +27,7 @@ public class InventoryService implements InventoryServiceInterface {
    
     @Override
     public List<Item> getItemsSoldOnDate(Date date) {
+    	// câu 1: sai yêu cầu
         return entityManager.createQuery("SELECT i FROM Item i ORDER BY i.id ASC", Item.class)
                 .getResultList();
     }

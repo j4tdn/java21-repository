@@ -4,6 +4,7 @@
              version="2.1">
     <persistence-unit name="PU_NAME" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <!-- Entity1 là gì, sao ko code theo cách a hướng dẫn  -->
         <class>com.example.Entity1</class>
         
         <properties>
