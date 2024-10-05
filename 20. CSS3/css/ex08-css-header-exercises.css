@@ -1,0 +1,48 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	color: #fff;
+}
+
+ul li {
+	list-style-type: none;
+}
+
+.page-header {
+	height: 66px;
+	width: 100%;
+	background-color: #000;
+
+	.wrapper {
+		width: 88%;
+		margin: 0 auto;
+		height: 100%;
+
+		.page-logo {
+			float: left;
+			line-height: 66px;
+		}
+
+		.navigation {
+			float: right;
+
+			li {
+				float: left;
+				margin-left: 44px;
+				line-height: 66px;
+
+				a {
+					text-transform: uppercase;
+					font-size: 24px;
+					font-family: corbel;
+					text-decoration: none;
+				}
+
+				a:hover {
+					color: #f00;
+				} 
+			}
+		}
+	}
+

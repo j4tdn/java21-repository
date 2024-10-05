@@ -1,0 +1,26 @@
+
+.block-md {
+	width: 180px;
+	height: 120px;
+}
+
+.block-lg {
+	width: 260px;
+	height: 140px;
+}
+
+.bg-green {
+	background: rgb(0, 255, 0);
+}
+
+.bg-orange {
+	background: orange;
+}
+
+.block-1 {
+	/*float: left; /*right*/*/
+}
+
+.block-2 {
+	/*clear: left;*/ /*clear trước khi render block-2*/
+}

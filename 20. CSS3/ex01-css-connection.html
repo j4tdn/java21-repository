@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CSS3 - Ex01 Css Connection</title>
+
+	
+
+	<!-- Internal CSS -->
+	<style>
+		/*
+			CSS Selector là tập các cách để CSS có thể gọi/tìm kiếm
+			các HTML tags để style cho nó
+	        
+	        + select theo tag name
+			p{}h2{}
+
+			+ select theo class, id --> .class(trùng nhau) #id(duy nhất)
+			  --> hỗ trợ gọi ngắn gọn trong css, js 
+			
+			-----
+			Tìm các tag là h2, apply color là green cho nó
+		*/
+		h2 {
+			color: green;
+		}
+
+		p {
+			text-decoration: underline;
+		}
+	</style>
+
+	<!-- External CSS -->
+	<link rel="stylesheet" href="css/ex01-external.css">
+</head>
+<body>
+	<h2>There are 3 ways[inline > internal || external (import orders)] to connection css with html</h2>
+
+	<hr>
+
+	<ul>
+		<li class="inline">1. Inline</li>
+		<li>2. Internal</li>
+		<li>3. External</li>
+	</ul>
+
+	<hr>
+
+	<!-- Inline CSS -->
+	<p style="color: blue; font-weight: bold;">Lorem1 ipsum dolor sit amet, consectetur adipisicing elit</p>
+
+	<p style="text-transform: uppercase;">Lorem2 ipsum dolor sit amet, consectetur adipisicing elit</p>
+
+	<hr>
+
+	<p class="text-test">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	<hr>
+
+	<ul id="languages" da="tech">
+		<li>1. Java</li>
+		<li>2. Database</li>
+		<li>3. Connection</li>
+		<li>4. Git</li>
+	</ul>
+
+
+
+</body>
+</html>
