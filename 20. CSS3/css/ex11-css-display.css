@@ -1,0 +1,29 @@
+.block-1 {
+	background-color: green;
+	display: inline;
+}
+
+/*
+	display: inline-block; tự cách ra 1 space
+	https://css-tricks.com/fighting-the-space-between-inline-block-elements/
+*/
+
+.block-2 {
+	background-color: orange;
+	display: inline-block;
+	height: 100px;
+	line-height: 100px;
+	margin-right: -4px;
+}
+
+.block-3 {
+	background-color: blue;
+/*	display: none;*/
+	display: inline;
+	visibility: hidden;
+}
+
+.block-4 {
+	background-color: red;
+	display: inline;
+}
