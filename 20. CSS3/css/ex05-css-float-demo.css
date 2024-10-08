@@ -1,0 +1,34 @@
+.block {
+	width: 150px;
+	height: 150px;
+}
+
+.block-pink {
+	background: pink;
+}
+
+.block-blue {
+	background: blue;
+}
+
+.block-red {
+	background: red;
+}
+
+.block-orange {
+	background: orange;
+}
+
+.block-green {
+	background: green;
+}
+
+.container {
+	.block {
+		float: left;
+	}
+
+	.block:nth-last-child(-n + 2) {
+		clear: left;
+	}
+}
