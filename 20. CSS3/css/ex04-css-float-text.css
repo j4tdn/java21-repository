@@ -1,0 +1,14 @@
+
+.block-md {
+	width: 180px;
+	height: 120px;
+}
+
+
+.bg-green {
+	background: rgb(0, 255, 0);
+}
+
+.block-1 {
+	float: left;
+}

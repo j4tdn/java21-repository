@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ex03 Form Demo</title>
+</head>
+<body>
+
+	<h1>LESSON 19 - HTML5 - Form Elements</h1>
+
+	<hr>
+
+	<form action="request" method="get">
+		<table cellpadding="4">
+			<tr>
+				<td><label>First Name: </label></td>
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<td><label>Last Name: </label></td>
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<td><label>Gender</label></td>
+				<td>
+					Male <input type="radio" name="gender-group" checked>
+					Female <input type="radio" name="gender-group">
+				</td>
+			</tr>
+			<tr>
+				<td><label>Age: </label></td>
+				<td><input type="number" min="18" max="100"></td>
+			</tr>
+			<tr>
+				<td><label>University: </label></td>
+				<td>
+					<select>
+						<option value="1">UED</option>
+						<option value="2">FPT</option>
+						<option value="3">DTU</option>
+						<option value="4">DUT</option>
+						<option value="5">DUE</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label>Languages: </label></td>
+				<td>
+					<label for="html5"> HTML5</label> <input id="html5" type="checkbox">
+					<label for="css3"> CSS3</label> <input id="css3" type="checkbox">
+					<label for="es2024"> ES2024</label> <input id="es2024" type="checkbox">
+				</td>
+			</tr>
+			<tr>
+				<td><label>Password: </label></td>
+				<td><input type="Password"</input></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<!-- 
+						submit: refresh trang khi submit form
+						button: không refresh trang
+					 -->
+					<input type="button" value="SignUp">
+					<input type="reset" value="Clear">
+				</td>
+			</tr>
+		</table>
+
+		<!-- 
+			HTML: tags
+			CSS: properties
+		 -->
+
+	</form>
+
+</body>
+</html>

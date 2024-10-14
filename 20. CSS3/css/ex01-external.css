@@ -1,0 +1,14 @@
+p {
+	font-size: 20px;
+	text-decoration: line-through;
+}
+
+li:first-child {
+	font-weight: bold;
+	text-transform: uppercase;
+	color: green;
+}
+
+
+
+

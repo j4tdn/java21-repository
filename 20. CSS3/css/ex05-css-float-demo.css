@@ -1,0 +1,26 @@
+.block {
+	width: 180px;
+	height: 120px;
+}
+
+.block-1 {
+	background: pink;
+}
+
+.block-2 {
+	background: blue;
+}
+
+.block-3 {
+	background: red;
+}
+
+.block-4 {
+	background: orange;
+}
+
+.block-5 {
+	background: seagreen;
+}
+
+
