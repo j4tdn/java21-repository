@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="icon" href="images/header.png" />
+		<title>Ex01 HTML Basic Demo</title>
+		<meta charset="utf-8">
+
+		<!-- 
+			internal css
+			add/remove css attribute for current html page 
+		 -->
+		<style type="text/css">
+
+			* {
+				scroll-behavior: smooth;
+			}
+
+		/*
+			Table Body: N rows
+
+			1. Tô màu cho hàng đầu tiên 	--> tr:first-child
+			2. Tô màu cho hàng cuối cùng 	--> tr:last-child
+			3. Tô màu cho hàng thứ 5: 		--> tr:nth-child(nthRow) index 1
+			4. Tô màu cho hàng đầu tiên lặp đi lặp lại 2 hàng 1 lần
+			nth-child(an + b)
+			a: chu kì lặp lại
+			b: tính từ hàng thứ b(index 1)
+			5. Tô màu cho 3 hàng đầu tiên so le
+			6. Tô màu cho 2 hàng cuối cùng
+			nth-lastchild(an+b)
+			a: chu kì lặp lại
+			b: tính từ hàng thứ b(index 1) từ dưới lên
+		  */
+
+			thead {
+				background: yellow;
+			}
+
+			tbody tr:nth-last-child(-n + 3) {
+				background: gray;
+			}
+
+			
+		</style>
+	</head>
+
+	<body>
+
+		<!-- 
+			html: default size: 16px = 1rem(root element)
+			px: đơn vi đo kích thước trên màn hình của thiết bị vi tính, phụ thuộc vào độ phân giải của màn hình
+
+			vd: Display Resolution : 1920x1200
+				Chia màn hình theo:
+					+ Chiều ngang: 1920px hay 1920 điểm ảnh
+					+ Chiều dọc: 1200px hay 1200 điểm ảnh
+			
+			1rem = 16px
+
+			1em = default size của paren element
+
+			tag:
+			+ tên thẻ
+			+ kèm với những thuộc tính có sẵn
+			  VD: h1: font-size 2em
+			+ dung css để override giá trị của các tt này
+
+			"semantic tag"
+			+ dung thẻ đúng ngữ nghĩa, context của dự án
+
+			Phân loại thẻ:
+			+ Thẻ đơn/ đôi
+			+ Thẻ inline / block
+			  Inline: kích thước bằng chính nội dung mà thẻ đó đang chứa, không xuống hàng khi kết thúc
+			  Block: Kích thước mặc định là 100%(vw)
+			  	   : xuống hàng khi kết thúc thẻ.
+
+		-->
+
+		<!-- Menu -->
+
+		<table id="menu" border="1" cellspacing="0" cellpadding="8">
+			<thead>
+				<tr>
+					<td colspan="2">Menu</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>[Un]OrderList</td>
+					<td>
+						<a href="#block-uol">naviage</a>
+					</td>
+				</tr>
+				<tr>
+					<td>[Un]Image</td>
+					<td>
+						<a href="#block-cup">naviage</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		Normal Text - No Tag
+
+		<!-- HEADING -->
+		<h1>This is H1 Tag</h1>
+		<h2>This is H2 Tag</h2>
+		<h3>This is H3 Tag</h3>
+		<h4>This is H4 Tag</h4>
+		<h5>This is H5 Tag</h5>
+		<h6>This is H6 Tag</h6>
+
+		<hr>
+
+		<!-- Paragraph: đoạn hội thoại -->
+		<p>Lorem1: ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quo iure blanditiis molestias <br>labore laborum minima impedit tempora quasi sapiente nostrum, nesciunt corporis, earum. Architecto voluptatem dicta itaque, illum tempora!</p>
+
+		<p>Lorem2: ipsum dolor sit amet consectetur adipisicing elit. <strong>Laudantium, quo iure blanditiis molestias labore laborum minima impedit tempora quasi</strong> sapiente <em>nostrum</em>, nesciunt corporis, earum. Architecto voluptatem dicta itaque, illum tempora!</p>
+
+		<hr>
+
+		<!-- This is Order/UnOrder List Elements -->
+		<h3 id="block-uol">#1 Backend/Databse Languages</h3>
+		<ol>
+			<li>Java/Php/C#</li>
+			<li>Database</li>
+			<li>JDBC/ODBC</li>
+			<li>ORM Framework</li>
+		</ol>
+
+		<h3>#2 FrontEnd Languages</h3>
+		<ul>
+			<li>HTML5</li>
+			<li>CSS3</li>
+			<li>JavaScript/TypeScript</li>
+			<li>ReactJs</li>
+		</ul>
+
+		<hr>
+
+		<a href="https://givralbakery.com.vn/banh-kem/cupcake.html">
+			<img id="block-cup" src="images/cupcake.png" alt="cup-cake" width="280" height="320">
+		</a>
+
+		<hr>
+
+		<!-- Table -->
+
+		<h3>Section 2: Table Demo</h3>
+
+		<!-- should be replaced by css -->
+		<table border="1" cellspacing="0" cellpadding="16">
+			<thead>
+				<tr>
+					<th rowspan="2">No.</th>
+					<th rowspan="2">Name</th>
+					<th rowspan="2">Age</th>
+					<th rowspan="2">Eye Color</th>
+					<th colspan="2">Phone</th>
+				</tr>
+				<<tr>
+					<th>Fax 1</th>
+					<th>Fax 2</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Peter</td>
+					<td>18</td>
+					<td>Blue</td>
+					<td>123456</td>
+					<td>1456</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Kate</td>
+					<td>25</td>
+					<td>Green</td>
+					<td>123456</td>
+					<td>123456</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Oliver</td>
+					<td>35</td>
+					<td>Brown</td>
+					<td>123456</td>
+					<td>123456</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>Peter</td>
+					<td>18</td>
+					<td>Blue</td>
+					<td>123456</td>
+					<td>1456</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>Kate</td>
+					<td>25</td>
+					<td>Green</td>
+					<td>123456</td>
+					<td>123456</td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>Oliver</td>
+					<td>35</td>
+					<td>Brown</td>
+					<td>123456</td>
+					<td>123456</td>
+				</tr>
+				<tr>
+					<td>7</td>
+					<td>Peter</td>
+					<td>18</td>
+					<td>Blue</td>
+					<td>123456</td>
+					<td>1456</td>
+				</tr>
+				<tr>
+					<td>8</td>
+					<td>Kate</td>
+					<td>25</td>
+					<td>Green</td>
+					<td>123456</td>
+					<td>123456</td>
+				</tr>
+				<tr>
+					<td>9</td>
+					<td>Oliver</td>
+					<td>35</td>
+					<td>Brown</td>
+					<td>123456</td>
+					<td>123456</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<hr>
+
+		<h3>Anchor Tag</h3>
+
+		<a href="https://www.ebay.com/" target="_blank">Ref to Ebay</a>
+		<a href="https://www.google.com/">Ref to Google</a>
+
+		<a href="ex02-navigation.html">Ex02 Navigation</a>
+		<a href="root/page1.html">Page 1</a>
+		<a href="root/sub/page2.html">Page 2</a>
+
+		<hr>
+
+		<video src="video/video.mp4"
+			width="280px" height="160px" controls poster="images/cake.jpg" loop>
+		</video>
+
+		<audio src="audio/audio.mp3" controls>
+			
+		</audio>
+
+	</body>
+</html>

@@ -1,0 +1,21 @@
+p {
+	font-size: 20px;
+	text-decoration: line-through;
+}
+
+.inline {
+	font-weight: bold;
+	text-transform: uppercase;
+	color: green;
+}
+
+ul#languages {
+	li:last-child {
+		color: greenyellow;
+	}
+	li:first-child {
+		color: red;
+	}
+
+
+}

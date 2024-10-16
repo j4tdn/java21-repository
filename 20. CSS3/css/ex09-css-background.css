@@ -1,0 +1,34 @@
+.title {
+	color: green;
+	font-weight: 700;
+}
+
+div[class^='block'] {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.block-01 {
+	width: 300px;
+	height: 200px;
+
+	background-color: orange;
+
+	background-image: url('../images/cupcake.png');
+	background-size: 100px 100px;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.block-02 {
+	width: 300px;
+	height: 200px;
+
+	/*
+	cover :  muốn hình ảnh fixed với size của element;
+	--> width/height của element và bg-image phải cùng tỉ lệ
+	 	 */
+
+	background-image: url('../images/cupcake.png');
+	background-size: 300px 200px;
+}

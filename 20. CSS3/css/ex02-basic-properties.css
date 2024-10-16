@@ -1,0 +1,31 @@
+.title {
+	color: green;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.text-major {
+	color: red;
+	text-decoration: line-through;
+}
+
+.lorem2 {
+	line-height: 24px;
+}
+
+.simple-block {
+	border: 1px solid black;
+	width: 44px;
+	height: 44px;
+	text-align: center;
+	line-height: 44px;
+	border-radius: 50%;
+}
+
+.random {
+	width: 112px;
+	white-space: nowrap;
+	overflow: hidden; /*áp dụng cho mọi elements*/
+	text-overflow: ellipsis;
+
+}

@@ -1,0 +1,22 @@
+.block-1 {
+	background-color: green;
+	display: inline;
+}
+
+.block-2 {
+	background-color: orange;
+	display: inline-block;
+	height: 100px;
+	margin-right: -4px;
+}
+
+.block-3 {
+	background-color: blue;
+	display: inline;
+	visibility: hidden;
+}
+
+.block-4 {
+	background-color: red;
+	display: inline;
+}
