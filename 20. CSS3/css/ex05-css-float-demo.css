@@ -1,0 +1,35 @@
+.block-md {
+	width: 180px;
+	height: 120px;
+}
+
+.bg-pink {
+	background-color: pink;
+	float: left;
+}
+
+.bg-blue {
+	background-color: blue;
+	float: left;
+}
+
+.bg-red {
+	background-color: red;
+		float: left;
+}
+.bg-yellow {
+	background-color: yellow;
+	clear: left;
+}
+.bg-skyblue {
+	background-color: skyblue;
+	float: left;
+}
+
+/*.block-1 {
+	float: left;
+}
+
+.block-2 {
+	
+}*/
