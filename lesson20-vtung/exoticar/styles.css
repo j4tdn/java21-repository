@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.page-header {
+    height: 66px;
+    width: 100%;
+    background-color: #000;
+
+    .wrapper {
+        margin: 0 auto;
+        width: 88%;
+        height: 100%;
+
+        .page-logo {
+            float: left;
+            line-height: 66px;
+        }
+
+        .nav {
+            float: right;
+
+            li {
+                display: inline-block;
+                margin-left: 110px;
+
+                a {
+                    font-family: corbel;
+                    text-decoration: none;
+                    line-height: 66px;
+                    color: #fff;
+                    text-transform: uppercase;
+                }
+
+                a:hover {
+                    color: red;
+                }
+            }
+        }
+    }
+}
+
+.page-main {
+    width: 100%;
+
+    .page-banner {
+        padding-top: 50%;
+        background: url(./images/banner.png) top center / cover no-repeat;
+    }
+
+    .page-content {
+        margin: 0 auto;
+        width: 88%;
+        height: 100%;
+
+        .left-content {
+            padding: 20px 0;
+            width: 50%;
+            float: left;
+
+            .title {
+                font-size: 44px;
+                font-weight: 500;
+            }
+
+            .sub-title {
+                font-style: italic;
+                font-size: 20px;
+                margin: 20px 20px 20px 0;
+            }
+        }
+
+        .right-content {
+            padding: 20px 0px 20px 20px;
+            background-color: #1d1d1d;
+            float: left;
+            width: 50%;
+
+            .title {
+                font-size: 44px;
+                font-weight: 500;
+            }
+
+            .sub-title {
+                font-style: italic;
+                font-size: 20px;
+                margin: 20px 20px 20px 0;
+            }
+
+            p {
+                color: #ffffff;
+            }
+        }
+    }
+}
