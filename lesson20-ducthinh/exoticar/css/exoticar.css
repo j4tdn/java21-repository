@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+/* Hero Section */
+.poster {
+    background-image: url('../images/banner.png');
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.poster-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.poster h1 {
+    white-space: nowrap;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.poster p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.poster .btn {
+    background-color: red;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+.poster .btn:hover {
+    background-color: darkred;
+}
+
+/* Main Section */
+.main-content {
+    background-color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+    position: relative;
+    
+}
+
+.container::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    background-color: #222; /* Same as the right section */
+    transform: skewX(-10deg); /* Creates the diagonal effect */
+    transform-origin: top left;
+    z-index: 1;
+    pointer-events: none; /* Allows you to interact with elements below */
+    color: white;
+}
+
+
+
+.seating-layout {
+    width: 50%;
+    height: auto;
+    max-height: 700px;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+}
+
+.sports-car{
+    width: 45%;
+    height: auto;
+    max-height: 550px;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+}
+
+.strong-para{
+    font-style: italic;
+}
+
+.sports-car h2,
+.seating-layout h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 0 40px
+}
+
+.sports-car p,
+.seating-layout p {
+    font-size: 0.8rem;
+    line-height: 1.6;
+    padding: 0 40px
+}
+
+.seating-layout {
+    background-color: #222;
+    color: white;
+    
+}
+
+/* Footer */
+footer {
+    background-image: linear-gradient(black, rgb(83, 83, 77));
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column h4 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.footer-column p {
+    margin-bottom: 10px;
+}
+
+.social a {
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.social a:hover {
+    color: #ddd;
+}
+
+.navigation{
+    background-color: #222;
+    color: white;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.list-items{
+    display: flex;
+    list-style: none;
+}
+.list{
+    display: flex;
+}
+.list li{
+    padding: 0 30px ;
+    color: #ddd;
+}
+.logo-navigation{
+    margin-right: 100px;
+}
