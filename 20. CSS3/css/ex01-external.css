@@ -1,0 +1,20 @@
+p {
+    font-size: 20px;
+    text-decoration: line-through;
+}
+
+li.inline {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: green;
+}
+
+ul#languages {
+    li:first-child {
+        color: red;
+    }
+
+    li:last-child {
+        color: green;
+    }
+}
