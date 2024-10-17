@@ -1,0 +1,32 @@
+.title {
+    font-weight: 700;
+    color: green;
+    text-transform: uppercase;
+}
+
+.text-major {
+    text-decoration: line-through;
+    color: red;
+}
+
+.lorem2 {
+    text-align: justify;
+    line-height: 24px;
+}
+
+.simple-block {
+    text-align: center;
+    line-height: 44px;
+    height: 44px;
+    width: 44px;
+    border: 1px solid #000;
+    border-radius: 50%;
+}
+
+.random {
+    margin-top: 20px;
+    width: 120px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

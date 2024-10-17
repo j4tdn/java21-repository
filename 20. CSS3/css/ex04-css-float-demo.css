@@ -1,0 +1,36 @@
+.box {
+    width: 100px;
+    height: 100px;
+}
+
+.box1 {
+    background-color: pink;
+    float: left;
+}
+
+.box2 {
+    background-color: blue;
+    float: left;
+}
+
+.box3 {
+    background-color: red;
+    float: left;
+}
+
+.box4 {
+    background-color: orange;
+    clear: left;
+}
+
+.box5 {
+    background-color: rgb(91, 191, 231);
+}
+
+.box {
+    float: left;
+}
+
+.box:nth-last-child(-n + 1) {
+    clear: left;
+}
