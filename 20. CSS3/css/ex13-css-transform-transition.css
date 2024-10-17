@@ -1,0 +1,20 @@
+.block-1 {
+	width: 300px;
+	height: 300px;
+	background-image: url("../images/candies.jpg");
+	background-size: 300px 300px;
+	border: 2px dashed orange;
+
+   /*	
+      khi hover vào 
+      all: tất cả các tt trong hover sẽ được apply 
+      4s: duration -- all props hoàn thành sau 4s
+      1s: đợi 1s all props mới bắt đầu thực thi
+   */
+	transition: all 4s 1s linear;
+}
+
+.block-1:hover {
+	border-radius: 50%;
+	transform: translate(300px, 100px);
+}

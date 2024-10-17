@@ -1,0 +1,45 @@
+h1 ~ p:not(.brew) {
+	color: red;
+	font-weight: bold;
+}
+
+h1::after {
+	content: "";
+	width: 40px;
+	height: 2px;
+	display: block;
+	background-color: red;
+	margin: 20px 5px;
+}
+
+.brew{
+	&::first-line {
+	color: orange;
+	}
+}
+
+input[type="checkbox"]:checked + label {
+	color: green;
+}
+
+/* tìm thẻ p là con đầu tiên trong parent-1 --> ăn css */
+.parent-1 p:first-child {
+	color: green;
+	text-decoration: underline;
+}
+
+.parent-1 p:last-child {
+	color: red;
+	text-decoration: underline;
+}
+
+/* tìm thẻ ơ 'xuất hiện' đầu tiên trong parent-2 --> ăn css */
+.parent-2 p:first-of-type {
+	color: green;
+	text-decoration: underline;
+}
+
+.parent-2 p:last-of-type {
+	color: redr;
+	text-decoration: un;
+}

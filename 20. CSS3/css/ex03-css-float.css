@@ -19,3 +19,7 @@
 .block-1 {
 	float: left;
 }
+
+.block-2 {
+	clear: left; /*clear trước khi render block*/
+}
