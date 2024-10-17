@@ -1,0 +1,33 @@
+h1 ~ p:not(.brew){
+	color: red;
+	font-weight: bold;
+}
+
+h1::after{
+	content: '';
+	width: 48px;
+	height: 2px;
+	display: block;
+	background-color: red;
+	margin: 20px 5px;
+}
+
+.brew{
+	&::first-line{
+		color: orange;
+	}	
+}
+
+input[type="checkbox"]:checked + label {
+	color: red;
+}
+
+.parent-1 p:first-child{
+	color: green;
+	text-decoration: underline;
+}
+
+.parent-2 p:first-of-type{
+	color: green;
+	text-decoration: underline;
+}

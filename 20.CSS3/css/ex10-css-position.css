@@ -1,0 +1,97 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+/*
+	Trong 1 web page, document là đối tượng lưu trữ tất cả các elements
+
+	Khi element có position: absolute | fixed
+	--> bị removed khỏi document, ko còn thuộc layer hiện tại
+
+*/
+
+.header {
+	height: 37px;
+}
+
+.title {
+	color: green;
+	font-weight: 600;
+	position: fixed;
+}
+
+.container {
+	width: 400px;
+	height: 280px;
+	/*padding: 20px 20px;*/
+	margin: 50px auto;
+}
+
+.block {
+	width: 60px;
+	height: 60px;
+}
+
+/*
+	Element: position=relative
+	--> Điều chỉnh vị trí của element so với vị trí ban đầu của chính nó
+*/
+
+.container-01 {
+	border: 2px red dotted;
+
+	.block-11 {
+		border: 1px solid red;
+
+		background-color: red;
+
+		position: relative;
+		z-index: 7;
+	}
+
+	.block-12 {
+		border: 1px solid green;
+
+		position: relative;
+		left: 30px;
+		bottom: 30px;
+
+		background-color: green;
+		z-index: 7;
+	}
+
+	.block-13 {
+		border: 1px solid blue;
+		position: relative;
+		left: 60px;
+		bottom: 60px;
+	}
+}
+
+/*
+	Element có position=absolute
+	--> điều chỉnh vị trí tương đối so với element
+	cha nếu element cha ko phải là static  
+*/
+
+.container-02 {
+	border: 2px blue dotted;
+	position: relative;
+
+	.block-21 {
+		border: 1px solid red;
+	}
+
+	.block-22 {
+		border: 1px solid green;
+		position: absolute;
+		top: 10px;
+		left: 10px;
+	}
+
+	.block-23 {
+		border: 1px solid blue;
+	}
+}

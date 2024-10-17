@@ -1,5 +1,5 @@
 p {
-	fint-size: 20px;
+	font-size: 20px;
 	text-decoration: line-through;
 }
 
@@ -10,6 +10,15 @@ li.inline {
 
 }
 
-ul#languages li:last-child {
-	color: red;
+/*nested css*/
+/*ul#languages*/
+ul[da='tech']  {
+	li:last-child {
+		color: red;
+	}
+
+	li:first-child {
+		color: greenyellow;
+	}
 }
+
