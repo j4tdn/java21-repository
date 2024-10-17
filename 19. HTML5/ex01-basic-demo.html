@@ -1,0 +1,298 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="images/header.png"/>
+    <title>Ex01 HTML Basic Demo	</title>
+
+<!--     internal css
+    add/remove css attributes for current html page -->
+
+    <style>
+
+        * {
+            scroll-behavior: smooth;
+        }
+
+        /* 
+
+        1. Tô màu cho hàng đầu tiên   ---> tr:first-child
+        2. Tô màu cho hàng cuối cùng  ---> tr:last-child
+        3. Tô màu cho hàng thứ 5      ---> tr:nth-child(nthRow) --> index 1
+        4. Tô màu cho hàng đầu tiên lặp đi lặp lại 2 hàng 1 lần   --->  tr:nth-child(2n + 1)
+            nth-child(an + b)
+            a: chu kỳ lặp lại
+            b: tính từ hàng thứ b (index 1)
+
+        5. Tô màu cho 3 hàng đầu tiên
+
+        6. Tô màu cho 2 hàng cuối cùng
+            nth-last-child(an+b)
+            a: chu kỳ lặp lại
+            b: tính từ hàng thứ(index 1) từ dưới lên 
+        */
+
+    /*    tbody tr:first-child {
+            background: grey;
+        }
+
+        tbody tr:last-child {
+            background: pink;
+        }
+
+        tbody tr:nth-child(5) {
+            background: grey;
+        }
+
+        tbody tr:nth-child(2n + 1) {
+            background: greenyellow;
+        }
+
+        tbody tr:nth-child(-n + 3) {
+            background: grey;
+        }
+
+         tbody tr:nth-last-child(-n + 2) {
+            background: grey;
+        }
+
+        */
+
+        table#table-demo {
+
+           thead {
+            background: yellow;
+        }
+
+        tbody tr:nth-last-child(-n + 2) {
+            background: grey;
+        }
+    }
+
+</style>
+</head>
+
+<body>
+
+    <!-- 
+        html: default size: 16px = 1rem (root element)
+        px: đơn vị đo kích thước trên màn hình của thiết 
+        bị vi tính, phụ thuộc vào độ phân giải của màn 
+
+        Display Resolution: 1920 x 1200
+
+        Chia màn hình theo 
+        + chiều ngang = 1920px 1920 điểm ảnh
+        + chiều dọc = 1200px 1200 điểm ảnh
+
+
+        1rem = 16px
+
+        1em = default size của parent element
+
+
+        tag: 
+        + tên thẻ
+        + kèm với những thuộc tính có sẵn
+          VD: h1: font-size 2em
+          + dùng css để override giá trị của các tt này
+      -->  
+
+      <!-- MENU -->
+      <table id= "menu" border="1" cellspacing="0" cellpadding="8">
+          <thead>
+              <tr>
+                  <td colspan="2">MENU</td>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>[Un]OrderList</td>
+                  <td>
+                      <a href="#block-uol">Navigate</a>
+                  </td>
+              </tr>
+              <tr>
+                  <td>[Un]Image</td>
+                  <td>
+                      <a href="#block-cup">Navigate</a>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+
+      Normal Text - No Tag
+
+      <!-- HEADING -->
+      <h1>This is H1 Tag</h1>
+      <h2>This is H2 Tag</h2>
+      <h3>This is H3 Tag</h3>
+      <h4>This is H4 Tag</h4>
+      <h5>This is H5 Tag</h5>
+      <h6>This is H6 Tag</h6>
+
+
+      <hr>
+
+      <pre>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  
+        Java 21 
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
+
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</pre>
+
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <br> eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <strong>Duis aute irure dolor</strong> in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <em>Excepteur</em> sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+
+    <!-- This is Order/UnOrder List Elements -->
+    <h3 id="block-uol"># Backend/Database Languages</h3>
+    <ol>
+     <li>HTML5</li>
+     <li>CSS3</li>
+     <li>JavaScipt/TypeScript</li>
+     <li>ReactJs</li>
+ </ol>
+
+ <a href="https://sugargeekshow.com/recipe/vanilla-cupcake-recipe/">
+  <img id="block-cup" src="images/cupcake.png" alt="cupcake" width="280" height="320">
+ </a>
+
+<h3>Section 2: Table Demo</h3>
+
+<table>
+ <thead>
+     <tr>
+         <th>Test 01</th>
+         <th>Test 02</th>
+     </tr>
+ </thead>
+ <tbody>
+     <tr>
+         <td>A</td>
+         <td>B</td>
+     </tr>
+ </tbody>
+</table>
+
+<table id="table-demo" border="1" cellspacing="0" cellpadding="16px">
+ <thead>
+     <tr>
+        <th  rowspan="2">No.</th>
+        <th rowspan="2">Name</th>
+        <th rowspan="2">Age</th>
+        <th rowspan="2">Eye Color</th>
+        <th colspan="2">Phone 1</th>
+    </tr>
+    <tr>
+        <th>Fax 1</th>
+        <th>Fax 2</th>
+    </tr>
+</thead>
+
+<tbody>
+    <tr>
+        <td>1</td>
+        <td>Peter</td>
+        <td>18</td>
+        <td>Blue</td>
+        <td>123</td>
+        <td>456</td>
+    </tr>
+
+    <tr>
+        <td>2</td>
+        <td>Mai</td>
+        <td>20</td>
+        <td>Red</td>
+        <td>123</td>
+        <td>456</td>
+    </tr>
+
+    <tr>
+     <td>3</td>
+     <td>Oliver</td>
+     <td>20</td>
+     <td>Brown</td>
+     <td>123</td>
+     <td>456</td>
+ </tr>
+ <tr>
+     <td>4</td>
+     <td>Oliver</td>
+     <td>20</td>
+     <td>Brown</td>
+     <td>123</td>
+     <td>456</td>
+ </tr>
+ <tr>
+     <td>5</td>
+     <td>Oliver</td>
+     <td>20</td>
+     <td>Brown</td>
+     <td>123</td>
+     <td>456</td>
+ </tr>
+ <tr>
+     <td>6</td>
+     <td>Oliver</td>
+     <td>20</td>
+     <td>Brown</td>
+     <td>123</td>
+     <td>456</td>
+ </tr>
+ <tr>
+     <td>7</td>
+     <td>Oliver</td>
+     <td>20</td>
+     <td>Brown</td>
+     <td>123</td>
+     <td>456</td>
+ </tr>
+ <tr>
+     <td>8</td>
+     <td>Oliver</td>
+     <td>20</td>
+     <td>Brown</td>
+     <td>123</td>
+     <td>456</td>
+ </tr>
+ <tr>
+     <td>9</td>
+     <td>Oliver</td>
+     <td>20</td>
+     <td>Brown</td>
+     <td>123</td>
+     <td>456</td>
+ </tr>
+ <tr>
+     <td>10</td>
+     <td>Oliver</td>
+     <td>20</td>
+     <td>Brown</td>
+     <td>123</td>
+     <td>456</td>
+ </tr>
+</tbody>
+</table>
+
+<hr>
+
+<h3>Anchor Tag</h3>
+<a href="https://www.ebay.com/" target="_blank" >Ref to Ebay</a>
+
+<a href="https://www.google.com.vn/?hl=vi" >Ref to Google</a><br>
+
+&#128063;<a href="ex02-navigation.html">Ex02 Navigation</a><br>
+&#128063;<a href="root/page1.html">Page 1</a><br>
+&#128063;<a href="root/sub/page2.html">Page 2</a><br>
+
+</body>
+</html>
+
