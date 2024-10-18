@@ -1,0 +1,182 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+a:hover {
+    color: #f00;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.page-header {
+    width: 100%;
+    height: 66px;
+    background-color: #000;
+}
+
+.wrapper {
+    width: 88%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.logo-image {
+    float: left;
+    line-height: 66px;
+}
+
+.navigation {
+    float: right;
+}
+
+.navigation li {
+    float: left;
+    margin-left: 100px;
+    line-height: 66px;
+}
+
+.navigation a {
+    text-transform: uppercase;
+    font-family: corbel;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    color: #f00;
+}
+
+.block-1 {
+    width: 100%;
+    height: 680px;
+    background-image: url(/images/banner.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.block-1 a {
+    text-decoration: none;
+}
+
+.p1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.p2 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    text-align: center;
+}
+
+.p3 {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: red;
+    padding: 15px;
+}
+
+.p3 a:hover {
+    color: blueviolet;
+}
+
+.block-2 {
+    width: 100%;
+    height: 620px;
+    background-image: linear-gradient(100deg, 
+        white 0%,
+        white 50%,
+        black 50%,
+        black 100%);
+}
+
+.block-21 {
+    padding: 30px 80px;
+    float: left;
+    width: 500px;
+    height: 400px;
+}
+
+.content2 {
+    color: black;
+}
+
+.p4 {
+    color: black;
+}
+
+.block-22 {
+    padding: 30px 80px;
+    float: right;
+    width: 500px;
+    height: 400px;
+}
+
+.content3 {
+    color: white;
+}
+
+.p5 {
+    color: white;
+}
+
+h1::after {
+    content: '';
+    width: 100px;
+    height: 2px;
+    display: block;
+    background-color: red;
+    margin: 10px 0px;
+}
+
+.footer {
+    width: 100%;
+    height: 250px;
+    background-color: black;
+    padding: 40px 100px;
+    line-height: 1.7rem;
+}
+
+.block-3 {
+    width: 25%;
+    float: left;
+}
+
+.block-3 h2 {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+
+.block-3 ul li {
+    margin-bottom: 5px;
+}
+
+.block-3 ul li a {
+    text-decoration: none;
+    color: #686868;
+    font-family: 'Roboto', sans-serif;
+}
+
+.block-1 {
+    background-image: url('/images/banner.png');
+}

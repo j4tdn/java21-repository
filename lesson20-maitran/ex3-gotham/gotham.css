@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: white;
+    color: #000;
+}
+
+header {
+    background-color: #F8CC33;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 40px;
+}
+
+nav ul li.logo img {
+    height: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 17px;
+    color: #000;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: red;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 100px;
+}
+
+.recent-articles {
+    flex: 2;
+    margin-right: 20px;
+}
+
+.recent-articles h2 {
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.recent-articles article {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.recent-articles img {
+    float: left;
+    width: 40%;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.recent-articles h3 {
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.recent-articles p {
+    margin: 5px 0;
+    color: #000;
+}
+
+.popular-news {
+    flex: 1;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.popular-news h2 {
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.popular-news ul {
+    list-style-type: none;
+}
+
+.popular-news li {
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.popular-news li span {
+    font-weight: bold;
+    margin-right: 5px;
+    color: gray;
+}
+
+.popular-news h2 {
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; 
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-button {
+    padding: 10px 15px;
+    background-color: #F8CC33;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #F8B900; /* Thay đổi màu nền khi di chuột qua */
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #F8CC33;
+}
+
+.footer h2 {
+    color: gray;
+    font-size: 15px;
+}
+
+.block4 {
+    flex: 1;
+    text-align: center;
+}
+
+.block4 ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.block4 ul li {
+    margin: 0 15px;
+}
+
+.block4 ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.block4 ul li a:hover {
+    color: red;
+}
+
+.social-icons li {
+    display: flex;
+    align-items: center;
+}
+
+.recent-articles article:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+

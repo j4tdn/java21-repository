@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.left-sidebar, .right-sidebar {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0 20px; 
+}
+
+
+.main {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0 10px; 
+}
+
+.airfare, .luxury {
+    display: flex;
+    align-items: flex-start; 
+    gap: 15px; 
+}
+
+.airfare img, .luxury img {
+    width: 17%; 
+    height: 10vh;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.airfare p, .luxury p {
+    flex-grow: 1; 
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    margin: 0;
+}
+
+.main .featured {
+    flex-basis: 100%;
+}
+
+.headline {
+    font-weight: bold;
+    font-size: 19px;
+}
+
+
+.main .maduro img, .left-sidebar img, .right-sidebar img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.essay p {
+    font-style: italic;
+}
+
+.left-sidebar .featured {
+    display: block; 
+}
+
+
+
+.left-sidebar .nobel-warning,
+.left-sidebar .church-fire,
+.left-sidebar .scotland-leader {
+    display: flex; 
+}
+
+
+
+.left-sidebar img, .right-sidebar img {
+    width: 30%; 
+    height: auto;
+    border-radius: 5px;
+    margin-right: 10px; 
+}
+
+.featured img, .essay img {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+}
+
+
+.left-sidebar p {
+
+    line-height: 1.5;
+    color: #333;
+    flex-grow: 1; 
+
+
+    .right-sidebar .marathon-record,
+    .right-sidebar .health-report,
+    .right-sidebar .politics-report{
+        display: flex; 
+    }
