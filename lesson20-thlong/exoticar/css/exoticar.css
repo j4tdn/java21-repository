@@ -1,0 +1,192 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	color: #fff;
+}
+
+ul li {
+	list-style-type: none;
+}
+
+html {
+	font-family: 'Times New Roman', Times, serif;
+}
+
+.page-header {
+	height: 66px;
+	width: 100%;
+	background-color: #000;
+
+	.wrapper {
+		width: 88%;
+		margin: 0 auto;
+		height: 100%;
+
+		.page-logo {
+			float: left;
+			line-height: 66px;
+		}
+
+		.navigation {
+			float: right;
+
+			li {
+				float: left;
+				margin-left: 100px;
+				line-height: 66px;
+
+				a {
+					text-transform: uppercase;
+					font-size: 24px;
+					font-family: corbel;
+					text-decoration: none;
+				}
+
+				a:hover {
+					color: #f00;
+				} 
+			}
+		}
+	}
+}
+
+.banner {
+    width: 100%;
+}
+
+.image-page-car {
+    margin-bottom: -4px;
+}
+
+.information-body {
+    height: 600px; /* Độ cao của div */
+    background: linear-gradient(95deg, white 50%, rgb(49, 48, 48) 50%);
+    
+    .sports-car {
+		width: 400px;
+		height: 600px;
+		margin-left: 100px;
+		margin-top: 30px;
+		float: left;
+
+		h3 {
+			font-size: 30px;
+			font-weight: 50;
+			color: #000;
+			padding-bottom: 20px;
+		}
+
+		hr {
+			width: 50px;
+			height: 3px;
+			border: none;
+			background-color: red;
+			margin-bottom: 20px;
+		}
+
+		h5 {
+			color: #000;
+			font-size: 20px;
+			font-style: italic;
+			font-weight: 100;
+			margin-bottom: 30px;
+		}
+
+		p {
+			color: #000;
+			font-size: 16px;
+			margin-bottom: 30px;
+			line-height: 20px;
+		}
+    }
+
+    .seating-layout {
+		width: 400px;
+		height: 600px;
+		margin-left: 350px;
+		margin-top: 30px;
+		float: left;
+		padding-bottom: 20px;
+
+        h3 {
+			font-size: 30px;
+			font-weight: 50;
+			color: white;
+		}
+
+		hr {
+			margin-top: 20px;
+			width: 50px;
+			height: 3px;
+			border: none;
+			background-color: red;
+			margin-bottom: 20px;
+		}
+
+		h5 {
+			color: #fff;
+			font-size: 20px;
+			font-style: italic;
+			font-weight: 100;
+			margin-bottom: 30px;
+		}
+
+		p {
+			color: white;
+			font-size: 16px;
+			margin-bottom: 30px;
+			line-height: 20px;
+		}
+       
+    }
+
+	
+
+}
+
+.page-footer {
+	width: 100%;
+	background-color: #181616;
+	height: 200px;
+
+	.column-footer {
+		margin-left: 100px;
+		width: 15%;
+		height: 80%;
+		float: left;
+		
+	}
+
+	hr {
+		margin-top: 10px;
+		height: 0.5px;
+		background-color: #614e4e;
+		border: none;
+	}
+
+	ul {
+		margin-top: 10px;
+		list-style-type: none;
+
+		li {
+			color: #5e4f4f;
+			margin-top: 10px;
+		}
+	}
+
+	.icon-social {
+		float: left;
+		width: 50px;
+		height: 20px;
+		margin-top: 10px;
+		
+	}
+
+	p {
+		margin-top: 50px;
+		color: white;
+		font-size: 16px;
+		line-height: 20px;
+	}
+}
