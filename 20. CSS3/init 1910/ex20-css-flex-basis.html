@@ -20,22 +20,29 @@
 			background-color: orange;
 			border: 1px solid darkblue;
 			height: 200px;
+			
 			width: 180px;
 		}
 
 		.item1 {
 			flex-basis: 220px;
-			max-width: 150px; /*flex-basis still obey max-width --> flex-direction: row*/
+			/*flex-basis still obey max-width --> flex-direction: row*/
 		}
 
 		.item2 {
 			flex-basis: 400px;
+			max-width: 300px;
 		}
 
 		.item3 {
 			flex-basis: 220px;
-			min-width: 318px;
+			min-width: 280px;
 		}
+
+		/*
+		  flex-basis: width/height thực tế của flex item sau khi đã grow/shrink
+		*/
+
 	</style>
 </head>
 <body>
