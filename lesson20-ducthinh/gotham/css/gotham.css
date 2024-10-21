@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+header {
+    background-color: #fbdc00;
+    padding: 15px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    width: 60%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+    margin: 0 20 bpx;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.articles {
+    width: 70%;
+    border-right: 1px solid #c6c1c1;
+    padding-right: 50px;
+}
+
+.articles h2 {
+    margin-bottom: 20px;
+}
+
+article {
+    display: flex;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(214, 208, 208, 0.824);
+}
+
+article img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+article .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;    
+    justify-content: space-around;
+}
+
+article .content h3 {
+    font-size: 20px;
+}
+
+
+article .content .info {
+    display: flex;
+    justify-content: flex-start;
+}
+
+article .content .info .number {
+    font-size: 14px;
+    color: #efca41;
+}
+
+article .content .info .view {
+    font-size: 14px;
+    color: #555;
+    margin-right: 20px;
+}
+
+.category {
+    color: #efca41;
+}
+
+
+
+button.more-articles {
+    background-color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    border-radius: 5px;
+    border-color: #fbdc00;
+}
+
+button.more-articles:hover { 
+    background-color: #fbdc00;
+    border-color: orange;
+}
+
+.sidebar {
+    width: 25%;
+}
+
+.sidebar .search input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    flex-grow: 1;
+    outline: none;
+}
+
+.sidebar .search img {
+    width: 20px;
+    height: 20px;
+}
+
+.sidebar .search {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.sidebar .calendar h3 {
+    margin-bottom: 10px;
+}
+
+.sidebar .popular-news {
+    display: flex;
+    flex-direction: column;
+}
+.sidebar .popular-news h3 {
+    margin: 20px 0;
+}
+
+
+
+
+.sidebar .popular-news ul {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+.sidebar .popular-news ul .time {
+    opacity: 0.5;
+    margin-bottom: 5px;
+}
+
+.sidebar .popular-news ul .topic {
+    font-weight: bold;
+}
+
+footer {
+    background-color: #fbdc00;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+footer .footer-nav a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+footer .footer-social {
+    display: flex;
+    justify-content: end;
+}
+
+footer .footer-nav a:hover {
+    opacity: 0.9;
+    cursor: pointer;
+    color: blue;
+}
+
+.calendar {
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Style cho bảng calendar */
+.calendar table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    table-layout: fixed;
+}
+
+.calendar th,
+.calendar td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 14px;
+}
+
+.calendar th {
+    background-color: #fbdc00; /* Màu nền vàng cho header */
+    color: #333; /* Màu chữ cho header */
+    font-weight: bold;
+}
+
+.calendar td {
+    background-color: #fff; /* Màu nền trắng cho các ngày */
+}
+
+.calendar td:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+/* Style cho các ô ngày trống */
+.dif-day {
+    background-color: #f4f4f4;
+    opacity: 0.5;
+}
+
+/* Style cho ngày đặc biệt (ví dụ ngày hiện tại) */
+.calendar td.current-day {
+    background-color: #fbdc00; /* Màu vàng nổi bật */
+    color: white;
+    font-weight: bold;
+}
