@@ -1,0 +1,206 @@
+/* ============ CSS COMMON ============*/
+:root {
+	/* Khai báo các css variable */
+	--black: #000;
+	--white: #fff;
+	--yellow: #edc300;
+	--red: #ca0500;
+}
+
+a {
+	color: var(--black);
+	text-decoration: none;
+}
+
+h3 {
+	font-size: 22px;
+}
+
+h2 {
+	font-size: 26px;
+}
+
+.wrapper {
+	width: 88%;
+	height: 100%;
+	margin: 0 auto;
+
+	display: flex;
+}
+
+/* ============ PAGE HEADER ============ */
+#page-header {
+	height: 68px;
+	background-color: var(--yellow);
+
+	.wrapper {
+		align-items: center;
+		justify-content: space-around;
+
+		> * {
+			flex-grow: 1; /*width: 33.33%;*/
+		}
+
+		.nav-top-left, .nav-top-right {
+			display: flex;
+			justify-content: space-around;
+
+			a {
+				text-transform: uppercase;
+
+				&:hover {
+					text-decoration: underline;
+					color: var(--red);	
+				}
+			}
+		}
+
+		.page-logo {
+			text-align: center;
+		}
+	}
+}
+
+
+
+/* ============ PAGE MAIN ============ */
+#page-main {
+	.wrapper {
+
+
+		#page-center {
+			width: 77%;
+			padding: 60px 60px 80px 0;
+
+			.recent {
+				margin-bottom: 22px;
+			}
+
+			.articles {
+				
+				.article {
+					display: flex;
+					column-gap: 24px;
+					margin-bottom: 60px;
+
+					.article-right {
+						.title {
+							&:hover {
+								text-decoration: underline;
+								font-weight: bold;
+							}
+						}
+
+						display: flex;
+						flex-direction: column;
+						justify-content: space-between;
+
+						.meta {
+							.published-date, .author {
+								opacity: 0.5;
+								font-size: 14px;
+							}
+
+							.category {
+								color: var(--yellow);
+
+								&:hover {
+									text-decoration: underline;
+								}
+							}	
+						}
+
+						.content {
+							overflow: hidden;
+							text-overflow: ellipsis;
+							display: -webkit-box;
+							-webkit-line-clamp: 5;
+							-webkit-box-orient: vertical;
+
+							line-height: 1.25;
+							text-align: justify;
+
+							&::after {
+								content: ' >';
+								color: var(--yellow);
+								cursor: pointer;
+
+							}
+						}
+
+						.additional-info {
+							.comments {
+								color: var(--yellow);
+							}
+						}
+					}
+				}
+			}
+		}
+
+		#page-sidebar {
+			width: 23%;
+
+			border-left: 2px dashed var(--black);
+			min-height: 100vh;
+		}	
+	}
+}
+
+
+/* ============ PAGE FOOTER ============ */
+#page-footer {
+	height: 68px;
+	background-color: var(--yellow);
+
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+
+	.wrapper {
+		align-items: center;
+		justify-content: space-between;
+
+		> * {
+			flex-grow: 1; /*width: 33.33%;*/
+		}
+
+		.nav-bottom-center {
+			display: flex;
+			justify-content: space-between;
+
+			a {
+				&:hover {
+					text-decoration: underline;
+					color: var(--red);	
+				}
+			}
+		}
+
+		.nav-bottom-social-links {
+			display: flex;
+			justify-content: flex-end;
+
+			li {
+				width: 44px;
+				height: 44px;
+				line-height: 44px;
+				text-align: center;
+				border-radius: 50%;
+
+				background-color: var(--white);
+				
+				/*fix vertical align with page header*/
+				margin-left: 32px;
+
+				a {
+					color: var(--yellow);
+
+					&:hover {
+						color: var(--red);
+					}
+				}
+			}
+		}
+	}
+}
