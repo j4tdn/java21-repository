@@ -1,0 +1,258 @@
+/*==================*/
+/*= RESET CSS ======*/
+/*==================*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	font-family: Helvetica Neue,Helvetica,Arial,Utkal,sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+	text-decoration: none;
+}
+
+
+/*==================*/
+/*= CNN CSS  ======*/
+
+
+.white {
+	color: white;
+}
+.header {
+    width: 100%;
+	display: flex;
+	justify-content: center;
+	background-color: #333;
+	align-items: center;
+}
+
+.header-wrapper {
+	width: 80%;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.header-nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 70%;
+	height: 100%;
+	font-size: 14px;
+}
+
+.header-input {
+	width: 30%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header-input input {
+	padding: 5px 10px;
+	width: 200px;
+	background-color: #333;
+}
+
+.header-input input::placeholder {
+	color: #fff; 
+    font-size: 16px; 
+    font-style: italic; 
+    opacity: 0.8; 
+}
+
+.header-input i {
+	padding: 10px 10px;
+}
+.logo {
+	height: 50px;
+}
+
+.logo img {
+	height: 60px;
+}
+
+.top-nav ul {
+	width: 100%;
+	height: 100%;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.top-nav ul li {
+    padding: 10px 10px;
+    position: relative; 
+	font-size: 16px;
+}
+
+.top-nav ul li::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%; 
+    transform: translateY(-50%);
+    height: 50%; 
+    border-right: 2px solid white; 
+}
+
+.top-nav ul li:last-child::after {
+	border-right: none;
+}
+
+
+
+.main-content {
+    width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: #fff;
+	align-items: center;
+}
+
+.content-hot {
+	width: 65%;
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.content-hot-item-big {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: start;
+	margin: 0 ;
+}
+
+.content-hot-item-big h1{
+	font-size: 60px;
+	text-align: center;
+	width: 434px;
+}
+
+.content-hot-item-big img {
+	width: 80%;
+	justify-self: center;
+}
+
+.content-hot-item-big h2 {
+	width: 80%;
+	font-weight: bold;
+	margin: 10px 10px;
+}
+
+.content-hot-item-big ul {
+	width: 80%;
+}
+.content-hot-item-big ul li {
+	padding: 5px;
+	border-top: 1px solid #747171;
+}
+
+.content-hot-item-extra {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0 10px;
+	padding-top: 50px
+}
+
+.content-hot-item-extra div {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+}
+
+.content-hot-item-extra div img {
+	width: 100%;
+}
+
+.extra-para {
+	position: absolute;
+    bottom: 30px; /* Điều chỉnh khoảng cách từ đáy hình ảnh */
+    align-items: center;
+	left: 42%;
+	height: 100px;
+    transform: translateX(-50%);
+    background-color: rgb(201, 194, 194); /* Nền mờ cho văn bản */
+    padding: 5px;
+    width: 80%; 
+}
+
+.content-hot-item-asis {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 50px;
+	padding-left: 50px;
+}
+
+.content-hot-item-asis p {
+	width: 300px;
+	text-align: start;
+	font-weight: bold;
+	margin: 10px 10px;
+}
+
+.content-hot-item-asis ul li {
+	padding: 10px 10px;
+	border-top: 1px solid #747171;
+	opacity: 0.8;
+}
+
+.content-news {
+	width: 65%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*==================*/
