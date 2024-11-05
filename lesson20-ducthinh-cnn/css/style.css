@@ -105,6 +105,11 @@ a {
 .header-input i {
 	padding: 10px 10px;
 }
+
+.header-input i:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}
 .logo {
 	height: 50px;
 }
@@ -125,6 +130,11 @@ a {
     padding: 10px 10px;
     position: relative; 
 	font-size: 16px;
+}
+
+.top-nav ul li:hover {
+	cursor: pointer;
+	opacity: 0.8;
 }
 
 .top-nav ul li::after {
@@ -160,6 +170,7 @@ a {
 }
 
 .content-hot-item-big {
+	width: 40%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -207,7 +218,7 @@ a {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 0;
+	padding-right: 50;
 }
 
 .content-hot-item-extra div img {
@@ -227,7 +238,7 @@ a {
 }
 
 .content-hot-item-asis {
-	flex: 1;
+	width: 30%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -243,7 +254,7 @@ a {
 }
 
 .content-hot-item-asis ul li {
-	padding: 10px 10px;
+	padding: 10px;
 	border-top: 1px solid #747171;
 	opacity: 0.8;
 }
@@ -252,7 +263,107 @@ a {
 	width: 65%;
 	display: flex;
 	justify-content: center;
+	align-items: start;
+}
+
+.content-news-extra1 {
+	height: 100%;
+	width: 30%;
+	display: flex;
+	flex-direction: column;
 	align-items: center;
+	justify-content: start;
+	padding: 0px 10px;
+}
+
+.content-news-extra2 {
+	height: 100%;
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: start;
+	padding-left: 50px;
+}
+
+.content-news-big {
+	width: 40%;
+	padding: 0px 10px;
+}
+
+
+.content-news-extra1 div ul li {
+	padding: 10px 0;
+	border-top: 1px solid #747171;
+	opacity: 0.8;
+}
+
+.wrap-around h1,img {
+	width:100%;
+	background-color: #cacaca;
+}
+
+.wrap-around h1 {
+	height: 20px;
+	text-align: start;
+}
+
+.content-news-extra1 div h2 {
+	font-size: 20px;
+	font-weight: bold;
+	padding: 5px 5px;
+}
+
+.content-news-big h2 {
+	background-color: #cacaca;
+	font-size: 30px;
+}
+
+.wrap-item-news {
+	display: block;
+}
+
+.wrap-item-news div {
+	display: flex;
+	justify-content: center;
+	padding-top: 10px;
+}
+
+.wrap-item-news div img {
+	width: 150px;
+	height: 70px;
+	margin-right: 10px;
+}
+
+.wrap-item-news div p {
+	font-size: 16px;
+	padding-top: 10px;
+}
+
+.content-news-extra2 h1 {
+	width:100%;
+	background-color: #cacaca;
+}
+
+.wrap-item-news-right div img {
+	width: 120px;
+	height: 40px;
+	margin-right: 10px;
+}
+
+.wrap-item-news-right div p {
+	font-size: 16px;
+	padding-top: 10px;
+}
+
+.wrap-item-news-right {
+	display: block;
+}
+
+.wrap-item-news-right div {
+	display: flex;
+	justify-content: center;
+	padding-top: 10px;
 }
 
 /*==================*/
