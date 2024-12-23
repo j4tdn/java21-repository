@@ -1,0 +1,27 @@
+*[class*='col'] {
+	background-color: orange;
+	border: 1px solid blue;
+}
+
+.row {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.height-sm {
+	*[class*='col'] {
+		height: 60px;
+	}
+}
+
+.height-md {
+	*[class*='col'] {
+		height: 100px;
+	}
+}
+
+.text-bg-yellow {
+	*[class*='col'] {
+		background-color: yellow;
+	}
+}

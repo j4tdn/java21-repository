@@ -1,0 +1,10 @@
+.space {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+.articles {
+	.article {
+		padding: 8px;
+	}
+}
