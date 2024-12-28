@@ -18,6 +18,11 @@
 		.height-lg {
 			height: 380px;
 		}
+
+
+		#page-footer {
+			height: 400px;
+		}	
 	</style>
 
 </head>
@@ -178,8 +183,111 @@
 		</button>
 	</div>
 
+	<hr> <hr>
+
+	<!-- Accordion -->
+
+	<div class="container">
+		<div class="row">
+			<div class="col-8 offset-2">
+				<div class="accordion" id="k21course">
+					<div class="accordion-item">
+						<h2 class="accordion-header">
+							<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+								P1 #1: GIT
+							</button>
+						</h2>
+						<div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" data-bs-parent="#k21course">
+							<div class="accordion-body">
+								<strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+								P2 #2: JAVA17
+							</button>
+						</h2>
+						<div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#k21course">
+							<div class="accordion-body">
+								<strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+								P3 #3: Database
+							</button>
+						</h2>
+						<div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" data-bs-parent="#k21course">
+							<div class="accordion-body">
+								<strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<hr> <hr>
+
+	<!-- Alert(Feedback Message) Toast(Notification) -->
+
+	<div class="alert alert-primary" role="alert">
+		A simple primary alert—check it out!
+	</div>
+	<div class="alert alert-secondary" role="alert">
+		A simple secondary alert—check it out!
+	</div>
+	<div class="alert alert-success" role="alert">
+		A simple success alert—check it out!
+	</div>
+	<div class="alert alert-danger" role="alert">
+		A simple danger alert—check it out!
+	</div>
+	<div class="alert alert-warning" role="alert">
+		A simple warning alert—check it out!
+	</div>
+	<div class="alert alert-info" role="alert">
+		A simple info alert—check it out!
+	</div>
+	<div class="alert alert-light" role="alert">
+		A simple light alert—check it out!
+	</div>
+	<div class="alert alert-dark" role="alert">
+		A simple dark alert—check it out!
+	</div>
+
+	<h1>Live Demo for Alert & Toast</h1>
+		
+	<!-- Alert -->		
+	<div id="liveAlertPlaceholder"></div> <!-- Vị trí hiển thị Alert ra -->
+	<button type="button" class="btn btn-primary" id="liveAlertBtn">Show Live Alert</button>
+
+	<!-- Toast -->	
+	<button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+	<div class="toast-container position-fixed top-0 start-0 p-3">
+		<div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+			<div class="toast-header">
+				<!-- <img src="..." class="rounded me-2" alt="..."> -->
+				<strong class="me-auto">Bootstrap</strong>
+				<small>11 mins ago</small>
+				<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+			</div>
+			<div class="toast-body">
+				Hello, world! This is a toast message.
+			</div>
+		</div>
+	</div>
+
+	<div id="page-footer">
+	</div>	
 
 	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/script3.js"></script>
 
 </body>
 </html>
