@@ -1,0 +1,152 @@
+/*==================*/
+/*= RESET CSS ======*/
+/*==================*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	font-family: Helvetica Neue,Helvetica,Arial,Utkal,sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+	text-decoration: none;
+}
+
+
+/*==================*/
+/*= CNN CSS  ======*/
+/*==================*/
+
+body {
+    line-height: 1;
+    font-family: Helvetica Neue, Helvetica, Arial, Utkal, sans-serif;
+}
+
+.header {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+.nav ul li {
+    font-size: 14px;
+    color: #fff;
+}
+
+.edition {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.main {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.headline {
+    width: 60%;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.headline h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+.sub-headline {
+    margin-top: 10px;
+}
+
+.sub-headline .label {
+    background-color: red;
+    color: #fff;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.sub-headline p {
+    font-size: 18px;
+    color: #555;
+    margin-top: 5px;
+}
+
+.side-stories {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.side-stories .story {
+    background-color: #f0f0f0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.side-stories .story img {
+    width: 100%;
+    height: auto;
+}
+
+.side-stories .story p {
+    font-size: 16px;
+    color: #333;
+}
