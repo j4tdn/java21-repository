@@ -1,0 +1,1 @@
+alert("Use ALERT to test JavaScript Connection ...");
