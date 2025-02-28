@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>LESSON 22 - TODO APP</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<p class="error-message">Text content cannot be empty !! Please text something</p>
+
+	<div id="todo-block">
+		<!-- TODO HEADER -->
+		<div id="todo-header">
+			<h1 class="title">TODO APP</h1>
+		</div>
+		
+		<!-- TODO BODY -->
+		<div id="todo-body">
+			<form class="todo-form">
+				<input class="todo-text" type="search" placeholder="A task you want to complete">
+				<input class="btn-add" type="button" value="+" />
+			</form>
+			<ul class="tasks">
+				<li class="task">
+					<div class="cbx-block">
+						<input class="cbx" type="checkbox">
+					</div>
+					<p class="task-content">Task 01</p>
+					<button class="btn-remove"></button>
+				</li>
+				<li class="task">
+					<div class="cbx-block">
+						<input class="cbx" type="checkbox">
+					</div>
+					<p class="task-content">Task 02</p>
+					<button class="btn-remove"></button>
+				</li>
+				<li class="task">
+					<div class="cbx-block">
+						<input class="cbx" type="checkbox">
+					</div>
+					<p class="task-content">Task 03</p>
+					<button class="btn-remove"></button>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+
+	<script src="js/script.js"></script>
+</body>
+</html>
