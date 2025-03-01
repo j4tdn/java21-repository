@@ -1,0 +1,118 @@
+/*===== UTILS =====*/
+:root{
+	--blue: #5B96DA;
+	--light-blue: #C3DEFD;
+	--white: #FFF;
+	--grey: #CED6DA;
+	--light-grey: #FAFAFA;
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+.task-done {
+	text-decoration: line-through;
+}
+
+/*===== CSS FOR UI =====*/
+
+.error-message {
+	color: red;
+	text-align: center;
+	margin-top: 50px;
+}
+
+#todo-block{
+
+	width: 25%;
+	margin: 20px auto;
+	border: 2px solid var(--blue);
+
+	#todo-header {
+		background-color: var(--blue);
+		padding: 1.5rem 0;
+
+		.title {
+			color: var(--white);
+			text-transform: uppercase;
+			text-align: center;
+			font-size: 2rem;
+			font-weight: bold;
+		}
+	}
+
+	#todo-body {
+		.todo-form, .task {
+			height: 3rem;
+			width: 100%;
+			display: flex;
+			border-bottom: 1px solid var(--grey);
+		}
+
+		.todo-form {
+			.todo-text {
+				width: 80%;
+				border: none;
+				outline: none;
+				padding-left: 0.5rem;
+				font-size: 1.25rem;
+			}
+
+			/* button enable*/
+			.btn-add {
+				width: 20%;
+				border: none;
+				cursor: pointer;
+				font-size: 2rem;
+				color: var(--blue);
+			}
+
+			.btn-add:disabled {
+				cursor: auto;
+				color: var(--grey);
+				background-color: var(--light-grey);
+			}
+		}
+
+		.tasks {
+			.task {
+
+				&:last-child {
+					border-bottom: none;
+				}
+
+				&:hover {
+					background-color: yellow;
+				}
+
+				.cbx-block {
+					width: 10%;
+					background-color: var(--light-blue);
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+
+				.task-content {
+					width: 70%;
+					line-height: 3rem;
+					padding-left: 0.5rem;
+				}
+
+				.btn-remove {
+					width: 20%;
+					border: none;
+					background-color: var(--light-blue);
+					cursor: pointer;
+					background-image: url('../images/trash.svg');
+					background-repeat: no-repeat;
+					background-position: center;
+					background-size: 2.25rem;
+				}
+
+			}
+		}
+	}
+
+}
