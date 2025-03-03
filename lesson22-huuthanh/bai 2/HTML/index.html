@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bong Bóng Bay</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+</head>
+<body>
+    <div id="scoreBoard">You popped 0 balloons</div>
+    <div id="gameOver" style="display: none;"></div>
+ <script src="../JavaScript/script.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const game = new Game();
+        game.start();
+    });
+</script>
+
+</body>
+</html>
