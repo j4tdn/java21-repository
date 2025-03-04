@@ -1,0 +1,67 @@
+/* General body styling */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: white;
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+/* Controls container */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+/* Control box style */
+.control-box {
+    width: 180px;
+    height: 180px;
+    background: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.2);
+}
+
+/* Vertical Range Slider */
+.control-range {
+    width: 100%;
+    margin: 10px 0;
+}
+
+/* Vertical Range Slider Specific */
+.vertical {
+    writing-mode: bt-lr;
+    appearance: slider-vertical;
+    height: 120px;
+}
+
+/* Container for square */
+.container {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* The square element */
+#square {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    transition: all 0.3s ease-in-out;
+}
