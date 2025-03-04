@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budgety Mockup</title>
+    <link rel="stylesheet" href="../CSS/style.css"/>
+<body>
+    <div class="container">
+        <h1>Quản lý Ngân sách</h1>
+        <div class="budget-summary">
+            <div class="available-budget">
+                <h2>Available Budget</h2>
+                <p id="available-budget">0.00</p>
+            </div>
+            <div class="income">
+                <h2>INCOME</h2>
+                <p id="income">0.00</p>
+            </div>
+            <div class="expenses">
+                <h2>EXPENSES</h2>
+                <p id="expenses">0.00</p>
+            </div>
+        </div>
+        <div class="form-group-container">
+            <div class="form-group">
+                <label for="type">Loại:</label>
+                <select id="type">
+                    <option value="income">INCOME</option>
+                    <option value="expense">EXPENSES</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="description">Mô tả:</label>
+                <input type="text" id="description" placeholder="Nhập mô tả">
+            </div>
+            <div class="form-group">
+                <label for="amount">Số tiền:</label>
+                <input type="number" id="amount" placeholder="Nhập số tiền">
+            </div>
+            <div class="form-group">
+                <button onclick="addTransaction()">Thêm giao dịch</button>
+            </div>
+        </div>
+        <div class="transactions-list" id="transactions-list"></div>
+    </div>
+
+    <script src="../JS/index.js"></script>
+</body>
+</html>

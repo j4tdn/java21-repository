@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+.budget-summary {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+.budget-summary div {
+    text-align: center;
+    border-radius: 4px;
+    flex: 1;
+    margin: 10px 10px;
+}
+.available-budget {
+    background-color: #28a745;
+    color: #fff;
+}
+.income {
+    background-color: #007bff;
+    color: #fff;
+}
+.expenses {
+    background-color: #dc3545;
+    color: #fff;
+}
+.form-group {
+    margin: 10px 10px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form-group-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.form-group button:hover {
+    background-color: #218838;
+}
+.transactions-list {
+    margin-top: 20px;
+}
+.transaction-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.transaction-item:last-child {
+    border-bottom: none;
+}
+.transaction-item.income {
+    margin: 10px;
+    background-color: #fff;
+    color: #007bff;
+    border: 1px solid #007bff;
+}
+.transaction-item.expense {
+    margin: 10px;
+    background-color: #fff;
+    color: #dc3545;
+    border: 1px solid #dc3545;
+}
