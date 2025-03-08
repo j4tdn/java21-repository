@@ -1,0 +1,117 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-image: url('../images/cover.png');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    padding: 120px;
+    color: white;
+}
+
+.budget-value {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.income, .expenses {
+    width: 250px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.income {
+    background: #00bcd4;
+    color: white;
+}
+
+.expenses {
+    background: #ff7043;
+    color: white;
+}
+
+.input-section {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background: white;
+}
+
+input, select, button {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#add-btn {
+    background: #FFFFFF;
+    color: white;
+    cursor: pointer;
+}
+
+.bi-check-circle {
+    font-size: 22px;
+    color: #3FAEB7;
+}
+
+.lists {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.income-list, .expenses-list {
+    width: 40%;
+    padding: 10px;
+}
+
+.income-list h3 {
+    color: #00bcd4;
+}
+
+.expenses-list h3 {
+    color: #ff7043;
+}
+
+p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+}
