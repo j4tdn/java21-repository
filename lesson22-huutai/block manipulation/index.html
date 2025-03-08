@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Block Manipulation</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="item">
+			<label for="xPos">Position X</label>
+			<input type="range" id="xPos" min="0" max="800" value="100">
+		</div>
+
+		<div class="item">
+			<label for="yPos">Position Y</label>
+			<input type="range" id="yPos" min="0" max="600" value="100">
+		</div>
+
+		<div class="item">
+			<label for="size">Size</label>
+			<input type="range" id="size" min="50" max="300" value="100">
+		</div>
+
+		<div class="item">
+			<label for="opacity">Opacity</label>
+			<input type="range" id="opacity" min="0" max="1" step="0.01" value="1">
+		</div>
+
+		<div class="item">
+			<label>Shape Type</label>
+			<select id="shapeType">
+				<option value="square">Vuông</option>
+				<option value="circle">Tròn</option>
+			</select>
+		</div>
+
+		<div class="item">
+			<label for="rbg">RGB</label>
+
+			<input type="range" id="rColor" min="0" max="255" value="0">
+			<input type="range" id="gColor" min="0" max="255" value="0">
+			<input type="range" id="bColor" min="0" max="255" value="0">
+		</div>
+	</div>
+
+
+
+	<div id="box"></div>
+
+	<script src="js/script.js"></script>
+</body>
+</html>

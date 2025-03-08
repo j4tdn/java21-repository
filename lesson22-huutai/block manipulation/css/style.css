@@ -1,0 +1,38 @@
+#box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      opacity: 1;
+      position: absolute;
+      margin-top: 140px;
+      margin-left: 30px;
+}
+
+
+.container {
+      display: flex;
+      justify-content: space-between;
+      width: 600px;
+      margin: 30px 0 0 30px;
+}
+
+.item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid #000;
+      border-radius: 8%;
+      padding: 10px;
+      margin-right: 10px;
+      min-width: 120px;
+      background-color: #3D3D3D;
+
+      label {
+            color: white;
+      }
+}
+
+input[type="range"] {
+      width: 100px;
+}
