@@ -1,0 +1,116 @@
+body {
+	overflow: hidden;
+}
+
+.balloon {
+	width: 100px;
+	height: 200px;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	position: absolute;
+	top: calc(100vh);
+	left: 200px;
+}
+
+.balloon-blue {
+	background-image: url(../images/balloon-blue.png);
+}
+
+.balloon-green {
+	background-image: url(../images/balloon-green.png);
+}
+
+.balloon-red {
+	background-image: url(../images/balloon-red.png);
+}
+
+.balloon-violet {
+	background-image: url(../images/balloon-violet.png);
+}
+
+.balloon-yellow {
+	background-image: url(../images/balloon-yellow.png);
+}
+
+
+.wl-container {
+	width: 100vw;
+	height: 100vh;
+
+	background-color: rgba(0, 0, 0, 0.4);
+	display: none; /*flex*/
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+
+	.wl-block {
+		background-color: #fff;
+		padding: 28px 8px;
+		text-align: center;
+		border-radius: 12px;
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+
+		> * {
+			> * {
+				margin: 6px 0;
+			}
+
+			> button {
+				cursor: pointer;
+				margin: 0 2px;
+				padding: 2px 12px;
+			}
+		}
+
+		/* toggle */
+
+		.w-block {
+			display: block; 
+		}
+
+		.l-block {
+			display: none;
+			padding: 0 2rem;
+
+			.play-again {
+				margin-top: 1rem;
+			}
+		}
+	}
+}
+
+
+.score-block {
+	position: absolute;
+	bottom: 0;
+	left: calc(50% - 180px);
+
+	width: 360px;
+	padding: 14px 0;
+	background-color: #efefef;
+	border-top-left-radius: 18px;
+	border-top-right-radius: 18px;
+	text-align: center;
+	font-size: 1.25rem;
+
+	.popped::after{
+		content: '';
+		display: block;
+		height: 2px;
+		width: 180px;
+		background-color: #f00;
+		margin: 12px auto;
+	}
+
+	.total-score {
+		color: green;
+		font-weight: bold;
+	}
+
+}
+
+.current-score {
+	color: orange;
+	font-weight: bold;		
+}
