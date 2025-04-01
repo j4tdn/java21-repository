@@ -23,6 +23,17 @@
 				<img src="images/happy.jpg" alt="happy">
 				<h4 class="popped">You popped up <span class="current-score">*</span> balloon(s)</h4>
 
+				<!-- Hiện khi win level trước -->
+				<div class="next-level-block">
+					<button class="play-next-level">
+						Level <span class="next-level">*</span>
+					</button>
+					<button class="stop">Stop the game</button>
+				</div>
+
+				<!-- Hiện khi hết màn -->
+				<button class="champion">You are a new champion</button>
+
 				<!-- TODO for next level or finish all the games -->
 			</div>
 			<div class="l-block">
@@ -37,10 +48,11 @@
 	</div>
 
 	<div class="score-block">
-		<p class="popped">You popped up <span class="current-score">*</span> balloon(s)</p>
+		<p class="popped">You popped up <span class="current-score">0</span> balloon(s)</p>
 		<p>Total Block = <span class="total-score">*</span>(s)</p>
 	</div>
 
+	<script src="js/model.js"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>
