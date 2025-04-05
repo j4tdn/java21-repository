@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar-section {
+    color: #fff;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #0051a3;
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-item {
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffd700;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    min-width: 200px;
+    padding: 1rem 0;
+}
+
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-item {
+    padding: 0.5rem 1rem;
+}
+
+.nav-container-menu {
+    margin-top: 1rem;
+    background: #0051a3;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background: #f2f2f2;
+    outline: none;
+    margin-right: 30rem;
+}
+
+.product {
+    display: flex;
+}
+
+.product img {
+    position: relative;
+    transition: all 0.3s ease;
+    margin: 0 8px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.product img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 81, 163, 0.2);
+    cursor: pointer;
+}
+
+.product img:hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 81, 163, 0.1);
+    border-radius: 3px;
+}
+
+.ikea-collection {
+    padding: 40px 20px;
+    background: #f5f5f5;
+}
+
+.collection-title {
+    color: #0051a3;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.category-card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.category-title {
+    color: #333;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.title-line {
+    width: 60px;
+    height: 2px;
+    background: #ffd700;
+    margin: 0 auto;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.collection-product {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-quality {
+    max-width: 100%;
+}
+
+.shipping-policy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    background: #fff9e6;
+    padding: 40px 0;
+    border-bottom: 3px solid #ffd700;
+}
+
+.policy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.policy-item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.policy-icon {
+    font-size: 2.5rem;
+    margin-right: 20px;
+}
+
+/* Phần tin tức */
+.news-section {
+    padding: 60px 0;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-title {
+    color: #0051a3;
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background: #ffd700;
+}
+
+.news-article {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 50px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.news-article:hover {
+    transform: translateY(-5px);
+}
+
+.article-image {
+    flex: 0 0 45%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.article-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.article-title {
+    color: #1a237e;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.article-excerpt {
+    color: #666;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.read-more {
+    color: #0051a3;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.article-container {
+    display: flex;
+}
+
+.news-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+#ikeaCarousel {
+    max-width: 1400px;
+    margin: 2rem auto;
+}
+
+.carousel-item {
+    height: 600px;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 100%;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 8px;
+    bottom: 20% !important;
+    left: 10% !important;
+    right: unset !important;
+    text-align: left;
+}
+
+.carousel-indicators button {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50%;
+}
+
+.ikea-footer {
+    background: #0051a3;
+    /* Màu xanh đặc trưng của IKEA */
+    color: white;
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ffcc00;
+    padding-bottom: 10px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col li {
+    margin-bottom: 10px;
+}
+
+.footer-col a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-col a:hover {
+    color: #ffcc00;
+}
+
+.contact-info p {
+    margin: 8px 0;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}

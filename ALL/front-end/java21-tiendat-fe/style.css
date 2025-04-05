@@ -1,0 +1,495 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: #f5f5f5;
+    padding: 15px 0; /* Tăng padding để có không gian cho chữ */
+    border-bottom: 1px solid #ddd;
+    display: flex; /* Sử dụng flexbox cho top bar */
+    flex-direction: column; /* Xếp logo và chữ theo chiều dọc */
+    align-items: flex-start; /* Căn trái các phần tử */
+}
+
+.top-bar .container {
+    width: 100%; /* Container chiếm hết chiều rộng để căn giữa logo và search bar */
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-bar .logo {
+    display: flex;
+    flex-direction: column; /* Xếp logo và chữ theo chiều dọc */
+    align-items: flex-start; /* Căn trái logo và chữ */
+}
+
+.top-bar .logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #0058a3;
+}
+
+.top-bar .logo img {
+    height: 80px; /* Tăng kích thước logo */
+    margin-right: 0; /* Bỏ margin bên phải logo */
+}
+
+.top-bar .logo span {
+    font-size: 0.9em; /* Chữ "nội thất thông minh" lớn hơn một chút */
+    color: #0058a3; /* Chuyển màu chữ về màu xanh logo */
+    margin-top: 5px; /* Tạo khoảng cách giữa logo và dòng chữ */
+}
+
+.top-bar .search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.top-bar .search-bar input[type="text"] {
+    padding: 8px 12px;
+    border: none;
+    outline: none;
+    font-size: 0.9em;
+    width: 300px;
+    color: #333;
+}
+
+.top-bar .search-bar button[type="submit"] {
+    background-color: #f5f5f5;
+    color: #333;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Стиль cho icon Font Awesome */
+.top-bar .search-bar button i.fas.fa-search {
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Main Navigation */
+.main-nav {
+    background-color: #0058a3;
+    padding: 8px 0;
+}
+
+.main-nav .container {
+    height: 35px;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: auto;
+}
+
+.main-nav ul li {
+    margin-right: 10px;
+}
+
+.main-nav ul li:last-child {
+    margin-right: 0;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.8em;
+    padding: 6px 10px;
+    border-radius: 0;
+    transition: background-color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    background-color: #004481;
+}
+
+/* Стиль cho "Tất cả danh mục" ở bên phải */
+.main-nav ul li.right {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+/* --------------------------------------------------- */
+/* Featured Categories */
+.featured-categories {
+    padding: 20px 0;
+    background-color: #f9f9f9;
+    width: 100%; /* Đảm bảo nó chiếm toàn bộ chiều ngang */
+}
+
+.featured-categories .container {
+    width: 100%; /* Đảm bảo container chiếm toàn bộ chiều ngang màn hình */
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column; /* Sắp xếp theo chiều dọc */
+    gap: 15px; /* Khoảng cách giữa các phần tử */
+}
+
+.featured-categories .category-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Phòng khách chiếm toàn bộ chiều rộng */
+.featured-categories .category-item.full-width {
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    margin-bottom: 15px;
+}
+
+/* Các ảnh nhỏ (bếp, trang trí, gia dụng) nằm ngang dưới ảnh phòng khách */
+.featured-categories .sub-categories-row {
+    display: flex;
+    width: 100%; /* Đảm bảo hàng này chiếm toàn bộ chiều rộng */
+    gap: 15px; /* Khoảng cách giữa các ảnh nhỏ */
+}
+
+.featured-categories .sub-categories-row .category-item {
+    flex: 1; /* Mỗi ảnh nhỏ chiếm 1 phần đều của không gian */
+    width: 100%; /* Đảm bảo các ảnh nhỏ chiếm đủ chiều rộng */
+}
+
+/* Ảnh */
+.featured-categories .category-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hiệu ứng hover */
+.featured-categories .category-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Overlay */
+.featured-categories .category-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 8px;
+}
+
+.featured-categories .category-item:hover .category-overlay {
+    opacity: 1;
+}
+
+/* --------------------------------------------------- */
+
+/* Cấu trúc chung cho collection-section */
+.collection-section {
+    padding: 20px 0;
+    background-color: #f9f9f9;
+}
+
+/* Căn giữa phần container */
+.collection-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn giữa tất cả nội dung trong container */
+}
+
+/* Tiêu đề BỘ SƯU TẬP nằm phía trên và căn giữa */
+.collection-section h3 {
+    margin-bottom: 40px; /* Tạo khoảng cách phía dưới tiêu đề */
+    font-size: 2.5em; /* Cỡ chữ cho tiêu đề */
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Grid cho collection */
+.collection-grid {
+    display: grid;
+    grid-template-columns: 50% 50%; /* 2 cột: trái (Decor) và phải (3 ảnh nhỏ) */
+    gap: 15px;
+    grid-template-rows: 1fr 1fr; /* Chia thành 2 hàng: ảnh nhỏ phía trên, ảnh lớn phía dưới */
+}
+
+/* Phần bên trái (Decor/trang trí) */
+.collection-left .collection-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100%;
+}
+
+.collection-left .collection-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Đảm bảo ảnh luôn đầy đủ mà không bị méo */
+}
+
+/* Phần bên phải (3 ảnh nhỏ) */
+.collection-right {
+    display: grid;
+    grid-template-rows: 1fr 1fr; /* Chia thành 2 hàng: ảnh lớn bên dưới chiếm 2 phần, ảnh nhỏ phía trên chiếm 1 phần */
+    grid-template-columns: 1fr 1fr; /* Chia 2 cột đều cho 2 ảnh nhỏ ở trên */
+    gap: 15px;
+}
+
+/* Các ảnh nhỏ phía trên */
+.collection-right .collection-item.top-left,
+.collection-right .collection-item.top-right {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.collection-right .collection-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Ảnh dưới (Đồ phòng ngủ) */
+.collection-right .collection-item.bottom {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 200%; /* Chiều ngang của ảnh "Đồ phòng ngủ" phải bằng tổng chiều ngang của ảnh "Đồ dùng bàn ăn" và "Đồ phòng tắm" */
+    height: 100%; /* Giữ chiều cao của ảnh "Đồ phòng ngủ" bằng chiều cao của các ảnh nhỏ */
+}
+
+/* Điều chỉnh chiều cao và chiều rộng của ảnh Đồ phòng ngủ */
+.collection-right .collection-item.bottom img {
+    width: 100%; /* Chiều ngang của ảnh Đồ phòng ngủ chiếm 100% chiều rộng phần bên phải */
+    height: 100%; /* Giữ chiều cao của ảnh "Đồ phòng ngủ" không bị kéo dài */
+    object-fit: cover;
+}
+
+/* Chỉnh kiểu cho label */
+.item-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 8px;
+}
+/* --------------------------------------------------- */
+
+/* Khung chứa toàn bộ phần sản phẩm */
+.product-section {
+    margin: 40px 0;
+    padding: 30px 20px;
+    background-color: #f8f8f8;
+}
+
+/* Container để căn giữa nội dung */
+.product-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Tiêu đề "SẢN PHẨM" */
+.product-section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 20px; /* Giảm margin bottom để gần với nút bấm hơn */
+    color: #333;
+}
+
+/* Phần các nút bấm (sắp xếp theo chiều ngang) */
+.product-section .product-filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px; /* Tăng margin bottom để tạo khoảng cách với ảnh */
+}
+
+.product-section .product-filter button {
+    font-size: 0.9rem;
+    padding: 10px 18px;
+    margin: 0 8px;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    outline: none;
+}
+
+.product-section .product-filter button.active {
+    background-color: #ffe082;
+    color: #333;
+    border-color: #fdd835;
+}
+
+.product-section .product-filter button:hover {
+    background-color: #fdd835;
+    color: #333;
+    border-color: #fdd835;
+}
+
+/* Phần các ảnh sản phẩm (sắp xếp theo chiều ngang) */
+.product-section .product-grid {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; /* Giảm margin top để gần với nút bấm hơn */
+}
+
+.product-section .product-item {
+    width: 24%;
+    background-color: #fff;
+    border: 1px solid #eee;
+    padding: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.product-section .product-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-section .product-item .image-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-section .product-item .image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-bottom: none;
+}
+
+.product-section .product-item .sold-out {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #f44336;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+/* Thông tin sản phẩm */
+.product-section .product-info {
+    margin-top: 10px;
+}
+
+.product-section .product-info .product-name {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 3px;
+}
+
+.product-section .product-info .product-price {
+    font-size: 0.9rem;
+    color: #0058a3;
+    font-weight: bold;
+}
+
+.product-section .product-info .product-id {
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 3px;
+}
+
+/* ------------------------------------------------------------ */
+
+.banner-container {
+    width: 100%;
+    height: 200px; /* Chiều cao cố định cho banner */
+    background-color: #333; /* Màu nền xám đậm */
+    color: #fff; /* Màu chữ trắng */
+    display: flex;
+    align-items: center; /* Căn chỉnh các phần tử con theo chiều dọc ở giữa */
+    justify-content: space-between;
+    padding: 20px 40px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.banner-left {
+    text-align: left;
+    padding-right: 20px;
+    /* Không cần thiết lập chiều cao cố định ở đây */
+}
+
+.banner-title-top {
+    font-size: 0.8em;
+    color: #ddd;
+    margin-bottom: 8px;
+}
+
+.banner-title-main {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+
+.banner-title-sub {
+    font-size: 1.5em;
+    line-height: 1.2;
+}
+
+.banner-right {
+    height: 100%; /* Chiều cao bằng 100% chiều cao container */
+    display: flex; /* Sử dụng flexbox để căn chỉnh nội dung bên trong */
+    align-items: center; /* Căn chỉnh hình ảnh theo chiều dọc ở giữa */
+}
+
+.banner-right img {
+    max-height: 100%; /* Chiều cao tối đa bằng chiều cao container */
+    display: block;
+    object-fit: contain; /* Đảm bảo ảnh không bị méo và hiển thị toàn bộ */
+}

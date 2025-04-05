@@ -1,0 +1,3 @@
+SELECT *
+FROM PHONG
+WHERE MaPhong LIKE 'VIP%';

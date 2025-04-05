@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IKEA Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="/"><img src="logo.png" alt="IKEA Logo"></a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Tất cả</a></li>
+        <li><a href="#">Đồ phòng khách</a></li>
+        <li><a href="#">Đồ phòng ngủ</a></li>
+        <li><a href="#">Đồ phòng tắm</a></li>
+        <li><a href="#">Đồ bếp</a></li>
+        <li><a href="#">Đồ dùng bàn ăn</a></li>
+        <li><a href="#">Đồ trẻ em</a></li>
+        <li><a href="#">Đồ dùng gia đình</a></li>
+        <li><a href="#">Decor/trang trí</a></li>
+        <li><a href="#">Tin tức</a></li>
+      </ul>
+    </nav>
+    <div class="search">
+      <input type="text" id="search-input" placeholder="Tìm kiếm sản phẩm...">
+      <button id="search-button">Tìm</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="image-gallery">
+        <div class="main-image" id="main-image">
+          <img src="image/image1.jpg" alt="Đồ phòng khách" class="gallery-image">
+        </div>
+        <div class="small-images">
+          <img src="image/image2.jpg" alt="Đồ bếp" class="gallery-image">
+          <img src="image/image3.jpg" alt="Đồ bếp" class="gallery-image">
+          <img src="image/image4.jpg" alt="Đồ trang trí" class="gallery-image">
+        </div>
+      </div>
+    </section>
+
+    <div class="product-header">
+        <h1>SẢN PHẨM</h1>
+      </div>
+      
+      <nav>
+        <a href="#" class="active">SẢN PHẨM BÁN CHẠY</a>
+        <a href="#">SẢN PHẨM MỚI</a>
+        <a href="#">SẢN PHẨM KHUYẾN MẠI</a>
+      </nav>
+      
+      <div class="product-grid">
+        <div class="product-item">
+          <img src="image/image3.jpg" alt="Bàn chải sơn màu Ikea Mala 901.933.20">
+          <div class="product-info">
+            <h3>Bàn chải sơn màu Ikea Mala 901.933.20</h3>
+            <p>55,000₫</p>
+          </div>
+        </div>
+        <div class="product-item">
+          <img src="image/image6.jpg" alt="Bộ 3 móc treo KUNGSFORS bằng thép không gì">
+          <div class="product-info">
+            <h3>Bộ 3 móc treo KUNGSFORS bằng thép không gì</h3>
+            <p>145,000₫</p>
+          </div>
+        </div>
+        <div class="product-item">
+          <img src="image/image7.jpg" alt="Bộ lọ hoa GRADVIS màu xanh hồng">
+          <div class="product-info">
+            <h3>Bộ lọ hoa GRADVIS màu xanh hồng</h3>
+            <p>Hết hàng</p>
+          </div>
+        </div>
+        <div class="product-item">
+          <img src="image/image8.jpg" alt="Cây lần bụi quần áo ikea BASTIS">
+          <div class="product-info">
+            <h3>Cây lần bụi quần áo ikea BASTIS</h3>
+            <p>55,000₫</p>
+          </div>
+        </div>
+      </div>
+      
+      <style>
+        .product-header {
+          background-color: white;
+          padding: 20px 0;
+          text-align: center;
+        }
+        .product-header h1 {
+          font-size: 24px;
+          font-weight: bold;
+          color: #333;
+        }
+        nav {
+          text-align: center;
+          margin-bottom: 20px;
+        }
+        nav a {
+          display: inline-block;
+          padding: 10px 20px;
+          text-decoration: none;
+          color: #333;
+          font-weight: bold;
+        }
+        nav a.active {
+          color: #ffc107;
+        }
+        .product-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          grid-gap: 20px;
+        }
+        .product-item {
+          text-align: center;
+        }
+        .product-item img {
+          max-width: 100%;
+          height: auto;
+        }
+        .product-info h3 {
+          font-size: 16px;
+          margin-top: 10px;
+        }
+        .product-info p {
+          color: #888;
+          margin-top: 5px;
+        }
+      </style>
+
+
+
+<div class="banner">
+    <header>
+        <h1>BỘ sưu tập
+
+        </h1>
+     
+      </header>
+
+      
+    <div class="content-wrapper">
+      <h1>Bộ Sưu Tập Đồ Bếp 2017</h1>
+      <p>Thiết Kế Tuyệt Mỹ, Chất Lượng Tuyệt Hảo</p>
+    </div>
+    <img src="image/image3.jpg" alt="Bộ sưu tập đồ bếp">
+  </div>
+  
+  <style>
+    .banner {
+      position: relative;
+      height: 400px;
+      background-color: #333;
+      overflow: hidden;
+    }
+    .content-wrapper {
+      position: absolute;
+      top: 50%;
+      left: 200px; 
+      transform: translateY(-50%);
+    
+      color: #fff;
+      width: calc(100% - 400px); 
+    }
+    .content-wrapper h1 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .content-wrapper p {
+      font-size: 18px;
+    }
+    .banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+
+
+<div class="product-features">
+   
+    <div class="feature-grid">
+      <div class="feature-item">
+        <img src="image/logo.jpg" alt="Giao hàng COD toàn quốc">
+        <div class="feature-content">
+          <h3>Giao hàng COD toàn quốc</h3>
+          <p>Giao hàng 24/7</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <img src="image/logo.jpg" alt="Hàng chính hãng 100%">
+        <div class="feature-content">
+          <h3>Hàng chính hãng 100%</h3>
+          <p>Phát hiện hàng giả đền gấp 10</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <img src="image/logo.jpg" alt="Mua hàng online tiện lợi">
+        <div class="feature-content">
+          <h3>Mua hàng online tiện lợi</h3>
+          <p>Nhận hàng trước trả tiền sau</p>
+        </div>
+      </div>
+    </div>
+</div>
+
+  
+  <style>
+    .product-features {
+  padding: 40px;
+}
+
+.product-features header {
+  text-align: center; 
+  margin-bottom: 40px;
+}
+
+.product-features header h1 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+}
+
+.product-features header p {
+  font-size: 18px;
+  color: #666;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+}
+
+.feature-item img {
+  max-width: 100px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.feature-content {
+  text-align: left;
+}
+
+.feature-content h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.feature-content p {
+  font-size: 14px;
+  color: #666;
+}
+
+  </style>
+
+
+
+<header>
+    <h1>Tin tức</h1>
+  </header>
+
+
+<div class="product-gallery">
+    <div class="gallery-row">
+      <div class="gallery-item">
+        <img src="image/image1.jpg" alt="Thảm phòng khách phong cách châu Âu">
+        <div class="gallery-content">
+          <h3>THẢM PHÒNG KHÁCH PHONG CÁCH CHÂU ÂU</h3>
+          <p>Thảm trải sàn phòng khách hay còn gọi là ...</p>
+        </div>
+      </div>    
+      <div class="gallery-item">
+        <img src="image/image2.jpg" alt="Thiết kế phòng ngủ mới mẻ">
+        <div class="gallery-content">
+          <h3>THIẾT KẾ PHÒNG NGỦ MỚI MỸ</h3>
+          <p>Trong kiến trúc của một ngôi nhà, bên cạnh sư ...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <style>
+    .product-gallery {
+      margin-top: 40px;
+    }
+    
+    .gallery-row {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .gallery-item {
+      width: 48%;
+      display: flex;
+      align-items: center;
+    }
+    
+    .gallery-item img {
+      max-width: 100px;
+      height: auto;
+      margin-right: 20px;
+    }
+    
+    .gallery-content {
+      text-align: left;
+    }
+    
+    .gallery-content h3 {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    
+    .gallery-content p {
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+
+
+
+
+    <section class="categories">
+     
+      <div class="category-grid">
+        <div class="category-card">
+          <img src="image/image1.jpg" alt="Đồ phòng khách">
+          <h3>Đồ phòng khách</h3>
+          <a href="#">Xem thêm</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="about">
+        <h3>Về IKEA</h3>
+        <p>IKEA là thương hiệu nội thất Thụy Điển nổi tiếng trên toàn thế giới.</p>
+      </div>
+      <div class="quick-links">
+        <h3>Liên kết nhanh</h3>
+        <ul>
+          <li><a href="#">Tất cả sản phẩm</a></li>
+          <li><a href="#">Tin tức</a></li>
+          <li><a href="#">Liên hệ</a></li>
+        </ul>
+      </div>
+      <div class="contact">
+        <h3>Liên hệ</h3>
+        <p>Địa chỉ: 123 Đường ABC, Thành phố XYZ</p>
+        <p>Điện thoại: 1900 1234</p>
+        <p>Email: info@ikeastore.com.vn</p>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2023 IKEA Store. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
